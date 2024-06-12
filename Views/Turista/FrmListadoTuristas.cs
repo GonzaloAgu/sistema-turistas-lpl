@@ -49,10 +49,11 @@ namespace TurApp.Views
             {
                 if (criterio != null)
                 {
-                    criterio += " and cod_pais = " + PaisCbo.SelectedValue;
+                    criterio += " and cod_pais = " + (PaisCbo.SelectedValue as Pais).Codigo;
+
                 }
                 else
-                    criterio = "cod_pais = " + PaisCbo.SelectedValue;
+                    criterio = "cod_pais = " + (PaisCbo.SelectedValue as Pais).Codigo;
             }
             this.TuristasGrd.DataSource = Turista.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));            
         }
