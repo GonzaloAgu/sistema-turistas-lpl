@@ -129,10 +129,10 @@ namespace TurApp.Views
 
         private void IngresoTuristaMnu_Click(object sender, EventArgs e)
         {
-            MainView.Instance.Cursor = Cursors.WaitCursor;
-            FrmTuristaAM frm = new FrmTuristaAM();
-            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
-            frm.ShowIngresoTurista(this);
+            MainView.Instance.Cursor = Cursors.WaitCursor;  // convierte el cursor en un reloj de arena
+            FrmTuristaAM frm = new FrmTuristaAM();  // genera el formulario de ingreso de turista
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);  // cuando el formulario frm se complete, esto llama al metodo frm_DoCompleteOperationForm que genera un cartelito de "operacion exitosa"
+            frm.ShowIngresoTurista(this);   // hace que el formulario de turista se muestre. se pasa como parámetro el formulario general (this), no se bien por qué
         }
 
         private void BuscarTuristaMnu_Click(object sender, EventArgs e)
