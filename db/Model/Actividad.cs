@@ -60,7 +60,23 @@ namespace TurApp.db
         // -- TODO --
         #region Relaciones con otras entidades
         //TipoActividadObj
+        public TipoActividad TipoActividadObj {
+            get {
+                if (_tipoActividad == null && this._cod_tipo_actividad != 0) {
+                    _tipoActividad = TipoActividad.FindByKeyStatic(this._cod_tipo_actividad);
+                }
+                return _tipoActividad;
+            }
+        }
         //TransporteObj
+        public Transporte TransporteObj {
+            get {
+                if (_transporte == null && this._cod_transporte != 0) {
+                    _transporte = Transporte.FindByKeyStatic(this._cod_transporte);
+                }
+                return _transporte;
+            }
+        }
         #endregion
     }
 
