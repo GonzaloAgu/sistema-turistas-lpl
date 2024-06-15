@@ -187,6 +187,11 @@ namespace TurApp.Views
         private void Turistas_mnu_top_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buscarActividadesMnu_Click(object sender, EventArgs e) {
+            FrmActividadBusq frm = new FrmActividadBusq();
+            frm.ShowBuscar();
         }       
         
     }
