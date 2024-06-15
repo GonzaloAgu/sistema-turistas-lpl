@@ -47,7 +47,7 @@ namespace TurApp.Views {
                 if (value == FrmOperacion.frmAlta) {
                     this.Text = "Ingreso de nueva actividad";
                     this.tipoActCB.SelectedIndex = -1;
-                    // agregar el CB de transporte
+                    this.TransporteCbo.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion) {
                     this.Text = "Actualizacion de datos de actividad";
@@ -63,6 +63,39 @@ namespace TurApp.Views {
             this.Close();
         }
 
+        
+        private Boolean datosFormValidos() {
+            if (importeTxt.Text == "") {
+                MessageBox.Show("Ingrese importe", "Faltan datos...", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                importeTxt.Focus();
+                return false;
+            }
+
+            if (nivelTxt.Text == "") {
+                MessageBox.Show("Ingrese nivel", "Faltan datos...", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                nivelTxt.Focus();
+                return false;
+            }
+
+            if (tipoActCB.SelectedIndex == -1) {
+                MessageBox.Show("Ingrese tipo de actividad", "Faltan datos...", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                nivelTxt.Focus();
+                return false;
+            }
+
+            if (TransporteCbo.SelectedIndex == -1) {
+                MessageBox.Show("Ingrese transporte", "Faltan datos...", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                nivelTxt.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
         private void GuardarBtn_Click(object sender, EventArgs e) {
             Actividad actividad = null;
             string errMsj = "";
@@ -70,8 +103,10 @@ namespace TurApp.Views {
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            // Validar...
-
+            // Valida si falta algun dato en el formulario
+            if(!datosFormValidos())
+                return;
+            
             if (OperacionForm == FrmOperacion.frmAlta) {
                 actividad = new Actividad();
                 operacionLog = "ALTA";
