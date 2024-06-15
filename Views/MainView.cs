@@ -180,7 +180,8 @@ namespace TurApp.Views
 
         private void ActividadAM_mnu_Click(object sender, EventArgs e)
         {
-            //new FrmActividad().Show();
+            FrmActividadAM form = new FrmActividadAM();
+            form.ShowIngresoActividad();
         }
 
         private void Turistas_mnu_top_Click(object sender, EventArgs e)
