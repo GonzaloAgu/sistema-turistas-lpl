@@ -37,7 +37,7 @@ namespace TurApp.Views {
                 if (criterio == null)
                     criterio = String.Format("nivel = {0} ", NivelTxt.Text);
                 else
-                    criterio += String.Format("nivel = {0} ", NivelTxt.Text);
+                    criterio += String.Format(" and nivel = {0} ", NivelTxt.Text);
             }
 
             try {
