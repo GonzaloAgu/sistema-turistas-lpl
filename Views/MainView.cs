@@ -192,6 +192,11 @@ namespace TurApp.Views
         private void buscarActividadesMnu_Click(object sender, EventArgs e) {
             FrmActividadBusq frm = new FrmActividadBusq();
             frm.ShowBuscar();
+        }
+
+        private void ListadoActividades_Click(object sender, EventArgs e) {
+            FrmListadoActividad form = new FrmListadoActividad();
+            form.Show();
         }       
         
     }
