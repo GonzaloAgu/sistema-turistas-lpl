@@ -41,8 +41,8 @@ namespace TurApp.Views {
                     MessageBox.Show("No se encontraron resultados con criterio ingresado", "Sin resultados...", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 // invocar Formulario de Listado.
-                //FrmActividadList frm = new FrmActividadList();
-                //frm.ShowListado(lista, this, null);
+                FrmActividadList frm = new FrmActividadList();
+                frm.ShowListado(lista, this, null);
             }
             catch (Exception ex) {
                 MessageBox.Show("Ocurrio un error: " + ex.Message, "Error...", MessageBoxButtons.OK, MessageBoxIcon.Error);
