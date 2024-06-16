@@ -15,6 +15,7 @@ namespace TurApp.db
         private string _letra;
         private int _nro_renglon;
         private int _cod_paquete;
+        private Paquete _paquete = null;
         private float _importe;
                 #endregion
 
@@ -63,7 +64,14 @@ namespace TurApp.db
         }
         #endregion        
         // -- TODO --
-        #region Relaciones con otras entidades  
+        #region Relaciones con otras entidades 
+        public Paquete PaqueteObj {
+            get {
+                if (_paquete == null && _cod_paquete != 0)
+                    _paquete = Paquete.FindByKeyStatic(_cod_paquete);
+                return _paquete;
+            }
+        }
         #endregion
     }
 

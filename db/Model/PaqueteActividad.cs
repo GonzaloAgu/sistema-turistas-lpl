@@ -11,7 +11,9 @@ namespace TurApp.db
     {
         #region variables locales
         private int _cod_paquete;
+        private Paquete _paquete = null;
         private int _cod_actividad;
+        private Actividad _actividad = null;
         private float _importe;
         private DateTime _fecha_hora_desde;
         private DateTime _fecha_hora_hasta;
@@ -67,6 +69,21 @@ namespace TurApp.db
 
         // -- TODO --
         #region Relaciones con otras entidades
+        public Paquete PaqueteObj {
+            get {
+                if (_paquete == null && _cod_paquete != 0)
+                    _paquete = Paquete.FindByKeyStatic(_cod_paquete);
+                return _paquete;
+            }
+        }
+
+        public Actividad ActividadObj {
+            get {
+                if (_actividad == null && _cod_actividad != 0)
+                    _actividad = Actividad.FindByKeyStatic(_cod_actividad);
+                return _actividad;
+            }
+        }
         #endregion
     }
 

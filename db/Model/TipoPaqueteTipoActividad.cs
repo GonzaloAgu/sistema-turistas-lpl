@@ -12,8 +12,8 @@ namespace TurApp.db
         #region variables locales
         private int _CodTipoPaquete;
         private int _CodTipoActividad;
-        private TipoPaquete tipo_paquete = null;
-        private TipoActividad tipo_actividad = null;
+        private TipoPaquete _tipoPaquete = null;
+        private TipoActividad _tipoActividad = null;
         #endregion
 
         #region propiedades publicas
@@ -37,12 +37,20 @@ namespace TurApp.db
         #region Relaciones con otras entidades
         public TipoPaquete TipoPaqueteObj
         {
-            get { throw new NotImplementedException(); }
+            get {
+                if (_tipoPaquete == null && _CodTipoPaquete != 0)
+                    _tipoPaquete = TipoPaquete.FindByKeyStatic(_CodTipoPaquete);
+                return _tipoPaquete;
+            }
         }
 
         public TipoActividad TipoActividadObj
         {
-            get { throw new NotImplementedException(); }
+            get {
+                if (_tipoActividad == null && _CodTipoActividad != 0)
+                    _tipoActividad = TipoActividad.FindByKeyStatic(_CodTipoActividad);
+                return _tipoActividad;
+            }
         }
 
         #endregion

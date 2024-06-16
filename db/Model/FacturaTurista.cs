@@ -15,7 +15,9 @@ namespace TurApp.db
         private string _letra;
         private DateTime _fecha;
         private int _dniTurista;
+        private Turista _turista = null;
         private int _cod_forma_pago;
+        private FormaPago _formaPago = null;
         private string _detallePago;
         
         #endregion
@@ -71,6 +73,24 @@ namespace TurApp.db
             set { _detallePago = value; }
         }
         #endregion        
+
+        #region relaciones con otras entidades
+        public Turista TuristaObj {
+            get {
+                if (_turista == null && _dniTurista != 0)
+                    _turista = Turista.FindByKeyStatic(_dniTurista);
+                return _turista;
+            }
+        }
+
+        public FormaPago FormaPagoObj {
+            get {
+                if (_formaPago == null && _cod_forma_pago != 0)
+                    _formaPago = FormaPago.FindByKeyStatic(_cod_forma_pago);
+                return _formaPago;
+            }
+        }
+        #endregion
     }
 
 }

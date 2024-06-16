@@ -12,11 +12,15 @@ namespace TurApp.db
         #region variables locales
         private int _Codigo;
         private int _cod_tipo_paquete;
+        private TipoPaquete _tipoPaquete = null;
         private int _cod_agencia;
+        private Agencia _agencia = null;
         private DateTime _fecha;
         private int _nivel;
         private int _dniTurista;
+        private Turista _turista = null;
         private int _cod_destino;
+        private Destino _destino = null;
         //instancias internas de destino, tipo paquete, turista, agencia
         #endregion
 
@@ -74,6 +78,38 @@ namespace TurApp.db
 
         // -- TODO --
         #region Relaciones con otras entidades
+
+        public TipoPaquete TipoPaqueteObj {
+            get {
+                if (_tipoPaquete == null && _cod_tipo_paquete != 0)
+                    _tipoPaquete = TipoPaquete.FindByKeyStatic(_cod_tipo_paquete);
+                return _tipoPaquete;
+            }
+        }
+
+        public Agencia AgenciaObj {
+            get {
+                if (_agencia == null && _cod_agencia != 0)
+                    _agencia = Agencia.FindByKeyStatic(_cod_agencia);
+                return _agencia;
+            }
+        }
+
+        public Turista TuristaObj {
+            get {
+                if (_turista == null && _dniTurista != 0)
+                    _turista = Turista.FindByKeyStatic(_dniTurista);
+                return _turista;
+            }
+        }
+
+        public Destino DestinoObj {
+            get {
+                if (_destino == null && _cod_destino != 0)
+                    _destino = Destino.FindByKeyStatic(_cod_destino);
+                return _destino;
+            }
+        }
 
         #endregion
     }
