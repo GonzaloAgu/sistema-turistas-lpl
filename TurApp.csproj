@@ -185,6 +185,12 @@
     <Compile Include="Views\CtlCargaInfo.Designer.cs">
       <DependentUpon>CtlCargaInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormasPago\FrmFormaPagoAM.Designer.cs">
+      <DependentUpon>FrmFormaPagoAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CtlCargaInfo.resx">
       <DependentUpon>CtlCargaInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormasPago\FrmFormaPagoAM.resx">
+      <DependentUpon>FrmFormaPagoAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -325,7 +334,6 @@
     <Folder Include="Script\" />
     <Folder Include="Views\Detinos\" />
     <Folder Include="Views\Facturas\" />
-    <Folder Include="Views\FormasPago\" />
     <Folder Include="Views\Localidades\" />
     <Folder Include="Views\Paises\" />
     <Folder Include="Views\Paquete\" />

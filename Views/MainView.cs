@@ -197,6 +197,11 @@ namespace TurApp.Views
         private void ListadoActividades_Click(object sender, EventArgs e) {
             FrmListadoActividad form = new FrmListadoActividad();
             form.Show();
+        }
+
+        private void IngresoFormaPago_Click(object sender, EventArgs e) {
+            FrmFormaPagoAM form = new FrmFormaPagoAM();
+            form.ShowIngresoFormaPago();
         }       
         
     }
