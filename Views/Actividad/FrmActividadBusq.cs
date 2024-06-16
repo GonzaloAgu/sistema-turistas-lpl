@@ -23,14 +23,21 @@ namespace TurApp.Views {
             // verificar si hay multiples opciones a usar como filtro que elija alguna, si son dos campos, no hace falta.            
             string criterio = null;
             if (this.TipoActChk.Checked) {
-                criterio = String.Format("cod_tipo_actividad = {0}", (tipoActCb.SelectedValue as TipoActividad).Codigo );
+                criterio = String.Format("cod_tipo_actividad = {0}", tipoActCb.SelectedValue );
             }
 
             if (this.TransporteChk.Checked) {
                 if (criterio == null)
-                    criterio = String.Format("cod_transporte = {0} ", (TransporteCbo.SelectedValue as Transporte).Codigo);
+                    criterio = String.Format("cod_transporte = {0} ", TransporteCbo.SelectedValue);
                 else
-                    criterio += String.Format(" and cod_pais = {0}", (TransporteCbo.SelectedValue as Transporte).Codigo);
+                    criterio += String.Format(" and cod_transporte = {0}", TransporteCbo.SelectedValue);
+            }
+
+            if (this.NivelChk.Checked) {
+                if (criterio == null)
+                    criterio = String.Format("nivel = {0} ", NivelTxt.Text);
+                else
+                    criterio += String.Format("nivel = {0} ", NivelTxt.Text);
             }
 
             try {

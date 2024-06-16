@@ -124,6 +124,7 @@
             this.tipoActCb.Name = "tipoActCb";
             this.tipoActCb.Size = new System.Drawing.Size(175, 21);
             this.tipoActCb.TabIndex = 20;
+            this.tipoActCb.ValueMember = "Codigo";
             // 
             // FrmActividadBusq
             // 
