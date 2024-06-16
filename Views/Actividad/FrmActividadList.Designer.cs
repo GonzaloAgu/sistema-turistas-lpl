@@ -82,6 +82,7 @@
             this.ActividadesGrd.Size = new System.Drawing.Size(743, 237);
             this.ActividadesGrd.TabIndex = 0;
             this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.Actividades_DataBinding);
+            this.ActividadesGrd.DoubleClick += new System.EventHandler(this.ActividadesGrd_DoubleClick);
             // 
             // TipoActividad
             // 

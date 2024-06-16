@@ -48,6 +48,24 @@ namespace TurApp.Views {
             }
         }
 
+        private void ActividadesGrd_DoubleClick(object sender, EventArgs e) {
+            if (this.ActividadesGrd.SelectedRows.Count > 0) {
+                MainView.Instance.Cursor = Cursors.WaitCursor;
+                FrmActividadAM frm = new FrmActividadAM();
+                frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+                frm.ShowModificarActividad(this, (this.ActividadesGrd.SelectedRows[0].DataBoundItem as Actividad));
+            }
+        }
+
+        void frm_DoCompleteOperationForm(object Sender, EventArgDom ev) {
+            this.Cursor = Cursors.Default;
+            if (ev.Status == TipoOperacionStatus.stOK) {
+                var selAnt = ActividadesGrd.SelectedRows[0].Index;
+                this.ActividadesGrd.DataSource = Actividad.FindAllStatic(_criterio, (a1, a2) => a1.TipoActividadObj.Nombre.CompareTo(a2.TipoActividadObj.Nombre));
+                ActividadesGrd.Rows[selAnt].Selected = true;
+                MessageBox.Show("Actividad actualizada", "Exito...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         
     }
 }
