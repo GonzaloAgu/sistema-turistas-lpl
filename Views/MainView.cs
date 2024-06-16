@@ -202,6 +202,11 @@ namespace TurApp.Views
         private void IngresoFormaPago_Click(object sender, EventArgs e) {
             FrmFormaPagoAM form = new FrmFormaPagoAM();
             form.ShowIngresoFormaPago();
+        }
+
+        private void BuscarFormasPago_Click(object sender, EventArgs e) {
+            FrmFormaPagoBusq form = new FrmFormaPagoBusq();
+            form.Show();
         }       
         
     }

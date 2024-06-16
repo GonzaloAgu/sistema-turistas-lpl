@@ -290,6 +290,7 @@
             this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.buscarToolStripMenuItem.Tag = "ModificaFormaPago,ConsultaFormaPago";
             this.buscarToolStripMenuItem.Text = "Buscar";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.BuscarFormasPago_Click);
             // 
             // Listados_mnu_top
             // 
