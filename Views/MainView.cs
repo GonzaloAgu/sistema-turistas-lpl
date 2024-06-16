@@ -207,6 +207,11 @@ namespace TurApp.Views
         private void BuscarFormasPago_Click(object sender, EventArgs e) {
             FrmFormaPagoBusq form = new FrmFormaPagoBusq();
             form.Show();
+        }
+
+        private void FormaPagosToolStripMenuItem_Click(object sender, EventArgs e) {
+            FrmListadoFormaPago form = new FrmListadoFormaPago();
+            form.Show();
         }       
         
     }
