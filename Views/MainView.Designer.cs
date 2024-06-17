@@ -66,6 +66,8 @@
             this.AcercaDe_mnu = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
             this.StatusInfoUser = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Paises_mnu_top = new System.Windows.Forms.ToolStripMenuItem();
+            this.PaiseseAM_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.status.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +80,7 @@
             this.TipoActividad_mnu_top,
             this.Localidades_mnu_top,
             this.Actividad_mnu_top,
+            this.Paises_mnu_top,
             this.Paquetes_mnu_top,
             this.TipoPaquete_mnu_top,
             this.FormaPagoToolStripMenuItem,
@@ -100,12 +103,11 @@
             this.Turistas_mnu_top.Size = new System.Drawing.Size(59, 20);
             this.Turistas_mnu_top.Tag = "AltaTurista,ModificaTurista,ConsultaTurista";
             this.Turistas_mnu_top.Text = "Turistas";
-
             // 
             // TuristaAM_mnu
             // 
             this.TuristaAM_mnu.Name = "TuristaAM_mnu";
-            this.TuristaAM_mnu.Size = new System.Drawing.Size(118, 22);
+            this.TuristaAM_mnu.Size = new System.Drawing.Size(152, 22);
             this.TuristaAM_mnu.Tag = "AltaTurista";
             this.TuristaAM_mnu.Text = "Ingreso";
             this.TuristaAM_mnu.Click += new System.EventHandler(this.IngresoTuristaMnu_Click);
@@ -113,7 +115,7 @@
             // BuscarTuristaMnu
             // 
             this.BuscarTuristaMnu.Name = "BuscarTuristaMnu";
-            this.BuscarTuristaMnu.Size = new System.Drawing.Size(118, 22);
+            this.BuscarTuristaMnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarTuristaMnu.Tag = "ModificaTurista,ConsultaTurista";
             this.BuscarTuristaMnu.Text = "Buscar...";
             this.BuscarTuristaMnu.Click += new System.EventHandler(this.BuscarTuristaMnu_Click);
@@ -281,7 +283,7 @@
             // ingresoToolStripMenuItem
             // 
             this.ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
-            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.ingresoToolStripMenuItem.Tag = "AltaFormaPago";
             this.ingresoToolStripMenuItem.Text = "Ingreso";
             this.ingresoToolStripMenuItem.Click += new System.EventHandler(this.IngresoFormaPago_Click);
@@ -289,7 +291,7 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.buscarToolStripMenuItem.Tag = "ModificaFormaPago,ConsultaFormaPago";
             this.buscarToolStripMenuItem.Text = "Buscar";
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.BuscarFormasPago_Click);
@@ -313,7 +315,7 @@
             // TuristasToolStripMenuItem
             // 
             this.TuristasToolStripMenuItem.Name = "TuristasToolStripMenuItem";
-            this.TuristasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.TuristasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.TuristasToolStripMenuItem.Tag = "ConsultaTurista";
             this.TuristasToolStripMenuItem.Text = "Turistas";
             this.TuristasToolStripMenuItem.Click += new System.EventHandler(this.ListadoTuristaMnu_Click);
@@ -321,7 +323,7 @@
             // AgenciasToolStripMenuItem
             // 
             this.AgenciasToolStripMenuItem.Name = "AgenciasToolStripMenuItem";
-            this.AgenciasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AgenciasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.AgenciasToolStripMenuItem.Tag = "ConsultaAgencia";
             this.AgenciasToolStripMenuItem.Text = "Agencia";
             this.AgenciasToolStripMenuItem.Click += new System.EventHandler(this.ListadoAgencias_Click);
@@ -329,7 +331,7 @@
             // localidadesToolStripMenuItem1
             // 
             this.localidadesToolStripMenuItem1.Name = "localidadesToolStripMenuItem1";
-            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.localidadesToolStripMenuItem1.Tag = "ConsultaLocalidad";
             this.localidadesToolStripMenuItem1.Text = "Localidades";
             this.localidadesToolStripMenuItem1.Click += new System.EventHandler(this.ListadoLocalidadesMnu_Click);
@@ -337,7 +339,7 @@
             // ActividadesToolStripMenuItem1
             // 
             this.ActividadesToolStripMenuItem1.Name = "ActividadesToolStripMenuItem1";
-            this.ActividadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ActividadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.ActividadesToolStripMenuItem1.Tag = "ConsultaActividad";
             this.ActividadesToolStripMenuItem1.Text = "Actividades";
             this.ActividadesToolStripMenuItem1.Click += new System.EventHandler(this.ListadoActividades_Click);
@@ -345,7 +347,7 @@
             // FormaPagosToolStripMenuItem
             // 
             this.FormaPagosToolStripMenuItem.Name = "FormaPagosToolStripMenuItem";
-            this.FormaPagosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.FormaPagosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.FormaPagosToolStripMenuItem.Tag = "ConsultaFormaPago";
             this.FormaPagosToolStripMenuItem.Text = "FormaPagos";
             this.FormaPagosToolStripMenuItem.Click += new System.EventHandler(this.FormaPagosToolStripMenuItem_Click);
@@ -353,21 +355,21 @@
             // auditoriaToolStripMenuItem
             // 
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.auditoriaToolStripMenuItem.Tag = "ConsultaAuditoria";
             this.auditoriaToolStripMenuItem.Text = "Auditoria";
             // 
             // PaqueteToolStripMenuItem
             // 
             this.PaqueteToolStripMenuItem.Name = "PaqueteToolStripMenuItem";
-            this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.PaqueteToolStripMenuItem.Tag = "ConsultaPaquete";
             this.PaqueteToolStripMenuItem.Text = "Paquete";
             // 
             // TipoActividadToolStripMenuItem1
             // 
             this.TipoActividadToolStripMenuItem1.Name = "TipoActividadToolStripMenuItem1";
-            this.TipoActividadToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.TipoActividadToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.TipoActividadToolStripMenuItem1.Tag = "ConsultaTipoActividad";
             this.TipoActividadToolStripMenuItem1.Text = "Tipo Actividad";
             // 
@@ -399,6 +401,23 @@
             // 
             this.StatusInfoUser.Name = "StatusInfoUser";
             this.StatusInfoUser.Size = new System.Drawing.Size(0, 17);
+            // 
+            // Paises_mnu_top
+            // 
+            this.Paises_mnu_top.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PaiseseAM_menu});
+            this.Paises_mnu_top.Name = "Paises_mnu_top";
+            this.Paises_mnu_top.Size = new System.Drawing.Size(51, 20);
+            this.Paises_mnu_top.Tag = "AltaPais";
+            this.Paises_mnu_top.Text = "Paises";
+            // 
+            // PaiseseAM_menu
+            // 
+            this.PaiseseAM_menu.Name = "PaiseseAM_menu";
+            this.PaiseseAM_menu.Size = new System.Drawing.Size(152, 22);
+            this.PaiseseAM_menu.Tag = "AltaPais";
+            this.PaiseseAM_menu.Text = "Ingreso";
+            this.PaiseseAM_menu.Click += new System.EventHandler(this.PaiseseAM_menu_Click);
             // 
             // MainView
             // 
@@ -467,6 +486,8 @@
         private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TipoActividadToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem Paises_mnu_top;
+        private System.Windows.Forms.ToolStripMenuItem PaiseseAM_menu;
 
     }
 }

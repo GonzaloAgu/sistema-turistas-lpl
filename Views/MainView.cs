@@ -241,6 +241,12 @@ namespace TurApp.Views
         private void FormaPagosToolStripMenuItem_Click(object sender, EventArgs e) {
             FrmListadoFormaPago form = new FrmListadoFormaPago();
             form.Show();
+        }
+
+        private void PaiseseAM_menu_Click(object sender, EventArgs e)
+        {
+            FrmPaisAM frm = new FrmPaisAM();
+            frm.ShowIngresoPais();
         }       
         
 
