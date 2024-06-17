@@ -39,8 +39,8 @@ namespace TurApp.db
 
         public Agencia AgenciaObj {
             get {
-                if(_agencia == null && _cod_agencia != 0 )
-                    _agencia = Agencia.FindByKeyStatic(_cod_agencia)
+                if (_agencia == null && _cod_agencia != 0)
+                    _agencia = Agencia.FindByKeyStatic(_cod_agencia);
                 return _agencia;
             }
         }

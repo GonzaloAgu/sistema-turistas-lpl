@@ -60,15 +60,15 @@
             this.LocCol,
             this.Activo,
             this.Moroso});
-            this.TuristasGrd.Location = new System.Drawing.Point(12, 85);
-            this.TuristasGrd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TuristasGrd.Location = new System.Drawing.Point(9, 69);
+            this.TuristasGrd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TuristasGrd.MultiSelect = false;
             this.TuristasGrd.Name = "TuristasGrd";
             this.TuristasGrd.ReadOnly = true;
             this.TuristasGrd.RowTemplate.Height = 24;
             this.TuristasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TuristasGrd.ShowEditingIcon = false;
-            this.TuristasGrd.Size = new System.Drawing.Size(1101, 473);
+            this.TuristasGrd.Size = new System.Drawing.Size(826, 384);
             this.TuristasGrd.TabIndex = 0;
             this.TuristasGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuristasGrd_CellContentClick);
             this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
@@ -125,30 +125,30 @@
             // 
             this.groupBox1.Controls.Add(this.ApellidoTxt);
             this.groupBox1.Controls.Add(this.NombreChk);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(303, 52);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(227, 42);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // ApellidoTxt
             // 
             this.ApellidoTxt.Enabled = false;
-            this.ApellidoTxt.Location = new System.Drawing.Point(92, 18);
-            this.ApellidoTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ApellidoTxt.Location = new System.Drawing.Point(69, 15);
+            this.ApellidoTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ApellidoTxt.Name = "ApellidoTxt";
-            this.ApellidoTxt.Size = new System.Drawing.Size(193, 22);
+            this.ApellidoTxt.Size = new System.Drawing.Size(146, 20);
             this.ApellidoTxt.TabIndex = 1;
             // 
             // NombreChk
             // 
             this.NombreChk.AutoSize = true;
-            this.NombreChk.Location = new System.Drawing.Point(5, 21);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NombreChk.Location = new System.Drawing.Point(4, 17);
+            this.NombreChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NombreChk.Name = "NombreChk";
-            this.NombreChk.Size = new System.Drawing.Size(80, 21);
+            this.NombreChk.Size = new System.Drawing.Size(63, 17);
             this.NombreChk.TabIndex = 0;
             this.NombreChk.Text = "Nombre";
             this.NombreChk.UseVisualStyleBackColor = true;
@@ -156,10 +156,10 @@
             // 
             // FiltroBtn
             // 
-            this.FiltroBtn.Location = new System.Drawing.Point(959, 22);
-            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FiltroBtn.Location = new System.Drawing.Point(719, 18);
+            this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FiltroBtn.Name = "FiltroBtn";
-            this.FiltroBtn.Size = new System.Drawing.Size(101, 39);
+            this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
             this.FiltroBtn.TabIndex = 2;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
@@ -169,11 +169,11 @@
             // 
             this.groupBox3.Controls.Add(this.PaisCbo);
             this.groupBox3.Controls.Add(this.PaisChk);
-            this.groupBox3.Location = new System.Drawing.Point(358, 12);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(268, 10);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(300, 50);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(225, 41);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
@@ -183,20 +183,20 @@
             this.PaisCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisCbo.Enabled = false;
             this.PaisCbo.FormattingEnabled = true;
-            this.PaisCbo.Location = new System.Drawing.Point(120, 18);
-            this.PaisCbo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PaisCbo.Location = new System.Drawing.Point(90, 15);
+            this.PaisCbo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PaisCbo.Name = "PaisCbo";
-            this.PaisCbo.Size = new System.Drawing.Size(152, 24);
+            this.PaisCbo.Size = new System.Drawing.Size(115, 21);
             this.PaisCbo.TabIndex = 1;
             this.PaisCbo.ValueMember = "Nombre";
             // 
             // PaisChk
             // 
             this.PaisChk.AutoSize = true;
-            this.PaisChk.Location = new System.Drawing.Point(13, 18);
-            this.PaisChk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PaisChk.Location = new System.Drawing.Point(10, 15);
+            this.PaisChk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PaisChk.Name = "PaisChk";
-            this.PaisChk.Size = new System.Drawing.Size(57, 21);
+            this.PaisChk.Size = new System.Drawing.Size(46, 17);
             this.PaisChk.TabIndex = 0;
             this.PaisChk.Text = "Pais";
             this.PaisChk.UseVisualStyleBackColor = true;
@@ -205,10 +205,9 @@
             // ExportarBtn
             // 
             this.ExportarBtn.Enabled = false;
-            this.ExportarBtn.Location = new System.Drawing.Point(981, 564);
-            this.ExportarBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExportarBtn.Location = new System.Drawing.Point(736, 458);
             this.ExportarBtn.Name = "ExportarBtn";
-            this.ExportarBtn.Size = new System.Drawing.Size(112, 32);
+            this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
             this.ExportarBtn.TabIndex = 7;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
@@ -216,15 +215,15 @@
             // 
             // FrmListadoTuristas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 607);
+            this.ClientSize = new System.Drawing.Size(860, 493);
             this.Controls.Add(this.ExportarBtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TuristasGrd);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FrmListadoTuristas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -176,6 +176,12 @@
     <Compile Include="Views\Agencias\FrmAgenciaList.Designer.cs">
       <DependentUpon>FrmAgenciaList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Agencias\FrmListadoAgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmListadoAgencia.Designer.cs">
+      <DependentUpon>FrmListadoAgencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Common\CommonView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Agencias\FrmAgenciaList.resx">
       <DependentUpon>FrmAgenciaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Agencias\FrmListadoAgencia.resx">
+      <DependentUpon>FrmListadoAgencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CtlCargaInfo.resx">
       <DependentUpon>CtlCargaInfo.cs</DependentUpon>
