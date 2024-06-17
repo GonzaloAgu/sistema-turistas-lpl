@@ -251,6 +251,12 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Paises\FrmPaisAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paises\FrmPaisAM.Designer.cs">
+      <DependentUpon>FrmPaisAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Turista\FrmListadoTuristas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paises\FrmPaisAM.resx">
+      <DependentUpon>FrmPaisAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,7 +415,6 @@
     <Folder Include="Script\" />
     <Folder Include="Views\Detinos\" />
     <Folder Include="Views\Facturas\" />
-    <Folder Include="Views\Paises\" />
     <Folder Include="Views\Paquete\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
