@@ -100,7 +100,7 @@
             this.Turistas_mnu_top.Size = new System.Drawing.Size(59, 20);
             this.Turistas_mnu_top.Tag = "AltaTurista,ModificaTurista,ConsultaTurista";
             this.Turistas_mnu_top.Text = "Turistas";
-            this.Turistas_mnu_top.Click += new System.EventHandler(this.Turistas_mnu_top_Click);
+
             // 
             // TuristaAM_mnu
             // 
@@ -184,6 +184,7 @@
             this.LocalidadAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.LocalidadAM_mnu.Tag = "AltaLocalidad";
             this.LocalidadAM_mnu.Text = "Ingreso";
+            this.LocalidadAM_mnu.Click += new System.EventHandler(this.LocalidadAM_mnu_Click);
             // 
             // BuscarLocalidad_mnu
             // 
@@ -191,6 +192,7 @@
             this.BuscarLocalidad_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarLocalidad_mnu.Tag = "ModificaLocalidad,ConsultaLocalidad";
             this.BuscarLocalidad_mnu.Text = "Buscar";
+            this.BuscarLocalidad_mnu.Click += new System.EventHandler(this.BuscarLocalidad_mnu_Click);
             // 
             // Actividad_mnu_top
             // 
@@ -330,6 +332,7 @@
             this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.localidadesToolStripMenuItem1.Tag = "ConsultaLocalidad";
             this.localidadesToolStripMenuItem1.Text = "Localidades";
+            this.localidadesToolStripMenuItem1.Click += new System.EventHandler(this.ListadoLocalidadesMnu_Click);
             // 
             // ActividadesToolStripMenuItem1
             // 
