@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.Text;  
 using System.Windows.Forms;
 using System.Configuration;
 
@@ -183,10 +183,36 @@ namespace TurApp.Views
             //new FrmActividad().Show();
         }
 
-        private void Turistas_mnu_top_Click(object sender, EventArgs e)
-        {
+   
 
-        }       
-        
+
+
+        //////////////////
+
+        private void LocalidadAM_mnu_Click(object sender, EventArgs e)
+        {
+            /*MainView.Instance.Cursor = Cursors.WaitCursor;
+            FrmLocalidadAM frm = new FrmLocalidadAM();
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);
+            frm.ShowIngresoLocalidad(this);*/
+            FrmLocalidadAM frmListLoc = new FrmLocalidadAM();
+            frmListLoc.Show();
+            frmListLoc.OperacionForm = FrmOperacion.frmAlta;
+        }
+
+        private void ListadoLocalidadesMnu_Click(object sender, EventArgs e)
+        {
+            FrmListadoLocalidades frmListLoc = new FrmListadoLocalidades();
+            frmListLoc.Show();
+        }
+
+        private void BuscarLocalidad_mnu_Click(object sender, EventArgs e)
+        {
+            MainView.Instance.Cursor = Cursors.WaitCursor;
+            FrmLocalidadBusq frm = new FrmLocalidadBusq();
+            frm.ShowBuscar();
+        }
+
+
     }
 }
