@@ -241,6 +241,11 @@ namespace TurApp.Views
         private void FormaPagosToolStripMenuItem_Click(object sender, EventArgs e) {
             FrmListadoFormaPago form = new FrmListadoFormaPago();
             form.Show();
+        }
+
+        private void Facturar_mnu_top_Click(object sender, EventArgs e) {
+            FrmFacturar form = new FrmFacturar();
+            form.Show();
         }       
         
 

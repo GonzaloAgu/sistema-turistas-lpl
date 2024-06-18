@@ -100,7 +100,6 @@
             this.Turistas_mnu_top.Size = new System.Drawing.Size(59, 20);
             this.Turistas_mnu_top.Tag = "AltaTurista,ModificaTurista,ConsultaTurista";
             this.Turistas_mnu_top.Text = "Turistas";
-
             // 
             // TuristaAM_mnu
             // 
@@ -281,7 +280,7 @@
             // ingresoToolStripMenuItem
             // 
             this.ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
-            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.ingresoToolStripMenuItem.Tag = "AltaFormaPago";
             this.ingresoToolStripMenuItem.Text = "Ingreso";
             this.ingresoToolStripMenuItem.Click += new System.EventHandler(this.IngresoFormaPago_Click);
@@ -289,7 +288,7 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.buscarToolStripMenuItem.Tag = "ModificaFormaPago,ConsultaFormaPago";
             this.buscarToolStripMenuItem.Text = "Buscar";
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.BuscarFormasPago_Click);
@@ -313,7 +312,7 @@
             // TuristasToolStripMenuItem
             // 
             this.TuristasToolStripMenuItem.Name = "TuristasToolStripMenuItem";
-            this.TuristasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.TuristasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.TuristasToolStripMenuItem.Tag = "ConsultaTurista";
             this.TuristasToolStripMenuItem.Text = "Turistas";
             this.TuristasToolStripMenuItem.Click += new System.EventHandler(this.ListadoTuristaMnu_Click);
@@ -321,7 +320,7 @@
             // AgenciasToolStripMenuItem
             // 
             this.AgenciasToolStripMenuItem.Name = "AgenciasToolStripMenuItem";
-            this.AgenciasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AgenciasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.AgenciasToolStripMenuItem.Tag = "ConsultaAgencia";
             this.AgenciasToolStripMenuItem.Text = "Agencia";
             this.AgenciasToolStripMenuItem.Click += new System.EventHandler(this.ListadoAgencias_Click);
@@ -329,7 +328,7 @@
             // localidadesToolStripMenuItem1
             // 
             this.localidadesToolStripMenuItem1.Name = "localidadesToolStripMenuItem1";
-            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.localidadesToolStripMenuItem1.Tag = "ConsultaLocalidad";
             this.localidadesToolStripMenuItem1.Text = "Localidades";
             this.localidadesToolStripMenuItem1.Click += new System.EventHandler(this.ListadoLocalidadesMnu_Click);
@@ -337,7 +336,7 @@
             // ActividadesToolStripMenuItem1
             // 
             this.ActividadesToolStripMenuItem1.Name = "ActividadesToolStripMenuItem1";
-            this.ActividadesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ActividadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.ActividadesToolStripMenuItem1.Tag = "ConsultaActividad";
             this.ActividadesToolStripMenuItem1.Text = "Actividades";
             this.ActividadesToolStripMenuItem1.Click += new System.EventHandler(this.ListadoActividades_Click);
@@ -345,7 +344,7 @@
             // FormaPagosToolStripMenuItem
             // 
             this.FormaPagosToolStripMenuItem.Name = "FormaPagosToolStripMenuItem";
-            this.FormaPagosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.FormaPagosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.FormaPagosToolStripMenuItem.Tag = "ConsultaFormaPago";
             this.FormaPagosToolStripMenuItem.Text = "FormaPagos";
             this.FormaPagosToolStripMenuItem.Click += new System.EventHandler(this.FormaPagosToolStripMenuItem_Click);
@@ -353,21 +352,21 @@
             // auditoriaToolStripMenuItem
             // 
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.auditoriaToolStripMenuItem.Tag = "ConsultaAuditoria";
             this.auditoriaToolStripMenuItem.Text = "Auditoria";
             // 
             // PaqueteToolStripMenuItem
             // 
             this.PaqueteToolStripMenuItem.Name = "PaqueteToolStripMenuItem";
-            this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.PaqueteToolStripMenuItem.Tag = "ConsultaPaquete";
             this.PaqueteToolStripMenuItem.Text = "Paquete";
             // 
             // TipoActividadToolStripMenuItem1
             // 
             this.TipoActividadToolStripMenuItem1.Name = "TipoActividadToolStripMenuItem1";
-            this.TipoActividadToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.TipoActividadToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.TipoActividadToolStripMenuItem1.Tag = "ConsultaTipoActividad";
             this.TipoActividadToolStripMenuItem1.Text = "Tipo Actividad";
             // 
@@ -377,6 +376,7 @@
             this.Facturar_mnu_top.Size = new System.Drawing.Size(62, 20);
             this.Facturar_mnu_top.Tag = "Facturar";
             this.Facturar_mnu_top.Text = "Facturar";
+            this.Facturar_mnu_top.Click += new System.EventHandler(this.Facturar_mnu_top_Click);
             // 
             // AcercaDe_mnu
             // 
