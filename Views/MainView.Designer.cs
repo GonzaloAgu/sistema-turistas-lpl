@@ -100,7 +100,6 @@
             this.Turistas_mnu_top.Size = new System.Drawing.Size(59, 20);
             this.Turistas_mnu_top.Tag = "AltaTurista,ModificaTurista,ConsultaTurista";
             this.Turistas_mnu_top.Text = "Turistas";
-
             // 
             // TuristaAM_mnu
             // 
@@ -236,6 +235,7 @@
             this.PaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.PaqueteAM_mnu.Tag = "AltaPaquete";
             this.PaqueteAM_mnu.Text = "Ingreso";
+            this.PaqueteAM_mnu.Click += new System.EventHandler(this.PaqueteAM_mnu_Click);
             // 
             // BuscarPaquete_mnu
             // 
@@ -243,6 +243,7 @@
             this.BuscarPaquete_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarPaquete_mnu.Tag = "ModificaPaquete,ConsultaPaquete";
             this.BuscarPaquete_mnu.Text = "Buscar";
+            this.BuscarPaquete_mnu.Click += new System.EventHandler(this.BuscarPaquete_mnu_Click);
             // 
             // TipoPaquete_mnu_top
             // 
@@ -281,7 +282,7 @@
             // ingresoToolStripMenuItem
             // 
             this.ingresoToolStripMenuItem.Name = "ingresoToolStripMenuItem";
-            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresoToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.ingresoToolStripMenuItem.Tag = "AltaFormaPago";
             this.ingresoToolStripMenuItem.Text = "Ingreso";
             this.ingresoToolStripMenuItem.Click += new System.EventHandler(this.IngresoFormaPago_Click);
@@ -289,7 +290,7 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.buscarToolStripMenuItem.Tag = "ModificaFormaPago,ConsultaFormaPago";
             this.buscarToolStripMenuItem.Text = "Buscar";
             this.buscarToolStripMenuItem.Click += new System.EventHandler(this.BuscarFormasPago_Click);
@@ -363,6 +364,7 @@
             this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.PaqueteToolStripMenuItem.Tag = "ConsultaPaquete";
             this.PaqueteToolStripMenuItem.Text = "Paquete";
+            this.PaqueteToolStripMenuItem.Click += new System.EventHandler(this.PaqueteToolStripMenuItem_Click);
             // 
             // TipoActividadToolStripMenuItem1
             // 

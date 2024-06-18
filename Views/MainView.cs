@@ -241,8 +241,25 @@ namespace TurApp.Views
         private void FormaPagosToolStripMenuItem_Click(object sender, EventArgs e) {
             FrmListadoFormaPago form = new FrmListadoFormaPago();
             form.Show();
-        }       
-        
+        }
+
+        private void PaqueteAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmPaqueteAM form = new FrmPaqueteAM();
+            form.ShowIngresoPaquete();
+        }
+
+        private void BuscarPaquete_mnu_Click(object sender, EventArgs e)
+        {
+            FrmPaqueteBusq form = new FrmPaqueteBusq();
+            form.Show();
+        }
+
+        private void PaqueteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoPaquetes form = new FrmListadoPaquetes();
+            form.Show();
+        }
 
     }
 }

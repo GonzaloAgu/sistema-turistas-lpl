@@ -221,11 +221,59 @@
     <Compile Include="Views\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Localidades\FrmListadoLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmListadoLocalidades.Designer.cs">
+      <DependentUpon>FrmListadoLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmLocalidadAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmLocalidadAM.Designer.cs">
+      <DependentUpon>FrmLocalidadAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmLocalidadBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmLocalidadBusq.Designer.cs">
+      <DependentUpon>FrmLocalidadBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmLocalidadList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Localidades\FrmLocalidadList.Designer.cs">
+      <DependentUpon>FrmLocalidadList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmListadoPaquetes.Designer.cs">
+      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteAM.Designer.cs">
+      <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteList.Designer.cs">
+      <DependentUpon>FrmPaqueteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteBusq.Designer.cs">
+      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Turista\FrmListadoTuristas.cs">
       <SubType>Form</SubType>
@@ -303,8 +351,32 @@
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Localidades\FrmListadoLocalidades.resx">
+      <DependentUpon>FrmListadoLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Localidades\FrmLocalidadAM.resx">
+      <DependentUpon>FrmLocalidadAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Localidades\FrmLocalidadBusq.resx">
+      <DependentUpon>FrmLocalidadBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Localidades\FrmLocalidadList.resx">
+      <DependentUpon>FrmLocalidadList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
+      <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteAM.resx">
+      <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteList.resx">
+      <DependentUpon>FrmPaqueteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteBusq.resx">
+      <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>
@@ -370,9 +442,7 @@
     <Folder Include="Script\" />
     <Folder Include="Views\Detinos\" />
     <Folder Include="Views\Facturas\" />
-    <Folder Include="Views\Localidades\" />
     <Folder Include="Views\Paises\" />
-    <Folder Include="Views\Paquete\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
