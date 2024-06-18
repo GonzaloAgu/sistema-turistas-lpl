@@ -263,6 +263,7 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +287,31 @@
     </Compile>
     <Compile Include="Views\Paquete\FrmPaqueteBusq.Designer.cs">
       <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+=======
+    <Compile Include="Views\TiposActividad\FrmListadoTipoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmListadoTipoActividad.Designer.cs">
+      <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmTipoActividadList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmTipoActividadList.Designer.cs">
+      <DependentUpon>FrmTipoActividadList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmTipoActividadBusq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmTipoActividadBusq.Designer.cs">
+      <DependentUpon>FrmTipoActividadBusq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmTipoActividadAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TiposActividad\FrmTipoActividadAM.Designer.cs">
+      <DependentUpon>FrmTipoActividadAM.cs</DependentUpon>
+>>>>>>> develop
     </Compile>
     <Compile Include="Views\Turista\FrmListadoTuristas.cs">
       <SubType>Form</SubType>
@@ -396,6 +422,7 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
       <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +434,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Paquete\FrmPaqueteBusq.resx">
       <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Views\TiposActividad\FrmListadoTipoActividad.resx">
+      <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TiposActividad\FrmTipoActividadAM.resx">
+      <DependentUpon>FrmTipoActividadAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TiposActividad\FrmTipoActividadBusq.resx">
+      <DependentUpon>FrmTipoActividadBusq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TiposActividad\FrmTipoActividadList.resx">
+      <DependentUpon>FrmTipoActividadList.cs</DependentUpon>
+>>>>>>> develop
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>

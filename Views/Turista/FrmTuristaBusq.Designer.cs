@@ -147,7 +147,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Turista...";
             this.Activated += new System.EventHandler(this.FrmTuristaBusq_Activated);
-            this.Load += new System.EventHandler(this.FrmActividadBusq_Load);
+            // ************this.Load += new System.EventHandler(this.FrmActividadBusq_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
