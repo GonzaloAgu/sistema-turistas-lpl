@@ -66,6 +66,8 @@
             this.AcercaDe_mnu = new System.Windows.Forms.ToolStripMenuItem();
             this.status = new System.Windows.Forms.StatusStrip();
             this.StatusInfoUser = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Paises_mnu_top = new System.Windows.Forms.ToolStripMenuItem();
+            this.PaiseseAM_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.status.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +80,7 @@
             this.TipoActividad_mnu_top,
             this.Localidades_mnu_top,
             this.Actividad_mnu_top,
+            this.Paises_mnu_top,
             this.Paquetes_mnu_top,
             this.TipoPaquete_mnu_top,
             this.FormaPagoToolStripMenuItem,
@@ -104,7 +107,7 @@
             // TuristaAM_mnu
             // 
             this.TuristaAM_mnu.Name = "TuristaAM_mnu";
-            this.TuristaAM_mnu.Size = new System.Drawing.Size(118, 22);
+            this.TuristaAM_mnu.Size = new System.Drawing.Size(152, 22);
             this.TuristaAM_mnu.Tag = "AltaTurista";
             this.TuristaAM_mnu.Text = "Ingreso";
             this.TuristaAM_mnu.Click += new System.EventHandler(this.IngresoTuristaMnu_Click);
@@ -112,7 +115,7 @@
             // BuscarTuristaMnu
             // 
             this.BuscarTuristaMnu.Name = "BuscarTuristaMnu";
-            this.BuscarTuristaMnu.Size = new System.Drawing.Size(118, 22);
+            this.BuscarTuristaMnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarTuristaMnu.Tag = "ModificaTurista,ConsultaTurista";
             this.BuscarTuristaMnu.Text = "Buscar...";
             this.BuscarTuristaMnu.Click += new System.EventHandler(this.BuscarTuristaMnu_Click);
@@ -235,6 +238,7 @@
             this.PaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.PaqueteAM_mnu.Tag = "AltaPaquete";
             this.PaqueteAM_mnu.Text = "Ingreso";
+            this.PaqueteAM_mnu.Click += new System.EventHandler(this.PaqueteAM_mnu_Click);
             // 
             // BuscarPaquete_mnu
             // 
@@ -242,6 +246,7 @@
             this.BuscarPaquete_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarPaquete_mnu.Tag = "ModificaPaquete,ConsultaPaquete";
             this.BuscarPaquete_mnu.Text = "Buscar";
+            this.BuscarPaquete_mnu.Click += new System.EventHandler(this.BuscarPaquete_mnu_Click);
             // 
             // TipoPaquete_mnu_top
             // 
@@ -362,6 +367,7 @@
             this.PaqueteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.PaqueteToolStripMenuItem.Tag = "ConsultaPaquete";
             this.PaqueteToolStripMenuItem.Text = "Paquete";
+            this.PaqueteToolStripMenuItem.Click += new System.EventHandler(this.PaqueteToolStripMenuItem_Click);
             // 
             // TipoActividadToolStripMenuItem1
             // 
@@ -399,6 +405,23 @@
             // 
             this.StatusInfoUser.Name = "StatusInfoUser";
             this.StatusInfoUser.Size = new System.Drawing.Size(0, 17);
+            // 
+            // Paises_mnu_top
+            // 
+            this.Paises_mnu_top.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PaiseseAM_menu});
+            this.Paises_mnu_top.Name = "Paises_mnu_top";
+            this.Paises_mnu_top.Size = new System.Drawing.Size(51, 20);
+            this.Paises_mnu_top.Tag = "AltaPais";
+            this.Paises_mnu_top.Text = "Paises";
+            // 
+            // PaiseseAM_menu
+            // 
+            this.PaiseseAM_menu.Name = "PaiseseAM_menu";
+            this.PaiseseAM_menu.Size = new System.Drawing.Size(152, 22);
+            this.PaiseseAM_menu.Tag = "AltaPais";
+            this.PaiseseAM_menu.Text = "Ingreso";
+            this.PaiseseAM_menu.Click += new System.EventHandler(this.PaiseseAM_menu_Click);
             // 
             // MainView
             // 
@@ -467,6 +490,8 @@
         private System.Windows.Forms.ToolStripMenuItem ingresoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TipoActividadToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem Paises_mnu_top;
+        private System.Windows.Forms.ToolStripMenuItem PaiseseAM_menu;
 
     }
 }
