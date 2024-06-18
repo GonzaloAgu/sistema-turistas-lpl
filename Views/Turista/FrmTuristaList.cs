@@ -120,5 +120,7 @@ namespace TurApp.Views
                 direction == ListSortDirection.Ascending ?
                 SortOrder.Ascending : SortOrder.Descending;
         }
+
+        
     }
 }

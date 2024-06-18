@@ -97,9 +97,7 @@ namespace TurApp.Views
             MainView.Instance.Cursor = Cursors.Default;
         }
 
-        private void FrmActividadBusq_Load(object sender, EventArgs e) {
-
-        }
+      
 
     }
 }

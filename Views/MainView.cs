@@ -33,7 +33,7 @@ namespace TurApp.Views
             StatusInfoUser.Text = String.Format("Usuario: {0} - {1}", _usuarioActual.UsuarioName, _usuarioActual.FechaLogin); ;
             // mostrar los permisos del usuario en base a los roles, leer cada permiso.
             // Recorrer cada item de Menu, para verificar primero los grupos  y luego cada opcion.
-            var list = this.menuStrip1.Items.Cast < ToolStripMenuItem>().ToList().Where(t=> t.Name.IndexOf("mnu_top") != -1);
+            var list = this.menuStrip1.Items.Cast < ToolStripMenuItem>().ToList().Where(t=> t.Name.IndexOf("1mnu_top") != -1);
             List<Funcion> listFuncUser = UsuarioActual.ListadoFunciones;
             bool prmOK=false;
             foreach (var item in list)
@@ -212,7 +212,44 @@ namespace TurApp.Views
         private void FormaPagosToolStripMenuItem_Click(object sender, EventArgs e) {
             FrmListadoFormaPago form = new FrmListadoFormaPago();
             form.Show();
-        }       
+        }
+
+        private void TipoActivAM_mnu_Click(object sender, EventArgs e)
+        {
+            MainView.Instance.Cursor = Cursors.WaitCursor;  // convierte el cursor en un reloj de arena
+            FrmTipoActividadAM frm = new FrmTipoActividadAM();  // genera el formulario de ingreso de turista
+            frm.DoCompleteOperationForm += new FormEvent(frm_DoCompleteOperationForm);  // cuando el formulario frm se complete, esto llama al metodo frm_DoCompleteOperationForm que genera un cartelito de "operacion exitosa"
+            frm.ShowIngresoTipoActividad(this);   // hace que el formulario de turista se muestre. se pasa como parámetro el formulario general (this), no se bien por qué
+        }
+
+        private void BuscarTipoAct_mnu_Click(object sender, EventArgs e)
+        {
+ 
+            MainView.Instance.Cursor = Cursors.WaitCursor;
+            FrmTipoActividadBusq frm = new FrmTipoActividadBusq();
+            frm.ShowBuscar();
+        
+
+        }
+/*
+            private void ListadoTipoActividadMnu_Click(object sender, EventArgs e)
+        {
+            //FrmListadoTuristas frmListPac = new FrmListadoTuristas();
+            FrmListadoActividad frmListPac = new FrmListadoActividad();
+            frmListPac.Show();
+        }
+
+  */          private void TipoActividadToolStripMenuItem1_Click(object sender, EventArgs e)
+            {
+                FrmListadoTipoActividad frmListPac = new FrmListadoTipoActividad();
+                frmListPac.Show();
+            }
+
+
+
+
+      
+
         
     }
 }
