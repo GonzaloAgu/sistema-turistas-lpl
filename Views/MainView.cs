@@ -243,13 +243,11 @@ namespace TurApp.Views
             form.Show();
         }
 
-<<<<<<< HEAD
         private void Facturar_mnu_top_Click(object sender, EventArgs e) {
             FrmFacturar form = new FrmFacturar();
             form.Show();
         }       
         
-=======
         private void PaqueteAM_mnu_Click(object sender, EventArgs e)
         {
             FrmPaqueteAM form = new FrmPaqueteAM();
@@ -267,7 +265,5 @@ namespace TurApp.Views
             FrmListadoPaquetes form = new FrmListadoPaquetes();
             form.Show();
         }
->>>>>>> 61ebd604be11bddb9267de300ba4ac2e4148272d
-
     }
 }
