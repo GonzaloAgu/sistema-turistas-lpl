@@ -35,11 +35,11 @@ namespace TurApp.Views
             // Recorrer cada item de Menu, para verificar primero los grupos  y luego cada opcion.
             var list = this.menuStrip1.Items.Cast < ToolStripMenuItem>().ToList().Where(t=> t.Name.IndexOf("mnu_top") != -1);
             List<Funcion> listFuncUser = UsuarioActual.ListadoFunciones;
-            bool prmOK=false;
+            bool prmOK=true;
             foreach (var item in list)
 	        {
                 // verificar el permiso puede incluir listado hacer split.
-                prmOK = false;
+                prmOK = true;
                 string perm = item.Tag.ToString();
                 string[] listFunciones = perm.Split(',');
                 for (int i = 0; i < listFunciones.Length; i++)
@@ -53,7 +53,7 @@ namespace TurApp.Views
                                 
                 foreach (var subitm in list_subitm)
                 {
-                    prmOK = false;
+                    prmOK = true;
                     string permsub = subitm.Tag.ToString();
                     string[] listFuncionesSub = permsub.Split(',');
                     for (int i = 0; i < listFuncionesSub.Length; i++)

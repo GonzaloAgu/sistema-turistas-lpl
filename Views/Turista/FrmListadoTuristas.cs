@@ -61,8 +61,9 @@ namespace TurApp.Views
         private void TuristasGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow rw in this.TuristasGrd.Rows)
-            {                
-                rw.Cells[3].Value = (rw.DataBoundItem as Turista).PaisObj.Nombre;
+            {
+                rw.Cells[1].Value = (rw.DataBoundItem as Turista).Nombre;
+                rw.Cells[2].Value = (rw.DataBoundItem as Turista).PaisObj.Nombre;
             }
         }
 
