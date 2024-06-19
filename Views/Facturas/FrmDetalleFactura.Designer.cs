@@ -29,7 +29,7 @@
             this.PaqueteCbo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.anadirBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cancelarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,21 +90,22 @@
             this.anadirBtn.UseVisualStyleBackColor = true;
             this.anadirBtn.Click += new System.EventHandler(this.anadirBtn_Click);
             // 
-            // button2
+            // cancelarBtn
             // 
-            this.button2.Location = new System.Drawing.Point(39, 129);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancelarBtn.Location = new System.Drawing.Point(39, 129);
+            this.cancelarBtn.Name = "cancelarBtn";
+            this.cancelarBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelarBtn.TabIndex = 2;
+            this.cancelarBtn.Text = "Cancelar";
+            this.cancelarBtn.UseVisualStyleBackColor = true;
+            this.cancelarBtn.Click += new System.EventHandler(this.cancelarBtn_Click);
             // 
             // FrmDetalleFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 166);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.anadirBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDetalleFactura";
@@ -124,6 +125,6 @@
         private System.Windows.Forms.ComboBox PaqueteCbo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button anadirBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button cancelarBtn;
     }
 }

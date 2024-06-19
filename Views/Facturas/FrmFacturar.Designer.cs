@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.GenerarBtn = new System.Windows.Forms.Button();
             this.AnadirBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cancelarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.factGB.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.FormaPagoCbo.Name = "FormaPagoCbo";
             this.FormaPagoCbo.Size = new System.Drawing.Size(153, 21);
             this.FormaPagoCbo.TabIndex = 3;
+            this.FormaPagoCbo.ValueMember = "Forma";
             // 
             // TuristaCbo
             // 
@@ -165,7 +166,6 @@
             this.GenerarBtn.TabIndex = 4;
             this.GenerarBtn.Text = "Generar factura...";
             this.GenerarBtn.UseVisualStyleBackColor = true;
-            this.GenerarBtn.Click += new System.EventHandler(this.GenerarBtn_Click);
             // 
             // AnadirBtn
             // 
@@ -177,21 +177,22 @@
             this.AnadirBtn.UseVisualStyleBackColor = true;
             this.AnadirBtn.Click += new System.EventHandler(this.AnadirBtn_Click);
             // 
-            // button1
+            // cancelarBtn
             // 
-            this.button1.Location = new System.Drawing.Point(41, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cancelarBtn.Location = new System.Drawing.Point(41, 277);
+            this.cancelarBtn.Name = "cancelarBtn";
+            this.cancelarBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelarBtn.TabIndex = 6;
+            this.cancelarBtn.Text = "Cancelar";
+            this.cancelarBtn.UseVisualStyleBackColor = true;
+            this.cancelarBtn.Click += new System.EventHandler(this.cancelarBtn_Click);
             // 
             // FrmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 312);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.AnadirBtn);
             this.Controls.Add(this.GenerarBtn);
             this.Controls.Add(this.factGB);
@@ -223,6 +224,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button GenerarBtn;
         private System.Windows.Forms.Button AnadirBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cancelarBtn;
     }
 }

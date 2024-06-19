@@ -11,8 +11,10 @@ using TurApp.db;
 namespace TurApp.Views {
     public partial class FrmDetalleFactura : FormBase {
         private FacturaTurista _factura = null;
-        public FrmDetalleFactura(FacturaTurista factura) {
+        private int _renglon;
+        public FrmDetalleFactura(FacturaTurista factura, int renglon) {
             _factura = factura;
+            _renglon = renglon;
             InitializeComponent();
         }
 
@@ -29,10 +31,16 @@ namespace TurApp.Views {
             DetalleFacturaTurista detalle = new DetalleFacturaTurista();
             detalle.CodPaquete = (PaqueteCbo.SelectedValue as Paquete).Codigo;
             detalle.Importe = Int32.Parse(ImporteTxt.Text);
+            detalle.NroRenglon = ++_renglon;
             detalle.NroFactura = _factura.Nro;
             detalle.SerieFactura = _factura.Serie;
             detalle.LetraFactura = _factura.Letra;
             detalle.SaveObj();
+        }
+
+        private void cancelarBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

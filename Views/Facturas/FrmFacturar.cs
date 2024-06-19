@@ -11,6 +11,7 @@ using TurApp.db;
 namespace TurApp.Views {
     public partial class FrmFacturar : FormBase {
         private FacturaTurista _factura = null;
+        private int _renglones = 1;
 
         public FrmFacturar() {
             InitializeComponent();
@@ -41,18 +42,22 @@ namespace TurApp.Views {
 
             }
             
-            FrmDetalleFactura form = new FrmDetalleFactura(_factura);
+            FrmDetalleFactura form = new FrmDetalleFactura(_factura, _renglones);
             form.ShowDialog();
+            _renglones++;
         }
 
         private void FrmFacturar_Load(object sender, EventArgs e) {
             LoadComboBox(Turista.FindAllStatic(null, (t1, t2) => t1.Nombre.CompareTo(t2.Nombre)), TuristaCbo);
-            LoadComboBox(FormaPago.FindAllStatic(null, null), FormaPagoCbo);
+            LoadComboBox(FormaPago.FindAllStatic(null, (f1, f2) => f1.Forma.CompareTo(f2.Forma)), FormaPagoCbo, "Forma");
         }
 
-        private void GenerarBtn_Click(object sender, EventArgs e) {
-            
-            
+        private void cancelarBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+
+        
+
     }
 }
