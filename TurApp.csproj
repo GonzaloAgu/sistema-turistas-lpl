@@ -263,7 +263,6 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,7 +286,7 @@
     </Compile>
     <Compile Include="Views\Paquete\FrmPaqueteBusq.Designer.cs">
       <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
-=======
+	</Compile>
     <Compile Include="Views\TiposActividad\FrmListadoTipoActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,7 +310,6 @@
     </Compile>
     <Compile Include="Views\TiposActividad\FrmTipoActividadAM.Designer.cs">
       <DependentUpon>FrmTipoActividadAM.cs</DependentUpon>
->>>>>>> develop
     </Compile>
     <Compile Include="Views\Turista\FrmListadoTuristas.cs">
       <SubType>Form</SubType>
@@ -422,7 +420,6 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
       <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,7 +431,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Paquete\FrmPaqueteBusq.resx">
       <DependentUpon>FrmPaqueteBusq.cs</DependentUpon>
-=======
+	</EmbeddedResource>
     <EmbeddedResource Include="Views\TiposActividad\FrmListadoTipoActividad.resx">
       <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,7 +443,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TiposActividad\FrmTipoActividadList.resx">
       <DependentUpon>FrmTipoActividadList.cs</DependentUpon>
->>>>>>> develop
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Turista\FrmListadoTuristas.resx">
       <DependentUpon>FrmListadoTuristas.cs</DependentUpon>
