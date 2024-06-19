@@ -297,5 +297,11 @@ namespace TurApp.Views
             FrmListadoPaquetes form = new FrmListadoPaquetes();
             form.Show();
         }
+
+        private void Facturar_mnu_top_Click(object sender, EventArgs e)
+        {
+            FrmFacturar form = new FrmFacturar();
+            form.Show();
+        }
     }
 }
