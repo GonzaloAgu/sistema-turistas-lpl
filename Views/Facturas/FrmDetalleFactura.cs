@@ -31,7 +31,7 @@ namespace TurApp.Views {
             DetalleFacturaTurista detalle = new DetalleFacturaTurista();
             detalle.CodPaquete = (PaqueteCbo.SelectedValue as Paquete).Codigo;
             detalle.Importe = Int32.Parse(ImporteTxt.Text);
-            detalle.NroRenglon = ++_renglon;
+            detalle.NroRenglon = _renglon;
             detalle.NroFactura = _factura.Nro;
             detalle.SerieFactura = _factura.Serie;
             detalle.LetraFactura = _factura.Letra;
