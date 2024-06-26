@@ -102,13 +102,13 @@
             // 
             // ExportarBtn
             // 
-            this.ExportarBtn.Enabled = false;
             this.ExportarBtn.Location = new System.Drawing.Point(220, 269);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
             this.ExportarBtn.TabIndex = 17;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
+            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
             // FrmListadoFormaPago
             // 
