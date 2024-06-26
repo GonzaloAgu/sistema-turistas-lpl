@@ -12,6 +12,7 @@ using System.IO;
 namespace TurApp.Views {
     public partial class FrmListadoFormaPago : FormBase {
         private List<FormaPago> _lista = null;
+        private int _sentido = 1;
 
         public FrmListadoFormaPago() {
             InitializeComponent();
@@ -55,6 +56,18 @@ namespace TurApp.Views {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void FormaPagoGrd_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (_sentido == 1)
+                _sentido = -1;
+            else
+                _sentido = 1;
+
+            int columna = e.ColumnIndex;
+            _lista.Sort((fp1, fp2) => _sentido * fp1.Forma.CompareTo(fp2.Forma));
+            FormaPagoGrd.Refresh();
         }
     }
 }
