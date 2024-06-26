@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.TuristasGrd = new System.Windows.Forms.DataGridView();
+            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LocCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Moroso = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ApellidoTxt = new System.Windows.Forms.TextBox();
+            this.NombreTxt = new System.Windows.Forms.TextBox();
             this.NombreChk = new System.Windows.Forms.CheckBox();
             this.FiltroBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PaisCbo = new System.Windows.Forms.ComboBox();
             this.PaisChk = new System.Windows.Forms.CheckBox();
             this.ExportarBtn = new System.Windows.Forms.Button();
-            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Moroso = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TuristasGrd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,9 +72,47 @@
             this.TuristasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TuristasGrd_DataBindingComplete);
             this.TuristasGrd.DoubleClick += new System.EventHandler(this.TuristasGrd_DoubleClick);
             // 
+            // DniCol
+            // 
+            this.DniCol.DataPropertyName = "NroDocumento";
+            this.DniCol.HeaderText = "Dni";
+            this.DniCol.Name = "DniCol";
+            this.DniCol.ReadOnly = true;
+            // 
+            // NombreCol
+            // 
+            this.NombreCol.HeaderText = "Nombre y apellido";
+            this.NombreCol.Name = "NombreCol";
+            this.NombreCol.ReadOnly = true;
+            this.NombreCol.Width = 250;
+            // 
+            // LocCol
+            // 
+            this.LocCol.HeaderText = "Localidad";
+            this.LocCol.Name = "LocCol";
+            this.LocCol.ReadOnly = true;
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "Activo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            this.Activo.ReadOnly = true;
+            this.Activo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Activo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Moroso
+            // 
+            this.Moroso.DataPropertyName = "Moroso";
+            this.Moroso.HeaderText = "Moroso";
+            this.Moroso.Name = "Moroso";
+            this.Moroso.ReadOnly = true;
+            this.Moroso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Moroso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ApellidoTxt);
+            this.groupBox1.Controls.Add(this.NombreTxt);
             this.groupBox1.Controls.Add(this.NombreChk);
             this.groupBox1.Location = new System.Drawing.Point(9, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -84,14 +122,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // ApellidoTxt
+            // NombreTxt
             // 
-            this.ApellidoTxt.Enabled = false;
-            this.ApellidoTxt.Location = new System.Drawing.Point(69, 15);
-            this.ApellidoTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.ApellidoTxt.Name = "ApellidoTxt";
-            this.ApellidoTxt.Size = new System.Drawing.Size(146, 20);
-            this.ApellidoTxt.TabIndex = 1;
+            this.NombreTxt.Enabled = false;
+            this.NombreTxt.Location = new System.Drawing.Point(69, 15);
+            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.NombreTxt.Name = "NombreTxt";
+            this.NombreTxt.Size = new System.Drawing.Size(146, 20);
+            this.NombreTxt.TabIndex = 1;
             // 
             // NombreChk
             // 
@@ -164,44 +202,6 @@
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
-            // DniCol
-            // 
-            this.DniCol.DataPropertyName = "NroDocumento";
-            this.DniCol.HeaderText = "Dni";
-            this.DniCol.Name = "DniCol";
-            this.DniCol.ReadOnly = true;
-            // 
-            // NombreCol
-            // 
-            this.NombreCol.HeaderText = "Nombre y apellido";
-            this.NombreCol.Name = "NombreCol";
-            this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 250;
-            // 
-            // LocCol
-            // 
-            this.LocCol.HeaderText = "Localidad";
-            this.LocCol.Name = "LocCol";
-            this.LocCol.ReadOnly = true;
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "Activo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            this.Activo.ReadOnly = true;
-            this.Activo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Activo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Moroso
-            // 
-            this.Moroso.DataPropertyName = "Moroso";
-            this.Moroso.HeaderText = "Moroso";
-            this.Moroso.Name = "Moroso";
-            this.Moroso.ReadOnly = true;
-            this.Moroso.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Moroso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // FrmListadoTuristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +231,7 @@
 
         private System.Windows.Forms.DataGridView TuristasGrd;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox ApellidoTxt;
+        private System.Windows.Forms.TextBox NombreTxt;
         private System.Windows.Forms.CheckBox NombreChk;
         private System.Windows.Forms.Button FiltroBtn;
         private System.Windows.Forms.GroupBox groupBox3;

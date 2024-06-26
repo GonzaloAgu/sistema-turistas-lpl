@@ -19,7 +19,7 @@ namespace TurApp.Views {
         }
 
         public override void ConfigurePermiso(PermisoAttribute perm) {
-            //this.ExportarBtn.Enabled = Usuario.HasPermiso("Exportar");
+            this.ExportarBtn.Enabled = Usuario.HasPermiso("Exportar");
         }
 
         private void FrmListadoFormaPago_Load(object sender, EventArgs e) {

@@ -20,13 +20,12 @@ namespace TurApp.Views
 
         public override void ConfigurePermiso(PermisoAttribute perm)
         {
-            //this.ExportarBtn.Enabled = Usuario.HasPermiso("Exportar");
-            ExportarBtn.Enabled = true;
+            this.ExportarBtn.Enabled = Usuario.HasPermiso("Exportar");
         }
 
         private void NombreChk_CheckedChanged(object sender, EventArgs e)
         {
-            this.ApellidoTxt.Enabled = this.NombreChk.Checked;
+            this.NombreTxt.Enabled = this.NombreChk.Checked;
         }
 
         private void FrmListadoTuristas_Load(object sender, EventArgs e)
@@ -46,9 +45,13 @@ namespace TurApp.Views
         {
             //
             string criterio = null;
+
+            if (NombreChk.Checked && NombreTxt.Text != "")
+                criterio = String.Format("nombre ILIKE '%{0}%'", NombreTxt.Text);
             
             if (this.PaisChk.Checked && this.PaisCbo.SelectedIndex != -1)
             {
+                
                 if (criterio != null)
                 {
                     criterio += " and cod_pais = " + (PaisCbo.SelectedValue as Pais).Codigo;
