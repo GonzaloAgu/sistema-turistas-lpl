@@ -19,7 +19,7 @@ namespace TurApp.Views {
         }
 
         private void FrmDetalleFactura_Load(object sender, EventArgs e) {
-            LoadComboBox(Paquete.FindAllStatic(null, null), PaqueteCbo);
+            LoadComboBox(Paquete.FindAllStatic(null, null), PaqueteCbo, "Codigo");
         }
 
         private void anadirBtn_Click(object sender, EventArgs e) {
@@ -35,7 +35,16 @@ namespace TurApp.Views {
             detalle.NroFactura = _factura.Nro;
             detalle.SerieFactura = _factura.Serie;
             detalle.LetraFactura = _factura.Letra;
-            detalle.SaveObj();
+            try
+            {
+                detalle.SaveObj();
+                MessageBox.Show("Operación exitosa", "Detalle agregado a la factura", MessageBoxButtons.OK);
+                Close();
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void cancelarBtn_Click(object sender, EventArgs e)

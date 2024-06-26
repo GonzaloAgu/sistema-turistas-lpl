@@ -38,6 +38,7 @@
             this.GenerarBtn = new System.Windows.Forms.Button();
             this.AnadirBtn = new System.Windows.Forms.Button();
             this.cancelarBtn = new System.Windows.Forms.Button();
+            this.finalizarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.factGB.SuspendLayout();
             this.SuspendLayout();
@@ -159,16 +160,17 @@
             // 
             // GenerarBtn
             // 
-            this.GenerarBtn.Enabled = false;
-            this.GenerarBtn.Location = new System.Drawing.Point(177, 277);
+            this.GenerarBtn.Location = new System.Drawing.Point(41, 231);
             this.GenerarBtn.Name = "GenerarBtn";
             this.GenerarBtn.Size = new System.Drawing.Size(109, 23);
             this.GenerarBtn.TabIndex = 4;
             this.GenerarBtn.Text = "Generar factura...";
             this.GenerarBtn.UseVisualStyleBackColor = true;
+            this.GenerarBtn.Click += new System.EventHandler(this.GenerarBtn_Click);
             // 
             // AnadirBtn
             // 
+            this.AnadirBtn.Enabled = false;
             this.AnadirBtn.Location = new System.Drawing.Point(177, 231);
             this.AnadirBtn.Name = "AnadirBtn";
             this.AnadirBtn.Size = new System.Drawing.Size(109, 23);
@@ -187,18 +189,30 @@
             this.cancelarBtn.UseVisualStyleBackColor = true;
             this.cancelarBtn.Click += new System.EventHandler(this.cancelarBtn_Click);
             // 
+            // finalizarBtn
+            // 
+            this.finalizarBtn.Enabled = false;
+            this.finalizarBtn.Location = new System.Drawing.Point(192, 277);
+            this.finalizarBtn.Name = "finalizarBtn";
+            this.finalizarBtn.Size = new System.Drawing.Size(75, 23);
+            this.finalizarBtn.TabIndex = 7;
+            this.finalizarBtn.Text = "Finalizar";
+            this.finalizarBtn.UseVisualStyleBackColor = true;
+            this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
+            // 
             // FrmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 312);
+            this.Controls.Add(this.finalizarBtn);
             this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.AnadirBtn);
             this.Controls.Add(this.GenerarBtn);
             this.Controls.Add(this.factGB);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmFacturar";
-            this.Text = "FrmFacturar";
+            this.Text = "Generar factura";
             this.Load += new System.EventHandler(this.FrmFacturar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -225,5 +239,6 @@
         private System.Windows.Forms.Button GenerarBtn;
         private System.Windows.Forms.Button AnadirBtn;
         private System.Windows.Forms.Button cancelarBtn;
+        private System.Windows.Forms.Button finalizarBtn;
     }
 }

@@ -109,7 +109,7 @@
             this.Controls.Add(this.anadirBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDetalleFactura";
-            this.Text = "FrmDetalleFactura";
+            this.Text = "Añadir detalle a factura..";
             this.Load += new System.EventHandler(this.FrmDetalleFactura_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

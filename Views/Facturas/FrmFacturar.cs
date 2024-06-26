@@ -18,32 +18,9 @@ namespace TurApp.Views {
         }
 
         private void AnadirBtn_Click(object sender, EventArgs e) {
-            if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1) {
-                MessageBox.Show("Faltan datos por ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (_factura == null) {
-                _factura = new FacturaTurista();
-                _factura.DniTurista = (TuristaCbo.SelectedValue as Turista).NroDocumento;
-                _factura.CodFormaPago = (FormaPagoCbo.SelectedValue as FormaPago).Codigo;
-                _factura.Nro = Int32.Parse(nroFacturaTxt.Text);
-                _factura.Serie = Int32.Parse(nroSerieTxt.Text);
-                _factura.Letra = letraTxt.Text;
-                _factura.Fecha = DateTime.Now;
-
-                try {
-                    _factura.SaveObj();
-                    GenerarBtn.Enabled = true;
-                    MessageBox.Show("Operación exitosa", "Factura generada");
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            
             FrmDetalleFactura form = new FrmDetalleFactura(_factura, _renglones);
             form.ShowDialog();
+            finalizarBtn.Enabled = true;
             _renglones++;
         }
 
@@ -57,7 +34,48 @@ namespace TurApp.Views {
             this.Close();
         }
 
-        
+        private void GenerarBtn_Click(object sender, EventArgs e)
+        {
+            if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Faltan datos por ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (_factura == null)
+            {
+                _factura = new FacturaTurista();
+                _factura.DniTurista = (TuristaCbo.SelectedValue as Turista).NroDocumento;
+                _factura.CodFormaPago = (FormaPagoCbo.SelectedValue as FormaPago).Codigo;
+                _factura.Nro = Int32.Parse(nroFacturaTxt.Text);
+                _factura.Serie = Int32.Parse(nroSerieTxt.Text);
+                _factura.Letra = letraTxt.Text;
+                _factura.Fecha = DateTime.Now;
+
+                try
+                {
+                    if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Faltan datos por ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    _factura.SaveObj();
+                    GenerarBtn.Enabled = false;
+                    AnadirBtn.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void finalizarBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
     }
 }
