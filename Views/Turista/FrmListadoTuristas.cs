@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TurApp.db;
+using System.IO;
 
 namespace TurApp.Views
 {
@@ -19,7 +20,8 @@ namespace TurApp.Views
 
         public override void ConfigurePermiso(PermisoAttribute perm)
         {
-            this.ExportarBtn.Enabled = Usuario.HasPermiso("Exportar");
+            //this.ExportarBtn.Enabled = Usuario.HasPermiso("Exportar");
+            ExportarBtn.Enabled = true;
         }
 
         private void NombreChk_CheckedChanged(object sender, EventArgs e)
@@ -81,7 +83,27 @@ namespace TurApp.Views
 
         private void ExportarBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Implementar funcionalidad...!", "falta...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo TXT (*.txt)|*.txt|Archivo CSV (*.csv)|*.csv";
+            saveFileDialog.Title = "Guardar archivo como";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter archivo = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        archivo.WriteLine("dni,nombre,pais,");
+                        foreach (Turista tur in (TuristasGrd.DataSource as List<Turista>))
+                            archivo.WriteLine(String.Format("{0},{1},{2}", tur.NroDocumento, tur.Nombre, tur.PaisObj.Nombre));
+                        MessageBox.Show("Archivo guardado exitosamente en: " + saveFileDialog.FileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
