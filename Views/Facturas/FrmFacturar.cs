@@ -36,7 +36,7 @@ namespace TurApp.Views {
 
         private void GenerarBtn_Click(object sender, EventArgs e)
         {
-            if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1)
+            if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1 || detallePagoTxt.Text == "")
             {
                 MessageBox.Show("Faltan datos por ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -51,6 +51,7 @@ namespace TurApp.Views {
                 _factura.Serie = Int32.Parse(nroSerieTxt.Text);
                 _factura.Letra = letraTxt.Text;
                 _factura.Fecha = DateTime.Now;
+                _factura.DetallePago = detallePagoTxt.Text;
 
                 try
                 {
@@ -76,6 +77,8 @@ namespace TurApp.Views {
         {
             this.Close();
         }
+
+        
 
     }
 }

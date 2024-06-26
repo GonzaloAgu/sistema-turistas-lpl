@@ -29,6 +29,7 @@
             this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
             this.TuristaCbo = new System.Windows.Forms.ComboBox();
             this.factGB = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.letraTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nroSerieTxt = new System.Windows.Forms.TextBox();
@@ -39,6 +40,7 @@
             this.AnadirBtn = new System.Windows.Forms.Button();
             this.cancelarBtn = new System.Windows.Forms.Button();
             this.finalizarBtn = new System.Windows.Forms.Button();
+            this.detallePagoTxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.factGB.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +98,8 @@
             // 
             // factGB
             // 
+            this.factGB.Controls.Add(this.detallePagoTxt);
+            this.factGB.Controls.Add(this.label6);
             this.factGB.Controls.Add(this.letraTxt);
             this.factGB.Controls.Add(this.label5);
             this.factGB.Controls.Add(this.nroSerieTxt);
@@ -104,10 +108,19 @@
             this.factGB.Controls.Add(this.label3);
             this.factGB.Location = new System.Drawing.Point(12, 107);
             this.factGB.Name = "factGB";
-            this.factGB.Size = new System.Drawing.Size(274, 118);
+            this.factGB.Size = new System.Drawing.Size(274, 184);
             this.factGB.TabIndex = 3;
             this.factGB.TabStop = false;
             this.factGB.Text = "Datos de factura";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 122);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Detalle de pago";
             // 
             // letraTxt
             // 
@@ -160,7 +173,7 @@
             // 
             // GenerarBtn
             // 
-            this.GenerarBtn.Location = new System.Drawing.Point(41, 231);
+            this.GenerarBtn.Location = new System.Drawing.Point(21, 297);
             this.GenerarBtn.Name = "GenerarBtn";
             this.GenerarBtn.Size = new System.Drawing.Size(109, 23);
             this.GenerarBtn.TabIndex = 4;
@@ -171,7 +184,7 @@
             // AnadirBtn
             // 
             this.AnadirBtn.Enabled = false;
-            this.AnadirBtn.Location = new System.Drawing.Point(177, 231);
+            this.AnadirBtn.Location = new System.Drawing.Point(177, 297);
             this.AnadirBtn.Name = "AnadirBtn";
             this.AnadirBtn.Size = new System.Drawing.Size(109, 23);
             this.AnadirBtn.TabIndex = 5;
@@ -181,7 +194,7 @@
             // 
             // cancelarBtn
             // 
-            this.cancelarBtn.Location = new System.Drawing.Point(41, 277);
+            this.cancelarBtn.Location = new System.Drawing.Point(41, 343);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelarBtn.TabIndex = 6;
@@ -192,7 +205,7 @@
             // finalizarBtn
             // 
             this.finalizarBtn.Enabled = false;
-            this.finalizarBtn.Location = new System.Drawing.Point(192, 277);
+            this.finalizarBtn.Location = new System.Drawing.Point(192, 343);
             this.finalizarBtn.Name = "finalizarBtn";
             this.finalizarBtn.Size = new System.Drawing.Size(75, 23);
             this.finalizarBtn.TabIndex = 7;
@@ -200,11 +213,20 @@
             this.finalizarBtn.UseVisualStyleBackColor = true;
             this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
             // 
+            // detallePagoTxt
+            // 
+            this.detallePagoTxt.Location = new System.Drawing.Point(102, 119);
+            this.detallePagoTxt.MaxLength = 90;
+            this.detallePagoTxt.Multiline = true;
+            this.detallePagoTxt.Name = "detallePagoTxt";
+            this.detallePagoTxt.Size = new System.Drawing.Size(153, 47);
+            this.detallePagoTxt.TabIndex = 7;
+            // 
             // FrmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 312);
+            this.ClientSize = new System.Drawing.Size(298, 393);
             this.Controls.Add(this.finalizarBtn);
             this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.AnadirBtn);
@@ -240,5 +262,7 @@
         private System.Windows.Forms.Button AnadirBtn;
         private System.Windows.Forms.Button cancelarBtn;
         private System.Windows.Forms.Button finalizarBtn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox detallePagoTxt;
     }
 }
