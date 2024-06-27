@@ -44,9 +44,8 @@ namespace TurApp.Views
         private void LoadCombos()
         {
             this.PaisCbo.DataSource =  Pais.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
-
-            //this.PaisCbo.DataSource = ORMDB<Localidad>.FindAll(null);
         }
+
         public override FrmOperacion OperacionForm
         {
             get
@@ -61,16 +60,19 @@ namespace TurApp.Views
                 {
                     this.Text = "Ingreso de nuevo Turista...";
                     this.PaisCbo.SelectedIndex = -1;
+                    MisFactBtn.Enabled = false;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
                     this.Text = "Actualizacion de datos de Turista...";
+                    MisFactBtn.Enabled = true;
                     
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
                     this.Text = "Consulta de datos de Turista...";
                     this.GuardarBtn.Visible = false;
+                    MisFactBtn.Enabled = true;
                 }
             }
         }
@@ -117,15 +119,8 @@ namespace TurApp.Views
             // SET CAMPOS DE LOS CONTROLES A LOS ATRIBUTOS
             // leido desde un metodo.
             ReadDataFromForm(this, Turista);
-            /*
-            Turista.NroDocumento = Convert.ToInt32(DniTxt.Text);
-            Turista.Nombre = NombreTxt.Text;            
-            Turista.Domicilio = DomicilioTxt.Text;
-            Turista.CodPais= Convert.ToInt32(PaisCbo.SelectedValue);
-            Turista.Observaciones = ObservacionesTxt.Text;
-            Turista.Telefono = TelefonoTxt.Text;
-             * */
             detalleLog += Newtonsoft.Json.JsonConvert.SerializeObject(Turista);
+
             // intentar guardar en la Base de datos.
             try
             {
@@ -157,10 +152,12 @@ namespace TurApp.Views
         {
             ShowInfoTuristaInForm(Tur_modif, Invoker);
         }
+
         public void ShowModificarTurista(Turista Tur_modif)
         {
             ShowInfoTuristaInForm(Tur_modif, null);
         }
+
         private void ShowInfoTuristaInForm(Turista Tur_modif, FormBase Invoker)
         {
             this.OperacionForm = FrmOperacion.frmModificacion;
@@ -172,12 +169,14 @@ namespace TurApp.Views
             this.CancelarBtn.Click+=new EventHandler(CancelarBtn_Click);
             this.ShowDialog();
         }
+
         public void ShowIngresoTurista(FormBase Invoker)
         {
             this.InvokerForm = Invoker;
             this.OperacionForm = FrmOperacion.frmAlta;
             this.ShowDialog();
         }
+
         public void ShowIngresoTurista()
         {
             this.InvokerForm = null;
@@ -202,7 +201,8 @@ namespace TurApp.Views
 
         private void MisFactBtn_Click(object sender, EventArgs e)
         {
-            // debe mostrar un formulario con un listado de las facturas que se le han hecho al turista
+            FrmFacturasTurista form = new FrmFacturasTurista(_Turista_modif);
+            form.ShowDialog();
         }
 
     }

@@ -29,6 +29,7 @@
             this.FormaPagoCbo = new System.Windows.Forms.ComboBox();
             this.TuristaCbo = new System.Windows.Forms.ComboBox();
             this.factGB = new System.Windows.Forms.GroupBox();
+            this.detallePagoTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.letraTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.AnadirBtn = new System.Windows.Forms.Button();
             this.cancelarBtn = new System.Windows.Forms.Button();
             this.finalizarBtn = new System.Windows.Forms.Button();
-            this.detallePagoTxt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.factGB.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,15 @@
             this.factGB.TabStop = false;
             this.factGB.Text = "Datos de factura";
             // 
+            // detallePagoTxt
+            // 
+            this.detallePagoTxt.Location = new System.Drawing.Point(102, 119);
+            this.detallePagoTxt.MaxLength = 90;
+            this.detallePagoTxt.Multiline = true;
+            this.detallePagoTxt.Name = "detallePagoTxt";
+            this.detallePagoTxt.Size = new System.Drawing.Size(153, 47);
+            this.detallePagoTxt.TabIndex = 7;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -173,9 +182,9 @@
             // 
             // GenerarBtn
             // 
-            this.GenerarBtn.Location = new System.Drawing.Point(21, 297);
+            this.GenerarBtn.Location = new System.Drawing.Point(12, 297);
             this.GenerarBtn.Name = "GenerarBtn";
-            this.GenerarBtn.Size = new System.Drawing.Size(109, 23);
+            this.GenerarBtn.Size = new System.Drawing.Size(100, 23);
             this.GenerarBtn.TabIndex = 4;
             this.GenerarBtn.Text = "Generar factura...";
             this.GenerarBtn.UseVisualStyleBackColor = true;
@@ -194,7 +203,7 @@
             // 
             // cancelarBtn
             // 
-            this.cancelarBtn.Location = new System.Drawing.Point(41, 343);
+            this.cancelarBtn.Location = new System.Drawing.Point(12, 343);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelarBtn.TabIndex = 6;
@@ -205,22 +214,13 @@
             // finalizarBtn
             // 
             this.finalizarBtn.Enabled = false;
-            this.finalizarBtn.Location = new System.Drawing.Point(192, 343);
+            this.finalizarBtn.Location = new System.Drawing.Point(211, 343);
             this.finalizarBtn.Name = "finalizarBtn";
             this.finalizarBtn.Size = new System.Drawing.Size(75, 23);
             this.finalizarBtn.TabIndex = 7;
             this.finalizarBtn.Text = "Finalizar";
             this.finalizarBtn.UseVisualStyleBackColor = true;
             this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
-            // 
-            // detallePagoTxt
-            // 
-            this.detallePagoTxt.Location = new System.Drawing.Point(102, 119);
-            this.detallePagoTxt.MaxLength = 90;
-            this.detallePagoTxt.Multiline = true;
-            this.detallePagoTxt.Name = "detallePagoTxt";
-            this.detallePagoTxt.Size = new System.Drawing.Size(153, 47);
-            this.detallePagoTxt.TabIndex = 7;
             // 
             // FrmFacturar
             // 
