@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +58,31 @@ namespace TurApp.Views {
                 item.Cells["TipoActCol"].Value = actividadObj.TipoActividadObj.Nombre; ;
                 item.Cells["DescripcionCol"].Value = actividadObj.TipoActividadObj.Descripcion;
                 item.Cells["TransporteCol"].Value = actividadObj.TransporteObj.Descripcion;
+            }
+        }
+
+        private void ExportarBtn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo TXT (*.txt)|*.txt|Archivo CSV (*.csv)|*.csv";
+            saveFileDialog.Title = "Guardar archivo como";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter archivo = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        archivo.WriteLine("Codigo,CodigoTipoActividad,CodigoTransporte,");
+                        foreach (Actividad act in (ActividadesGrd.DataSource as List<Actividad>))
+                            archivo.WriteLine(String.Format("{0},{1},{2}", act.Codigo, act.CodTipoActividad, act.CodTransporte));
+                        MessageBox.Show("Archivo guardado exitosamente en: " + saveFileDialog.FileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

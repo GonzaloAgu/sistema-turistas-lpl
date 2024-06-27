@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,7 +94,27 @@ namespace TurApp.Views
 
         private void ExportarBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Implementar funcionalidad...!", "falta...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo TXT (*.txt)|*.txt|Archivo CSV (*.csv)|*.csv";
+            saveFileDialog.Title = "Guardar archivo como";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter archivo = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        archivo.WriteLine("Codigo, Fecha, CodAgencia, CodDestino, CodTipoPaquete, CodTipoPaquete, DniTurista");
+                        foreach (Paquete paq in  (PaquetesGrd.DataSource as List<Paquete>))
+                            archivo.WriteLine(String.Format("{0},{1},{2},{3},{4},{5},{6}", paq.Codigo, paq.Fecha, paq.CodAgencia, paq.CodDestino, paq.CodTipoPaquete, paq.CodTipoPaquete, paq.DniTurista));
+                        MessageBox.Show("Archivo guardado exitosamente en: " + saveFileDialog.FileName);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

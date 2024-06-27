@@ -206,6 +206,7 @@
             this.ExportarBtn.TabIndex = 17;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
+            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
             // FrmListadoAgencia
             // 
