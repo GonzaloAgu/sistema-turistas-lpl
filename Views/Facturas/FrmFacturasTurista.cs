@@ -13,6 +13,7 @@ namespace TurApp.Views
     public partial class FrmFacturasTurista : FormBase
     {
         private Turista _turista;
+
         public FrmFacturasTurista(Turista tur)
         {
             _turista = tur;
@@ -53,9 +54,24 @@ namespace TurApp.Views
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cerrarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void facturasGrd_DoubleClick(object sender, EventArgs e)
+        {
+            if (facturasGrd.SelectedRows.Count != 1)
+                return;
+
+            FacturaTurista fact = facturasGrd.SelectedRows[0].DataBoundItem as FacturaTurista;
+            FrmListaDetalles form = new FrmListaDetalles(fact);
+            form.ShowDialog();
+        }
+
+
+        
+
+        
     }
 }

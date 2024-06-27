@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.facturasGrd = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.facturasGrd = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Letra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FormaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cerrarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturasGrd)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,15 @@
             this.groupBox1.Size = new System.Drawing.Size(880, 358);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 326);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(313, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tip: Doble click en una fila para consultar el detalle de la factura.";
             // 
             // facturasGrd
             // 
@@ -67,28 +76,11 @@
             this.Detalle});
             this.facturasGrd.Location = new System.Drawing.Point(16, 19);
             this.facturasGrd.Name = "facturasGrd";
+            this.facturasGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.facturasGrd.Size = new System.Drawing.Size(846, 268);
             this.facturasGrd.TabIndex = 0;
             this.facturasGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.facturasGrd_DataBindingComplete);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(685, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cerrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 326);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tip: Doble click en una fila para consultar el detalle de la factura.";
+            this.facturasGrd.DoubleClick += new System.EventHandler(this.facturasGrd_DoubleClick);
             // 
             // Numero
             // 
@@ -139,12 +131,22 @@
             this.Detalle.ReadOnly = true;
             this.Detalle.Width = 250;
             // 
+            // cerrarBtn
+            // 
+            this.cerrarBtn.Location = new System.Drawing.Point(785, 376);
+            this.cerrarBtn.Name = "cerrarBtn";
+            this.cerrarBtn.Size = new System.Drawing.Size(75, 23);
+            this.cerrarBtn.TabIndex = 1;
+            this.cerrarBtn.Text = "Cerrar";
+            this.cerrarBtn.UseVisualStyleBackColor = true;
+            this.cerrarBtn.Click += new System.EventHandler(this.cerrarBtn_Click);
+            // 
             // FrmFacturasTurista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 411);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmFacturasTurista";
             this.Text = "Listado de facturas";
@@ -160,7 +162,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView facturasGrd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cerrarBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
