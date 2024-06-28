@@ -34,10 +34,10 @@
             this.NombreLocalidadTxt = new System.Windows.Forms.TextBox();
             this.NombreLocalidadChek = new System.Windows.Forms.CheckBox();
             this.LocalidadesGrd = new System.Windows.Forms.DataGridView();
-            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodPostalCheckBox = new System.Windows.Forms.CheckBox();
             this.CodigoPostalTxt = new System.Windows.Forms.TextBox();
+            this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).BeginInit();
             this.SuspendLayout();
@@ -45,21 +45,21 @@
             // ExportarBtn
             // 
             this.ExportarBtn.Enabled = false;
-            this.ExportarBtn.Location = new System.Drawing.Point(742, 467);
+            this.ExportarBtn.Location = new System.Drawing.Point(477, 467);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 12;
+            this.ExportarBtn.TabIndex = 6;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click_1);
             // 
             // FiltroBtn
             // 
-            this.FiltroBtn.Location = new System.Drawing.Point(721, 16);
+            this.FiltroBtn.Location = new System.Drawing.Point(485, 15);
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 15;
+            this.FiltroBtn.TabIndex = 5;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -73,7 +73,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(227, 42);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // NombreLocalidadTxt
@@ -83,7 +83,7 @@
             this.NombreLocalidadTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NombreLocalidadTxt.Name = "NombreLocalidadTxt";
             this.NombreLocalidadTxt.Size = new System.Drawing.Size(146, 20);
-            this.NombreLocalidadTxt.TabIndex = 1;
+            this.NombreLocalidadTxt.TabIndex = 2;
             // 
             // NombreLocalidadChek
             // 
@@ -92,7 +92,7 @@
             this.NombreLocalidadChek.Margin = new System.Windows.Forms.Padding(2);
             this.NombreLocalidadChek.Name = "NombreLocalidadChek";
             this.NombreLocalidadChek.Size = new System.Drawing.Size(63, 17);
-            this.NombreLocalidadChek.TabIndex = 0;
+            this.NombreLocalidadChek.TabIndex = 1;
             this.NombreLocalidadChek.Text = "Nombre";
             this.NombreLocalidadChek.UseVisualStyleBackColor = true;
             this.NombreLocalidadChek.CheckedChanged += new System.EventHandler(this.NombreLocalidadChek_CheckedChanged);
@@ -113,11 +113,30 @@
             this.LocalidadesGrd.RowTemplate.Height = 24;
             this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocalidadesGrd.ShowEditingIcon = false;
-            this.LocalidadesGrd.Size = new System.Drawing.Size(826, 384);
+            this.LocalidadesGrd.Size = new System.Drawing.Size(550, 384);
             this.LocalidadesGrd.TabIndex = 13;
             this.LocalidadesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LocalidadesGrd_CellContentClick);
             this.LocalidadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.LocalidadesGrd_DataBindingComplete);
             this.LocalidadesGrd.DoubleClick += new System.EventHandler(this.LocalidadesGrd_DoubleClick);
+            // 
+            // CodPostalCheckBox
+            // 
+            this.CodPostalCheckBox.AutoSize = true;
+            this.CodPostalCheckBox.Location = new System.Drawing.Point(249, 24);
+            this.CodPostalCheckBox.Name = "CodPostalCheckBox";
+            this.CodPostalCheckBox.Size = new System.Drawing.Size(91, 17);
+            this.CodPostalCheckBox.TabIndex = 3;
+            this.CodPostalCheckBox.Text = "Codigo Postal";
+            this.CodPostalCheckBox.UseVisualStyleBackColor = true;
+            this.CodPostalCheckBox.CheckedChanged += new System.EventHandler(this.CodPostalCheckBox_CheckedChanged);
+            // 
+            // CodigoPostalTxt
+            // 
+            this.CodigoPostalTxt.Enabled = false;
+            this.CodigoPostalTxt.Location = new System.Drawing.Point(346, 22);
+            this.CodigoPostalTxt.Name = "CodigoPostalTxt";
+            this.CodigoPostalTxt.Size = new System.Drawing.Size(100, 20);
+            this.CodigoPostalTxt.TabIndex = 4;
             // 
             // DniCol
             // 
@@ -132,32 +151,13 @@
             this.NombreCol.HeaderText = "Nombre";
             this.NombreCol.Name = "NombreCol";
             this.NombreCol.ReadOnly = true;
-            this.NombreCol.Width = 150;
-            // 
-            // CodPostalCheckBox
-            // 
-            this.CodPostalCheckBox.AutoSize = true;
-            this.CodPostalCheckBox.Location = new System.Drawing.Point(297, 24);
-            this.CodPostalCheckBox.Name = "CodPostalCheckBox";
-            this.CodPostalCheckBox.Size = new System.Drawing.Size(91, 17);
-            this.CodPostalCheckBox.TabIndex = 16;
-            this.CodPostalCheckBox.Text = "Codigo Postal";
-            this.CodPostalCheckBox.UseVisualStyleBackColor = true;
-            this.CodPostalCheckBox.CheckedChanged += new System.EventHandler(this.CodPostalCheckBox_CheckedChanged);
-            // 
-            // CodigoPostalTxt
-            // 
-            this.CodigoPostalTxt.Enabled = false;
-            this.CodigoPostalTxt.Location = new System.Drawing.Point(394, 22);
-            this.CodigoPostalTxt.Name = "CodigoPostalTxt";
-            this.CodigoPostalTxt.Size = new System.Drawing.Size(100, 20);
-            this.CodigoPostalTxt.TabIndex = 17;
+            this.NombreCol.Width = 400;
             // 
             // FrmListadoLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 505);
+            this.ClientSize = new System.Drawing.Size(579, 505);
             this.Controls.Add(this.CodigoPostalTxt);
             this.Controls.Add(this.CodPostalCheckBox);
             this.Controls.Add(this.FiltroBtn);
@@ -165,7 +165,7 @@
             this.Controls.Add(this.LocalidadesGrd);
             this.Controls.Add(this.ExportarBtn);
             this.Name = "FrmListadoLocalidades";
-            this.Text = "FrmListadoLocalidades";
+            this.Text = "Listado de localidades...";
             this.Load += new System.EventHandler(this.FrmListadoLocalidades_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -57,7 +57,6 @@ namespace TurApp.Views
         private void CodPostalChk_CheckedChanged(object sender, EventArgs e)
         {
             this.CodPostalTxt.Enabled = this.CodPostalChk.Checked;
-            this.NombreLocalidadChk.Enabled = !CodPostalChk.Checked;
         }
 
   
@@ -87,16 +86,15 @@ namespace TurApp.Views
         private void NombreLocalidadChk_CheckedChanged(object sender, EventArgs e)
         {
             this.NombreLocalidadTxt.Enabled = this.NombreLocalidadChk.Checked;
-            this.CodPostalChk.Enabled = !NombreLocalidadChk.Checked;
         }
 
-     
-
-       
-
-        
-
-        
-
+        private void CodPostalTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+               (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }     
+        }
     }
 }

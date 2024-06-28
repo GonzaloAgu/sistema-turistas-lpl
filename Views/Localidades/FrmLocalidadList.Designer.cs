@@ -40,11 +40,11 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(682, 290);
+            this.CerrarBtn.Location = new System.Drawing.Point(324, 284);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 9;
+            this.CerrarBtn.TabIndex = 1;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click_1);
@@ -56,7 +56,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(752, 266);
+            this.groupBox1.Size = new System.Drawing.Size(367, 266);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -80,7 +80,7 @@
             this.LocalidadesGrd.ReadOnly = true;
             this.LocalidadesGrd.RowTemplate.Height = 24;
             this.LocalidadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LocalidadesGrd.Size = new System.Drawing.Size(743, 237);
+            this.LocalidadesGrd.Size = new System.Drawing.Size(350, 237);
             this.LocalidadesGrd.TabIndex = 0;
             this.LocalidadesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LocalidadesGrd_CellContentClick);
             // 
@@ -91,10 +91,11 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Nombre.Width = 130;
+            this.Nombre.Width = 200;
             // 
             // Codigo_Postal
             // 
+            this.Codigo_Postal.DataPropertyName = "Codigo";
             this.Codigo_Postal.HeaderText = "Codigo Postal";
             this.Codigo_Postal.Name = "Codigo_Postal";
             this.Codigo_Postal.ReadOnly = true;
@@ -103,11 +104,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 322);
+            this.ClientSize = new System.Drawing.Size(388, 322);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLocalidadList";
-            this.Text = "FrmLocalidadList";
+            this.Text = "Resultado de búsqueda de localidades...";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LocalidadesGrd)).EndInit();
             this.ResumeLayout(false);

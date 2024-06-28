@@ -40,11 +40,11 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(238, 297);
+            this.CancelarBtn.Location = new System.Drawing.Point(184, 129);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
-            this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
-            this.CancelarBtn.TabIndex = 16;
+            this.CancelarBtn.Size = new System.Drawing.Size(71, 27);
+            this.CancelarBtn.TabIndex = 4;
             this.CancelarBtn.Tag = "odp";
             this.CancelarBtn.Text = "&Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
@@ -52,11 +52,11 @@
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(151, 297);
+            this.GuardarBtn.Location = new System.Drawing.Point(277, 129);
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
-            this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
-            this.GuardarBtn.TabIndex = 15;
+            this.GuardarBtn.Size = new System.Drawing.Size(71, 27);
+            this.GuardarBtn.TabIndex = 5;
             this.GuardarBtn.Text = "&Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
@@ -71,22 +71,22 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(292, 284);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.Size = new System.Drawing.Size(336, 114);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // nombreText
             // 
-            this.nombreText.Location = new System.Drawing.Point(94, 64);
+            this.nombreText.Location = new System.Drawing.Point(85, 32);
             this.nombreText.Name = "nombreText";
-            this.nombreText.Size = new System.Drawing.Size(138, 20);
-            this.nombreText.TabIndex = 20;
+            this.nombreText.Size = new System.Drawing.Size(215, 20);
+            this.nombreText.TabIndex = 2;
             this.nombreText.TextChanged += new System.EventHandler(this.nombreText_TextChanged);
             // 
             // Nombre
             // 
             this.Nombre.AutoSize = true;
-            this.Nombre.Location = new System.Drawing.Point(16, 67);
+            this.Nombre.Location = new System.Drawing.Point(35, 35);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(44, 13);
             this.Nombre.TabIndex = 19;
@@ -95,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 143);
+            this.label1.Location = new System.Drawing.Point(7, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 18;
@@ -104,22 +104,22 @@
             // 
             // CodPostal
             // 
-            this.CodPostal.Location = new System.Drawing.Point(94, 140);
+            this.CodPostal.Location = new System.Drawing.Point(85, 69);
             this.CodPostal.Name = "CodPostal";
-            this.CodPostal.Size = new System.Drawing.Size(100, 20);
-            this.CodPostal.TabIndex = 0;
+            this.CodPostal.Size = new System.Drawing.Size(77, 20);
+            this.CodPostal.TabIndex = 3;
             this.CodPostal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodPostal_KeyPress);
             // 
             // FrmLocalidadAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 365);
+            this.ClientSize = new System.Drawing.Size(359, 169);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmLocalidadAM";
-            this.Text = "FrmLocalidadAM";
+            this.Text = "Ingreso de localidad...";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
