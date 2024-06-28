@@ -89,7 +89,7 @@
             this.nombretxt.Margin = new System.Windows.Forms.Padding(2);
             this.nombretxt.Name = "nombretxt";
             this.nombretxt.Size = new System.Drawing.Size(167, 20);
-            this.nombretxt.TabIndex = 6;
+            this.nombretxt.TabIndex = 1;
             // 
             // descripciontxt
             // 
@@ -97,7 +97,7 @@
             this.descripciontxt.Margin = new System.Windows.Forms.Padding(2);
             this.descripciontxt.Name = "descripciontxt";
             this.descripciontxt.Size = new System.Drawing.Size(167, 20);
-            this.descripciontxt.TabIndex = 7;
+            this.descripciontxt.TabIndex = 2;
             // 
             // duraciontxt
             // 
@@ -106,7 +106,7 @@
             this.duraciontxt.MaxLength = 8;
             this.duraciontxt.Name = "duraciontxt";
             this.duraciontxt.Size = new System.Drawing.Size(76, 20);
-            this.duraciontxt.TabIndex = 8;
+            this.duraciontxt.TabIndex = 3;
             this.duraciontxt.TextChanged += new System.EventHandler(this.duraciontxt_TextChanged);
             // 
             // niveltxt
@@ -115,7 +115,8 @@
             this.niveltxt.Margin = new System.Windows.Forms.Padding(2);
             this.niveltxt.Name = "niveltxt";
             this.niveltxt.Size = new System.Drawing.Size(76, 20);
-            this.niveltxt.TabIndex = 9;
+            this.niveltxt.TabIndex = 4;
+            this.niveltxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodigoTxt_KeyPress);
             // 
             // cancelarbtn
             // 
@@ -123,7 +124,7 @@
             this.cancelarbtn.Margin = new System.Windows.Forms.Padding(2);
             this.cancelarbtn.Name = "cancelarbtn";
             this.cancelarbtn.Size = new System.Drawing.Size(75, 23);
-            this.cancelarbtn.TabIndex = 10;
+            this.cancelarbtn.TabIndex = 5;
             this.cancelarbtn.Text = "Cancelar";
             this.cancelarbtn.UseVisualStyleBackColor = true;
             this.cancelarbtn.Click += new System.EventHandler(this.cancelarbtn_Click);
@@ -134,7 +135,7 @@
             this.guardarbtn.Margin = new System.Windows.Forms.Padding(2);
             this.guardarbtn.Name = "guardarbtn";
             this.guardarbtn.Size = new System.Drawing.Size(75, 23);
-            this.guardarbtn.TabIndex = 11;
+            this.guardarbtn.TabIndex = 6;
             this.guardarbtn.Text = "Guardar";
             this.guardarbtn.UseVisualStyleBackColor = true;
             this.guardarbtn.Click += new System.EventHandler(this.guardarbtn_Click);
@@ -153,7 +154,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(275, 193);
-            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // label1
