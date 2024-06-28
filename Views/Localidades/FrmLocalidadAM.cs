@@ -203,49 +203,6 @@ namespace TurApp.Views
         }
 
 
-        private void MisFactBtn_Click(object sender, EventArgs e)
-        {
-            // debe mostrar un formulario con un listado de las facturas que se le han hecho al turista
-        }
-
-        private void DniTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DniLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NombreTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PaisCbo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LocalidadLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nombreText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CancelarBtn_Click_1(object sender, EventArgs e)
         {
             this.Close();

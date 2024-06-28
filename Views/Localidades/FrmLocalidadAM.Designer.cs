@@ -81,7 +81,6 @@
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(215, 20);
             this.nombreText.TabIndex = 2;
-            this.nombreText.TextChanged += new System.EventHandler(this.nombreText_TextChanged);
             // 
             // Nombre
             // 
@@ -100,7 +99,6 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Codigo Postal";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // CodPostal
             // 
