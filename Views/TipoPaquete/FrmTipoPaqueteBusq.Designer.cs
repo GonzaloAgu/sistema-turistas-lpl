@@ -116,7 +116,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmTipoPaqueteBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Búsqueda de tipos de paquete...";
+            this.Text = "Búsqueda de Tipo paquete...";
             this.ResumeLayout(false);
             this.PerformLayout();
 

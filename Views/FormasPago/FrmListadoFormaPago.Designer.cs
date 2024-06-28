@@ -63,6 +63,7 @@
             this.FormaPagoGrd.Size = new System.Drawing.Size(293, 194);
             this.FormaPagoGrd.TabIndex = 13;
             this.FormaPagoGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.FormaPagoGrd_ColumnHeaderMouseClick);
+            this.FormaPagoGrd.DoubleClick += new System.EventHandler(this.FormaPagoGrd_DoubleClick);
             // 
             // Forma
             // 
