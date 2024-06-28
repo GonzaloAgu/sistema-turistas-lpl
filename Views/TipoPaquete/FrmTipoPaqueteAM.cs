@@ -120,8 +120,7 @@ namespace TurApp.Views
                 operacionLog = "ALTA";
                 TipoPaq.Nombre = NombreTxt.Text;
                 TipoPaq.Descripcion = DescripcionTxt.Text;
-                DateTime parsedDate = DateTime.ParseExact(DuracionTxt.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                TipoPaq.Duracion = parsedDate.ToString("yyyy-MM-dd") + " 00:00:00";
+                TipoPaq.Duracion = MinutosATimestamp(DuracionTxt.Text);
                 TipoPaq.Nivel = Convert.ToInt32(NivelTxt.Text);
             }
             
@@ -131,8 +130,7 @@ namespace TurApp.Views
                 TipoPaq = _TipoPaquete_modif;
                 TipoPaq.Nombre = NombreTxt.Text;
                 TipoPaq.Descripcion = DescripcionTxt.Text;
-                DateTime parsedDate = DateTime.ParseExact(DuracionTxt.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                TipoPaq.Duracion = parsedDate.ToString("yyyy-MM-dd") + " 00:00:00";
+                TipoPaq.Duracion = MinutosATimestamp(DuracionTxt.Text);
                 TipoPaq.Nivel = Convert.ToInt32(NivelTxt.Text);
                 detalleLog = "OBJ-Antes:" + TipoPaqueteLog + " - OBJ-MOD"; 
             }
@@ -176,6 +174,27 @@ namespace TurApp.Views
         public void ShowModificarTipoPaquete(FormBase Invoker, TipoPaquete TP_modif)
         {
             ShowInfoTipoPaqueteInForm(TP_modif, Invoker);
+        }
+
+        private string MinutosATimestamp(string minutosString) {
+            // Convertir la cadena a un entero
+            int minutes;
+            if (int.TryParse(minutosString, out minutes)) {
+                // Fecha base (puedes elegir otra fecha base si prefieres)
+                DateTime baseDate = DateTime.Now;
+
+                // Sumar los minutos a la fecha base
+                DateTime resultDate = baseDate.AddMinutes(minutes);
+
+                // Convertir el resultado a una cadena en el formato adecuado para Postgres
+                string postgresTimestamp = resultDate.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+
+                // Mostrar el resultado
+                return postgresTimestamp;
+            }
+            else {
+                return "";
+            }
         }
 
         public void ShowModificarTipoPaquete(TipoPaquete TP_modif)

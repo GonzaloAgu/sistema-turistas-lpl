@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DuracionFormato = new System.Windows.Forms.Label();
             this.NivelTxt = new System.Windows.Forms.TextBox();
             this.NivelLbl = new System.Windows.Forms.Label();
             this.DuracionTxt = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.GuardarBtn = new System.Windows.Forms.Button();
             this.ErrorValidaTurista = new System.Windows.Forms.ErrorProvider(this.components);
-            this.DuracionFormato = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorValidaTurista)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +65,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // DuracionFormato
+            // 
+            this.DuracionFormato.AutoSize = true;
+            this.DuracionFormato.Location = new System.Drawing.Point(181, 88);
+            this.DuracionFormato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DuracionFormato.Name = "DuracionFormato";
+            this.DuracionFormato.Size = new System.Drawing.Size(64, 13);
+            this.DuracionFormato.TabIndex = 18;
+            this.DuracionFormato.Text = "(en minutos)";
+            // 
             // NivelTxt
             // 
             this.NivelTxt.Location = new System.Drawing.Point(72, 117);
             this.NivelTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NivelTxt.Name = "NivelTxt";
-            this.NivelTxt.Size = new System.Drawing.Size(166, 20);
+            this.NivelTxt.Size = new System.Drawing.Size(59, 20);
             this.NivelTxt.TabIndex = 17;
             this.NivelTxt.Tag = "Nivel";
             // 
@@ -89,7 +99,7 @@
             this.DuracionTxt.Location = new System.Drawing.Point(72, 85);
             this.DuracionTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DuracionTxt.Name = "DuracionTxt";
-            this.DuracionTxt.Size = new System.Drawing.Size(135, 20);
+            this.DuracionTxt.Size = new System.Drawing.Size(105, 20);
             this.DuracionTxt.TabIndex = 3;
             this.DuracionTxt.Tag = "Duracion";
             // 
@@ -167,16 +177,6 @@
             // ErrorValidaTurista
             // 
             this.ErrorValidaTurista.ContainerControl = this;
-            // 
-            // DuracionFormato
-            // 
-            this.DuracionFormato.AutoSize = true;
-            this.DuracionFormato.Location = new System.Drawing.Point(211, 88);
-            this.DuracionFormato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DuracionFormato.Name = "DuracionFormato";
-            this.DuracionFormato.Size = new System.Drawing.Size(69, 13);
-            this.DuracionFormato.TabIndex = 18;
-            this.DuracionFormato.Text = "dd/mm/aaaa";
             // 
             // FrmTipoPaqueteAM
             // 
