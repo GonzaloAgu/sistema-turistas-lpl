@@ -30,7 +30,7 @@
         {
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
             this.DniCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPaquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DniTur = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,7 @@
             this.PaquetesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PaquetesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DniCol,
-            this.ApellidoCol,
+            this.TipoPaquete,
             this.NombreCol,
             this.Fecha,
             this.DniTur,
@@ -81,13 +81,12 @@
             this.DniCol.Name = "DniCol";
             this.DniCol.ReadOnly = true;
             // 
-            // ApellidoCol
+            // TipoPaquete
             // 
-            this.ApellidoCol.DataPropertyName = "CodTP";
-            this.ApellidoCol.HeaderText = "Tipo paquete";
-            this.ApellidoCol.Name = "ApellidoCol";
-            this.ApellidoCol.ReadOnly = true;
-            this.ApellidoCol.Width = 150;
+            this.TipoPaquete.HeaderText = "Tipo paquete";
+            this.TipoPaquete.Name = "TipoPaquete";
+            this.TipoPaquete.ReadOnly = true;
+            this.TipoPaquete.Width = 150;
             // 
             // NombreCol
             // 
@@ -111,13 +110,13 @@
             // 
             // Nivel
             // 
+            this.Nivel.DataPropertyName = "Nivel";
             this.Nivel.HeaderText = "Nivel";
             this.Nivel.Name = "Nivel";
             this.Nivel.ReadOnly = true;
             // 
             // Destino
             // 
-            this.Destino.DataPropertyName = "Destino";
             this.Destino.HeaderText = "Destino";
             this.Destino.Name = "Destino";
             this.Destino.ReadOnly = true;
@@ -131,7 +130,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(227, 42);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // TipoPaqTxt
@@ -139,7 +138,7 @@
             this.TipoPaqTxt.Location = new System.Drawing.Point(107, 14);
             this.TipoPaqTxt.Name = "TipoPaqTxt";
             this.TipoPaqTxt.Size = new System.Drawing.Size(98, 20);
-            this.TipoPaqTxt.TabIndex = 9;
+            this.TipoPaqTxt.TabIndex = 2;
             // 
             // TipoPaqChk
             // 
@@ -148,7 +147,7 @@
             this.TipoPaqChk.Margin = new System.Windows.Forms.Padding(2);
             this.TipoPaqChk.Name = "TipoPaqChk";
             this.TipoPaqChk.Size = new System.Drawing.Size(89, 17);
-            this.TipoPaqChk.TabIndex = 0;
+            this.TipoPaqChk.TabIndex = 1;
             this.TipoPaqChk.Text = "Tipo paquete";
             this.TipoPaqChk.UseVisualStyleBackColor = true;
             // 
@@ -172,7 +171,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(225, 41);
-            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
             // NivelTxt
@@ -180,7 +179,7 @@
             this.NivelTxt.Location = new System.Drawing.Point(97, 14);
             this.NivelTxt.Name = "NivelTxt";
             this.NivelTxt.Size = new System.Drawing.Size(100, 20);
-            this.NivelTxt.TabIndex = 8;
+            this.NivelTxt.TabIndex = 5;
             // 
             // NivelChk
             // 
@@ -189,7 +188,7 @@
             this.NivelChk.Margin = new System.Windows.Forms.Padding(2);
             this.NivelChk.Name = "NivelChk";
             this.NivelChk.Size = new System.Drawing.Size(50, 17);
-            this.NivelChk.TabIndex = 0;
+            this.NivelChk.TabIndex = 4;
             this.NivelChk.Text = "Nivel";
             this.NivelChk.UseVisualStyleBackColor = true;
             this.NivelChk.CheckedChanged += new System.EventHandler(this.PaisChk_CheckedChanged);
@@ -200,7 +199,7 @@
             this.ExportarBtn.Location = new System.Drawing.Point(736, 458);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 7;
+            this.ExportarBtn.TabIndex = 6;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
@@ -219,7 +218,8 @@
             this.MaximizeBox = false;
             this.Name = "FrmListadoPaquetes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado de Turistas";
+            this.Text = "Listado de Paquetes";
+            this.Load += new System.EventHandler(this.FrmListadoPaquetes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -241,7 +241,7 @@
         private System.Windows.Forms.TextBox NivelTxt;
         private System.Windows.Forms.TextBox TipoPaqTxt;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoPaquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniTur;

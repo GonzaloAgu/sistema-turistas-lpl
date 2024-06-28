@@ -71,12 +71,12 @@ namespace TurApp.Views
         {
             foreach (DataGridViewRow rw in this.PaquetesGrd.Rows)
             {
-                rw.Cells[0].Value = (rw.DataBoundItem as Paquete).TipoPaqueteObj.Codigo;
-                rw.Cells[1].Value = (rw.DataBoundItem as Paquete).AgenciaObj.Codigo;
-                rw.Cells[2].Value = (rw.DataBoundItem as Paquete).Fecha;
-                rw.Cells[3].Value = (rw.DataBoundItem as Paquete).TuristaObj.NroDocumento;
-                rw.Cells[4].Value = (rw.DataBoundItem as Paquete).Nivel;
-                rw.Cells[5].Value = (rw.DataBoundItem as Paquete).DestinoObj.Codigo;
+                rw.Cells["TipoPaquete"].Value = (rw.DataBoundItem as Paquete).TipoPaqueteObj.Nombre;
+                rw.Cells[2].Value = (rw.DataBoundItem as Paquete).AgenciaObj.Nombre;
+                rw.Cells[3].Value = (rw.DataBoundItem as Paquete).Fecha;
+                rw.Cells[4].Value = (rw.DataBoundItem as Paquete).TuristaObj.Nombre;
+                rw.Cells[5].Value = (rw.DataBoundItem as Paquete).Nivel;
+                rw.Cells["Destino"].Value = (rw.DataBoundItem as Paquete).DestinoObj.Nombre;
             }
         }
 
@@ -104,7 +104,7 @@ namespace TurApp.Views
                 {
                     using (StreamWriter archivo = new StreamWriter(saveFileDialog.FileName))
                     {
-                        archivo.WriteLine("Codigo, Fecha, CodAgencia, CodDestino, CodTipoPaquete, CodTipoPaquete, DniTurista");
+                        archivo.WriteLine("Codigo,Fecha,CodAgencia,CodDestino,CodTipoPaquete,CodTipoPaquete,DniTurista");
                         foreach (Paquete paq in  (PaquetesGrd.DataSource as List<Paquete>))
                             archivo.WriteLine(String.Format("{0},{1},{2},{3},{4},{5},{6}", paq.Codigo, paq.Fecha, paq.CodAgencia, paq.CodDestino, paq.CodTipoPaquete, paq.CodTipoPaquete, paq.DniTurista));
                         MessageBox.Show("Archivo guardado exitosamente en: " + saveFileDialog.FileName);
