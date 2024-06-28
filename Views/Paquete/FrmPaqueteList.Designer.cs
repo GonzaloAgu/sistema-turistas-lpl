@@ -32,20 +32,20 @@
             this.CerrarBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PaquetesGrd = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPaquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodAgencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DniTurista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodDestino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).BeginInit();
             this.SuspendLayout();
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(676, 289);
+            this.CerrarBtn.Location = new System.Drawing.Point(722, 289);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
@@ -61,7 +61,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(752, 266);
+            this.groupBox1.Size = new System.Drawing.Size(824, 266);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -76,13 +76,13 @@
             this.PaquetesGrd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.PaquetesGrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PaquetesGrd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Dni,
+            this.Codigo,
+            this.TipoPaquete,
             this.CodAgencia,
             this.Fecha,
             this.DniTurista,
             this.Nivel,
-            this.CodDestino});
+            this.Destino});
             this.PaquetesGrd.Location = new System.Drawing.Point(9, 17);
             this.PaquetesGrd.Margin = new System.Windows.Forms.Padding(2);
             this.PaquetesGrd.MultiSelect = false;
@@ -90,43 +90,38 @@
             this.PaquetesGrd.ReadOnly = true;
             this.PaquetesGrd.RowTemplate.Height = 24;
             this.PaquetesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PaquetesGrd.Size = new System.Drawing.Size(743, 237);
+            this.PaquetesGrd.Size = new System.Drawing.Size(803, 237);
             this.PaquetesGrd.TabIndex = 0;
             this.PaquetesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TuristasGrd_CellContentClick);
-            this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.EspecialidadesGrd_DataBindingComplete);
+            this.PaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.Paquetes_DataBinding);
             // 
-            // Nombre
+            // Codigo
             // 
-            this.Nombre.DataPropertyName = "Codigo";
-            this.Nombre.HeaderText = "Codigo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Nombre.Width = 130;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Codigo.Width = 60;
             // 
-            // Dni
+            // TipoPaquete
             // 
-            this.Dni.DataPropertyName = "TipoPaq";
-            this.Dni.HeaderText = "Tipo paquete";
-            this.Dni.Name = "Dni";
-            this.Dni.ReadOnly = true;
-            this.Dni.Width = 80;
+            this.TipoPaquete.HeaderText = "Tipo paquete";
+            this.TipoPaquete.Name = "TipoPaquete";
+            this.TipoPaquete.ReadOnly = true;
+            this.TipoPaquete.Width = 150;
             // 
             // CodAgencia
             // 
-            this.CodAgencia.DataPropertyName = "CodAgencia";
-            this.CodAgencia.HeaderText = "Cod agencia";
+            this.CodAgencia.HeaderText = "Agencia";
             this.CodAgencia.Name = "CodAgencia";
             this.CodAgencia.ReadOnly = true;
             this.CodAgencia.Width = 150;
             // 
             // Fecha
             // 
-            this.Fecha.DataPropertyName = "Fecha";
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 140;
             // 
             // DniTurista
             // 
@@ -141,25 +136,27 @@
             this.Nivel.HeaderText = "Nivel";
             this.Nivel.Name = "Nivel";
             this.Nivel.ReadOnly = true;
+            this.Nivel.Width = 50;
             // 
-            // CodDestino
+            // Destino
             // 
-            this.CodDestino.HeaderText = "Cod destino";
-            this.CodDestino.Name = "CodDestino";
-            this.CodDestino.ReadOnly = true;
+            this.Destino.HeaderText = "Destino";
+            this.Destino.Name = "Destino";
+            this.Destino.ReadOnly = true;
+            this.Destino.Width = 150;
             // 
             // FrmPaqueteList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 327);
+            this.ClientSize = new System.Drawing.Size(841, 327);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmPaqueteList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado de Turistas...";
+            this.Text = "Busqueda de Paquetes...";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PaquetesGrd)).EndInit();
             this.ResumeLayout(false);
@@ -172,12 +169,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView PaquetesGrd;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoPaquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodAgencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn DniTurista;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
     }
 }

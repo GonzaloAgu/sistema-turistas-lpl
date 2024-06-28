@@ -29,7 +29,31 @@ namespace TurApp.Views
             string criterio = null;
             if (this.CodigoChk.Checked)
             {
-                criterio = String.Format("codigo = {0}", CodigoTxt.Text);
+                criterio = String.Format("codigo={0}", CodigoTxt.Text);
+            }
+
+            if (tipoPaqChk.Checked)
+            {
+                if(criterio != null)
+                    criterio += String.Format("AND cod_tipo_paquete={0}", (tipoPaqCbo.SelectedValue as TipoPaquete).Codigo);
+                else
+                    criterio = String.Format("cod_tipo_paquete={0}", (tipoPaqCbo.SelectedValue as TipoPaquete).Codigo);
+            }
+
+            if (agenciaChk.Checked)
+            {
+                if (criterio != null)
+                    criterio += String.Format("AND cod_agencia={0}", (agenciaCbo.SelectedValue as Agencia).Codigo);
+                else
+                    criterio = String.Format("cod_agencia={0}", (agenciaCbo.SelectedValue as Agencia).Codigo);
+            }
+
+            if (turistaChk.Checked)
+            {
+                if (criterio != null)
+                    criterio += String.Format("AND dni_turista={0}", (turistaCbo.SelectedValue as Turista).NroDocumento);
+                else
+                    criterio = String.Format("dni_turista = {0}", (turistaCbo.SelectedValue as Turista).NroDocumento);
             }
 
             try
@@ -75,7 +99,29 @@ namespace TurApp.Views
         }
 
         private void FrmActividadBusq_Load(object sender, EventArgs e) {
+            LoadComboBox(TipoPaquete.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), tipoPaqCbo, "Nombre");
+            tipoPaqCbo.SelectedIndex = -1;
 
+            LoadComboBox(Agencia.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), agenciaCbo, "Nombre");
+            agenciaCbo.SelectedIndex = -1;
+
+            LoadComboBox(Turista.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), turistaCbo, "Nombre");
+            agenciaCbo.SelectedIndex = -1;
+        }
+
+        private void tipoPaqChk_CheckedChanged(object sender, EventArgs e)
+        {
+            tipoPaqCbo.Enabled = tipoPaqChk.Checked;
+        }
+
+        private void agenciaChk_CheckedChanged(object sender, EventArgs e)
+        {
+            agenciaCbo.Enabled = agenciaChk.Checked;
+        }
+
+        private void turistaChk_CheckedChanged(object sender, EventArgs e)
+        {
+            turistaCbo.Enabled = turistaChk.Checked;
         }
 
     }

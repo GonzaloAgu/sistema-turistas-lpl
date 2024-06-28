@@ -59,11 +59,12 @@ namespace TurApp.Views
 
                 // Esto debe hacerse para todas las columnas que sean una referencia a otro objeto.
                 Paquete PaqueteObj = item.DataBoundItem as Paquete;
-
+                item.Cells["Codigo"].Value = PaqueteObj.Codigo;
                 item.Cells["DniTurista"].Value = PaqueteObj.TuristaObj.NroDocumento;
-                item.Cells["CodAgencia"].Value = PaqueteObj.AgenciaObj.Codigo;
-                item.Cells["CodTipoPaquete"].Value = PaqueteObj.TipoPaqueteObj.Codigo;
-                item.Cells["CodDestino"].Value = PaqueteObj.DestinoObj.Codigo;
+                item.Cells["CodAgencia"].Value = PaqueteObj.AgenciaObj.Nombre;
+                item.Cells["TipoPaquete"].Value = PaqueteObj.TipoPaqueteObj.Nombre;
+                item.Cells["Fecha"].Value = PaqueteObj.Fecha.ToString();
+                item.Cells["Destino"].Value = PaqueteObj.DestinoObj.Nombre;
             }
         }
 
