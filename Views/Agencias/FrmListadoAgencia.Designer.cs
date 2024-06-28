@@ -115,6 +115,7 @@
             this.AgenciaGrd.Size = new System.Drawing.Size(746, 384);
             this.AgenciaGrd.TabIndex = 13;
             this.AgenciaGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.AgenciaGrd_DataBindingComplete);
+            this.AgenciaGrd.DoubleClick += new System.EventHandler(this.AgenciaGrd_DoubleClick);
             // 
             // NombreCol
             // 

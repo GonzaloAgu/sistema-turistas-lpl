@@ -82,5 +82,12 @@ namespace TurApp.Views {
                 }
             }
         }
+
+        private void AgenciaGrd_DoubleClick(object sender, EventArgs e)
+        {
+            FrmAgenciaAM frmpac = new FrmAgenciaAM();
+            Agencia pac = (this.AgenciaGrd.SelectedRows[0].DataBoundItem as Agencia);
+            frmpac.ShowModificarAgencia(pac);
+        }
     }
 }

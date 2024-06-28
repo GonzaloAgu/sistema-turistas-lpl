@@ -15,6 +15,7 @@ namespace TurApp.Views
     {
         public override event FormEvent DoCompleteOperationForm;
         private Agencia _Agencia_modif = null;
+        private string AgenciaLog = "";
         public FrmAgenciaAM()
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace TurApp.Views
         private void LoadCombos()
         {
             this.LocalidadCbo.DataSource = Localidad.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
-
             //this.PaisCbo.DataSource = ORMDB<Localidad>.FindAll(null);
         }
         public override FrmOperacion OperacionForm
@@ -84,7 +84,7 @@ namespace TurApp.Views
         {
             this.OperacionForm = FrmOperacion.frmModificacion;
             _Agencia_modif = Cli_modif;
-            //AgenciaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Agencia_modif);
+            AgenciaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Agencia_modif);
             // cargar cada control con informacion del Agencia....
             //this.ApellidoTxt.Text = Pac_modif.Apellido;
             FormBase.ShowDataFromModel(this, Cli_modif);
@@ -116,13 +116,35 @@ namespace TurApp.Views
             {
                 Agencia = new Agencia();
                 operacionLog = "ALTA";
+                Agencia.Nombre = NombreTxt.Text;
+                Agencia.Calle = CalleTxt.Text;
+                Agencia.Nro = NroTxt.Text;
+                Agencia.Piso = PisoTxt.Text;
+                if (DptoTxt.Text != "")
+                    Agencia.Dpto = Convert.ToInt32(DptoTxt.Text);
+                else
+                    Agencia.Dpto = Convert.ToInt32("0");
+                Agencia.CodPostal = (LocalidadCbo.SelectedItem as Localidad).Codigo;
+                Agencia.Telefono1 = Telefono1Txt.Text;
+                Agencia.Telefono2 = Telefono2Txt.Text;
                 // cargar la info de la Agencia antes de dar de alta.
             }
 
             if (OperacionForm == FrmOperacion.frmModificacion)
             {
                 operacionLog = "MODIFICACION";
-                //Agencia = _Agencia_modif;
+                Agencia = _Agencia_modif;
+                Agencia.Nombre = NombreTxt.Text;
+                Agencia.Calle = CalleTxt.Text;
+                Agencia.Nro = NroTxt.Text;
+                Agencia.Piso = PisoTxt.Text;
+                if (DptoTxt.Text != null)
+                    Agencia.Dpto = Convert.ToInt32(DptoTxt.Text);
+                else
+                    Agencia.Dpto = Convert.ToInt32("0");
+                Agencia.CodPostal = (LocalidadCbo.SelectedItem as Localidad).Codigo;
+                Agencia.Telefono1 = Telefono1Txt.Text;
+                Agencia.Telefono2 = Telefono2Txt.Text;
                 //detalleLog = "OBJ-Antes:" + AgenciaLog + " - OBJ-MOD";
             }
             if (OperacionForm == FrmOperacion.frmConsulta)
