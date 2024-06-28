@@ -88,12 +88,7 @@ namespace TurApp.Views
             string detalleLog = "";
             MainView.Instance.Cursor = Cursors.WaitCursor;
 
-            if (codigotxt.Text == "")
-            {
-                MessageBox.Show("Ingrese código", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                codigotxt.Focus();
-                return;
-            }
+            
             // Validar otros campos según sea necesario...
 
             if (OperacionForm == FrmOperacion.frmAlta)
@@ -101,8 +96,7 @@ namespace TurApp.Views
                 tipoActividad = new TipoActividad();
                 operacionLog = "ALTA";
                 tipoActividad.Duracion = duraciontxt.Text;
-                tipoActividad.Codigo = Convert.ToInt32(codigotxt.Text);
-                tipoActividad.Descripcion = codigotxt.Text;
+                tipoActividad.Descripcion = descripciontxt.Text;
                 tipoActividad.Nivel = Convert.ToInt32(niveltxt.Text);
                 tipoActividad.Nombre = nombretxt.Text;
 
@@ -112,8 +106,7 @@ namespace TurApp.Views
                 operacionLog = "MODIFICACION";
                 tipoActividad = _TipoActividad_modif;
                 tipoActividad.Duracion = duraciontxt.Text;
-                tipoActividad.Codigo = Convert.ToInt32(codigotxt.Text);
-                tipoActividad.Descripcion = codigotxt.Text;
+                tipoActividad.Descripcion = descripciontxt.Text;
                 tipoActividad.Nivel = Convert.ToInt32(niveltxt.Text);
                 tipoActividad.Nombre = nombretxt.Text;
                 detalleLog = "OBJ-Antes:" + TipoActividadLog + " - OBJ-MOD";
