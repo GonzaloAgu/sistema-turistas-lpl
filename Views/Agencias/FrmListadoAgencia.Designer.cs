@@ -53,7 +53,7 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(229, 41);
-            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
             // LocalidadCbo
@@ -66,7 +66,7 @@
             this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(115, 21);
-            this.LocalidadCbo.TabIndex = 1;
+            this.LocalidadCbo.TabIndex = 6;
             // 
             // LocalidadChk
             // 
@@ -75,7 +75,7 @@
             this.LocalidadChk.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadChk.Name = "LocalidadChk";
             this.LocalidadChk.Size = new System.Drawing.Size(72, 17);
-            this.LocalidadChk.TabIndex = 0;
+            this.LocalidadChk.TabIndex = 5;
             this.LocalidadChk.Text = "Localidad";
             this.LocalidadChk.UseVisualStyleBackColor = true;
             this.LocalidadChk.CheckedChanged += new System.EventHandler(this.LocalidadChk_CheckedChanged);
@@ -86,7 +86,7 @@
             this.FiltroBtn.Margin = new System.Windows.Forms.Padding(2);
             this.FiltroBtn.Name = "FiltroBtn";
             this.FiltroBtn.Size = new System.Drawing.Size(76, 32);
-            this.FiltroBtn.TabIndex = 15;
+            this.FiltroBtn.TabIndex = 7;
             this.FiltroBtn.Text = "Filtrar";
             this.FiltroBtn.UseVisualStyleBackColor = true;
             this.FiltroBtn.Click += new System.EventHandler(this.FiltroBtn_Click);
@@ -171,7 +171,7 @@
             this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(116, 20);
-            this.NombreTxt.TabIndex = 1;
+            this.NombreTxt.TabIndex = 3;
             // 
             // NombreChk
             // 
@@ -180,7 +180,7 @@
             this.NombreChk.Margin = new System.Windows.Forms.Padding(2);
             this.NombreChk.Name = "NombreChk";
             this.NombreChk.Size = new System.Drawing.Size(63, 17);
-            this.NombreChk.TabIndex = 0;
+            this.NombreChk.TabIndex = 2;
             this.NombreChk.Text = "Nombre";
             this.NombreChk.UseVisualStyleBackColor = true;
             this.NombreChk.CheckStateChanged += new System.EventHandler(this.NombreChk_CheckStateChanged);
@@ -194,16 +194,16 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(189, 42);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // ExportarBtn
             // 
             this.ExportarBtn.Enabled = false;
-            this.ExportarBtn.Location = new System.Drawing.Point(721, 469);
+            this.ExportarBtn.Location = new System.Drawing.Point(673, 469);
             this.ExportarBtn.Name = "ExportarBtn";
             this.ExportarBtn.Size = new System.Drawing.Size(84, 26);
-            this.ExportarBtn.TabIndex = 17;
+            this.ExportarBtn.TabIndex = 8;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
             this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
@@ -212,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 507);
+            this.ClientSize = new System.Drawing.Size(769, 507);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.FiltroBtn);
             this.Controls.Add(this.AgenciaGrd);
