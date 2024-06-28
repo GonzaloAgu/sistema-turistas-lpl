@@ -69,5 +69,12 @@ namespace TurApp.Views {
             _lista.Sort((fp1, fp2) => _sentido * fp1.Forma.CompareTo(fp2.Forma));
             FormaPagoGrd.Refresh();
         }
+
+        private void FormaPagoGrd_DoubleClick(object sender, EventArgs e)
+        {
+            FrmFormaPagoAM form = new FrmFormaPagoAM();
+            FormaPago pag = (this.FormaPagoGrd.SelectedRows[0].DataBoundItem as FormaPago);
+            form.ShowModificarFormaPago(pag);
+        }
     }
 }
