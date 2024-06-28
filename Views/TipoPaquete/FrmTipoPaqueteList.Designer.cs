@@ -47,7 +47,7 @@
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 7;
+            this.CerrarBtn.TabIndex = 0;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
@@ -87,7 +87,7 @@
             this.TipoPaqueteGrd.RowTemplate.Height = 24;
             this.TipoPaqueteGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TipoPaqueteGrd.Size = new System.Drawing.Size(743, 237);
-            this.TipoPaqueteGrd.TabIndex = 0;
+            this.TipoPaqueteGrd.TabIndex = 1;
             this.TipoPaqueteGrd.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TipoPaqueteGrd_ColumnHeaderMouseClick);
             this.TipoPaqueteGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.EspecialidadesGrd_DataBindingComplete);
             this.TipoPaqueteGrd.DoubleClick += new System.EventHandler(this.TipoPaqueteGrd_DoubleClick);

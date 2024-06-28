@@ -31,7 +31,7 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(172, 69);
+            this.CancelarBtn.Location = new System.Drawing.Point(213, 69);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
@@ -42,7 +42,7 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(54, 69);
+            this.BuscarBtn.Location = new System.Drawing.Point(151, 69);
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
@@ -56,8 +56,8 @@
             this.FormaTxt.Location = new System.Drawing.Point(75, 23);
             this.FormaTxt.Margin = new System.Windows.Forms.Padding(2);
             this.FormaTxt.Name = "FormaTxt";
-            this.FormaTxt.Size = new System.Drawing.Size(168, 20);
-            this.FormaTxt.TabIndex = 1;
+            this.FormaTxt.Size = new System.Drawing.Size(196, 20);
+            this.FormaTxt.TabIndex = 0;
             this.FormaTxt.Tag = "Forma";
             this.FormaTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter_KeyPress);
             // 
@@ -74,13 +74,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 119);
+            this.ClientSize = new System.Drawing.Size(309, 106);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.FormaTxt);
             this.Name = "FrmFormaPagoBusq";
-            this.Text = "FrmFormaPagoBusq";
+            this.Text = "Búsqueda de formas de pago..";
             this.ResumeLayout(false);
             this.PerformLayout();
 

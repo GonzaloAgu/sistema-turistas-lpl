@@ -94,7 +94,7 @@
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmFormaPagoList";
-            this.Text = "Busqueda de formas de pago";
+            this.Text = "Resultado de busqueda de formas de pago";
             ((System.ComponentModel.ISupportInitialize)(this.FormasPagoGrd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

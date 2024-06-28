@@ -42,8 +42,8 @@
             this.CodigoTxt.Location = new System.Drawing.Point(74, 19);
             this.CodigoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.CodigoTxt.Name = "CodigoTxt";
-            this.CodigoTxt.Size = new System.Drawing.Size(123, 20);
-            this.CodigoTxt.TabIndex = 5;
+            this.CodigoTxt.Size = new System.Drawing.Size(159, 20);
+            this.CodigoTxt.TabIndex = 1;
             // 
             // CodigoChk
             // 
@@ -52,29 +52,29 @@
             this.CodigoChk.Margin = new System.Windows.Forms.Padding(2);
             this.CodigoChk.Name = "CodigoChk";
             this.CodigoChk.Size = new System.Drawing.Size(59, 17);
-            this.CodigoChk.TabIndex = 4;
+            this.CodigoChk.TabIndex = 0;
             this.CodigoChk.Text = "Código";
             this.CodigoChk.UseVisualStyleBackColor = true;
             this.CodigoChk.CheckedChanged += new System.EventHandler(this.CodigoChk_CheckedChanged);
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(139, 98);
+            this.CancelarBtn.Location = new System.Drawing.Point(175, 98);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
-            this.CancelarBtn.TabIndex = 9;
+            this.CancelarBtn.TabIndex = 5;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(43, 98);
+            this.BuscarBtn.Location = new System.Drawing.Point(100, 98);
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 8;
+            this.BuscarBtn.TabIndex = 4;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -86,7 +86,7 @@
             this.NivelChk.Margin = new System.Windows.Forms.Padding(2);
             this.NivelChk.Name = "NivelChk";
             this.NivelChk.Size = new System.Drawing.Size(50, 17);
-            this.NivelChk.TabIndex = 10;
+            this.NivelChk.TabIndex = 2;
             this.NivelChk.Text = "Nivel";
             this.NivelChk.UseVisualStyleBackColor = true;
             this.NivelChk.CheckedChanged += new System.EventHandler(this.NivelChk_CheckedChanged);
@@ -97,14 +97,14 @@
             this.NivelTxt.Location = new System.Drawing.Point(74, 55);
             this.NivelTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NivelTxt.Name = "NivelTxt";
-            this.NivelTxt.Size = new System.Drawing.Size(123, 20);
-            this.NivelTxt.TabIndex = 11;
+            this.NivelTxt.Size = new System.Drawing.Size(159, 20);
+            this.NivelTxt.TabIndex = 3;
             // 
             // FrmTipoPaqueteBusq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(216, 136);
+            this.ClientSize = new System.Drawing.Size(256, 136);
             this.Controls.Add(this.NivelTxt);
             this.Controls.Add(this.NivelChk);
             this.Controls.Add(this.CancelarBtn);
@@ -116,7 +116,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmTipoPaqueteBusq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Búsqueda de Turista...";
+            this.Text = "Búsqueda de tipos de paquete...";
             this.ResumeLayout(false);
             this.PerformLayout();
 
