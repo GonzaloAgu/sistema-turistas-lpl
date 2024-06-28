@@ -275,6 +275,12 @@
     <Compile Include="Views\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Paises\FrmPaisAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paises\FrmPaisAM.Designer.cs">
+      <DependentUpon>FrmPaisAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Paquete\FrmListadoPaquetes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,6 +456,9 @@
     <EmbeddedResource Include="Views\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paises\FrmPaisAM.resx">
+      <DependentUpon>FrmPaisAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
       <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
     </EmbeddedResource>
@@ -549,7 +558,6 @@
   <ItemGroup>
     <Folder Include="Script\" />
     <Folder Include="Views\Detinos\" />
-    <Folder Include="Views\Paises\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

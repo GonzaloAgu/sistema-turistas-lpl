@@ -236,9 +236,10 @@
             // PaiseseAM_menu
             // 
             this.PaiseseAM_menu.Name = "PaiseseAM_menu";
-            this.PaiseseAM_menu.Size = new System.Drawing.Size(113, 22);
+            this.PaiseseAM_menu.Size = new System.Drawing.Size(152, 22);
             this.PaiseseAM_menu.Tag = "AltaPais";
             this.PaiseseAM_menu.Text = "Ingreso";
+            this.PaiseseAM_menu.Click += new System.EventHandler(this.IngresoPais_Click);
             // 
             // Paquetes_mnu_top
             // 
@@ -279,7 +280,7 @@
             // TipoPaqueteAM_mnu
             // 
             this.TipoPaqueteAM_mnu.Name = "TipoPaqueteAM_mnu";
-            this.TipoPaqueteAM_mnu.Size = new System.Drawing.Size(152, 22);
+            this.TipoPaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
             this.TipoPaqueteAM_mnu.Tag = "AltaTipoPaquete";
             this.TipoPaqueteAM_mnu.Text = "Ingreso";
             this.TipoPaqueteAM_mnu.Click += new System.EventHandler(this.TipoPaqueteAM_mnu_Click);
@@ -287,7 +288,7 @@
             // BuscarTipoPaquete_mnu
             // 
             this.BuscarTipoPaquete_mnu.Name = "BuscarTipoPaquete_mnu";
-            this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(152, 22);
+            this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(113, 22);
             this.BuscarTipoPaquete_mnu.Tag = "ModificaTipoPaquete,ConsultaTipoPaquete";
             this.BuscarTipoPaquete_mnu.Text = "Buscar";
             this.BuscarTipoPaquete_mnu.Click += new System.EventHandler(this.BuscarTipoPaquete_mnu_Click);

@@ -316,5 +316,11 @@ namespace TurApp.Views
             FrmTipoPaqueteBusq form = new FrmTipoPaqueteBusq();
             form.Show();
         }
+
+        private void IngresoPais_Click(object sender, EventArgs e)
+        {
+            FrmPaisAM form = new FrmPaisAM();
+            form.ShowIngresoPais();
+        }
     }
 }
