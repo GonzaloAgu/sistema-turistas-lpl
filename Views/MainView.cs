@@ -322,5 +322,11 @@ namespace TurApp.Views
             FrmPaisAM form = new FrmPaisAM();
             form.ShowIngresoPais();
         }
+
+        private void AcercaDe_mnu_Click(object sender, EventArgs e)
+        {
+            FrmAcercaDe form = new FrmAcercaDe();
+            form.Show();
+        }
     }
 }

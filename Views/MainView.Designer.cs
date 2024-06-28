@@ -411,6 +411,7 @@
             this.AcercaDe_mnu.Name = "AcercaDe_mnu";
             this.AcercaDe_mnu.Size = new System.Drawing.Size(80, 20);
             this.AcercaDe_mnu.Text = "Acerca de...";
+            this.AcercaDe_mnu.Click += new System.EventHandler(this.AcercaDe_mnu_Click);
             // 
             // status
             // 
