@@ -279,16 +279,18 @@
             // TipoPaqueteAM_mnu
             // 
             this.TipoPaqueteAM_mnu.Name = "TipoPaqueteAM_mnu";
-            this.TipoPaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
+            this.TipoPaqueteAM_mnu.Size = new System.Drawing.Size(152, 22);
             this.TipoPaqueteAM_mnu.Tag = "AltaTipoPaquete";
             this.TipoPaqueteAM_mnu.Text = "Ingreso";
+            this.TipoPaqueteAM_mnu.Click += new System.EventHandler(this.TipoPaqueteAM_mnu_Click);
             // 
             // BuscarTipoPaquete_mnu
             // 
             this.BuscarTipoPaquete_mnu.Name = "BuscarTipoPaquete_mnu";
-            this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(113, 22);
+            this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarTipoPaquete_mnu.Tag = "ModificaTipoPaquete,ConsultaTipoPaquete";
             this.BuscarTipoPaquete_mnu.Text = "Buscar";
+            this.BuscarTipoPaquete_mnu.Click += new System.EventHandler(this.BuscarTipoPaquete_mnu_Click);
             // 
             // FormaPagoToolStripMenuItem
             // 
@@ -436,7 +438,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TurApp: Registro de información";

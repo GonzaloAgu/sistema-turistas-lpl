@@ -303,5 +303,17 @@ namespace TurApp.Views
             FrmFacturar form = new FrmFacturar();
             form.Show();
         }
+
+        private void TipoPaqueteAM_mnu_Click(object sender, EventArgs e)
+        {
+            FrmTipoPaqueteAM form = new FrmTipoPaqueteAM();
+            form.Show();
+        }
+
+        private void BuscarTipoPaquete_mnu_Click(object sender, EventArgs e)
+        {
+            FrmTipoPaqueteBusq form = new FrmTipoPaqueteBusq();
+            form.Show();
+        }
     }
 }
