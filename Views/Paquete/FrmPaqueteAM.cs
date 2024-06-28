@@ -42,12 +42,6 @@ namespace TurApp.Views
             
         }
 
-        private void LoadCombos()
-        {
-            this.DniTurTxt.DataSource =  Turista.FindAllStatic(null, (pa1, pa2) => pa1.NroDocumento.CompareTo(pa2.NroDocumento));
-
-            //this.PaisCbo.DataSource = ORMDB<Localidad>.FindAll(null);
-        }
         public override FrmOperacion OperacionForm
         {
             get
@@ -57,11 +51,9 @@ namespace TurApp.Views
             set
             {
                 base.OperacionForm = value;
-                LoadCombos();
                 if (value == FrmOperacion.frmAlta)
                 {
                     this.Text = "Ingreso de nuevo Paquete...";
-                    this.DniTurTxt.SelectedIndex = -1;
                 }
                 if (value == FrmOperacion.frmModificacion)
                 {
@@ -88,46 +80,40 @@ namespace TurApp.Views
             string detalleLog="";
             MainView.Instance.Cursor = Cursors.WaitCursor;                       
             
-            if (CodPaqTxt.Text == "")
+            if (tipoPaqCbo.SelectedIndex == -1)
             {
-                MessageBox.Show("Ingrese cod. paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodPaqTxt.Focus();
+                MessageBox.Show("Ingrese tipo paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tipoPaqCbo.Focus();
                 return;
             }
-            if (CodTPTxt.Text == "")
+            if (agenciaCbo.SelectedIndex == -1)
             {
-                MessageBox.Show("Ingrese cod. tipo paquete", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTPTxt.Focus();
-                return;
-            }
-            if (CodAgeTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese cod. agencia", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTPTxt.Focus();
+                MessageBox.Show("Ingrese agencia", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                agenciaCbo.Focus();
                 return;
             }
             if (FechaTxt.Text == "")
             {
                 MessageBox.Show("Ingrese fecha", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTPTxt.Focus();
+                FechaTxt.Focus();
                 return;
             }
             if (DniTur.Text == "")
             {
                 MessageBox.Show("Ingrese dni turista", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTPTxt.Focus();
+                DniTur.Focus();
                 return;
             }
             if (NivelTxt.Text == "")
             {
                 MessageBox.Show("Ingrese nivel", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTPTxt.Focus();
+                NivelTxt.Focus();
                 return;
             }
-            if (CodDestinoTxt.Text == "")
+            if (destinosCbo.SelectedIndex == -1)
             {
-                MessageBox.Show("Ingrese cod destino", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodTPTxt.Focus();
+                MessageBox.Show("Ingrese destino", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                destinosCbo.Focus();
                 return;
             }
             // validar...
@@ -138,30 +124,29 @@ namespace TurApp.Views
                 Paquete = new Paquete();
                 operacionLog = "ALTA";
                 Paquete = new Paquete();
-                Paquete.Codigo = Convert.ToInt32(CodPaqTxt.Text);
-                Paquete.CodTipoPaquete = Convert.ToInt32(CodTPTxt.Text);
-                Paquete.CodAgencia = Convert.ToInt32(CodAgeTxt.Text);
-                string format = "d/MM/yyyy";
+                Paquete.CodTipoPaquete = (tipoPaqCbo.SelectedValue as TipoPaquete).Codigo;
+                Paquete.CodAgencia = (agenciaCbo.SelectedValue as Agencia).Codigo;
+                string format = "dd/MM/yyyy";
                 CultureInfo provider = CultureInfo.InvariantCulture;
                 string fecha = FechaTxt.Text;
                 DateTime date = DateTime.ParseExact(fecha, format, provider);
                 Paquete.Fecha = date;
-                Paquete.DniTurista = Convert.ToInt32(DniTurTxt.Text);
+                Paquete.DniTurista = (turistaCbo.SelectedValue as Turista).NroDocumento;
                 Paquete.Nivel = Convert.ToInt32(NivelTxt.Text);
-                Paquete.CodDestino = Convert.ToInt32(CodDestinoTxt.Text);
+                Paquete.CodDestino = (destinosCbo.SelectedValue as Destino).Codigo;
             }
             
             if (OperacionForm == FrmOperacion.frmModificacion)
             {
                 operacionLog = "MODIFICACION";
                 Paquete = _Paquete_modif;
-                Paquete.Codigo = Convert.ToInt32(CodPaqTxt.Text);
-                Paquete.CodTipoPaquete = Convert.ToInt32(CodTPTxt.Text);
-                Paquete.CodAgencia = Convert.ToInt32(CodAgeTxt.Text);
+                Paquete.CodTipoPaquete = (tipoPaqCbo.SelectedValue as TipoPaquete).Codigo;
+                Paquete.CodAgencia = (agenciaCbo.SelectedValue as Agencia).Codigo;
+                Paquete.CodDestino = (destinosCbo.SelectedValue as Destino).Codigo;
                 Paquete.Fecha = Convert.ToDateTime(FechaTxt.Text);
-                Paquete.DniTurista = Convert.ToInt32(DniTurTxt.Text);
+                Paquete.DniTurista = Convert.ToInt32(turistaCbo.SelectedValue);
                 Paquete.Nivel = Convert.ToInt32(NivelTxt.Text);
-                Paquete.CodDestino = Convert.ToInt32(CodDestinoTxt.Text);
+                Paquete.DniTurista = (turistaCbo.SelectedValue as Turista).NroDocumento;
                 detalleLog = "OBJ-Antes:" + PaqueteLog + " - OBJ-MOD";                
             }
             if (OperacionForm == FrmOperacion.frmConsulta)
@@ -244,19 +229,33 @@ namespace TurApp.Views
             MainView.Instance.Cursor = Cursors.Default;   
         }
 
-        private void CodPaq_KeyPress(object sender, KeyPressEventArgs e)
+        private void FrmPaqueteAM_Load(object sender, EventArgs e)
+        {
+            LoadComboBox(TipoPaquete.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), tipoPaqCbo, "Nombre");
+            tipoPaqCbo.SelectedIndex = -1;
+
+            LoadComboBox(Agencia.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), agenciaCbo, "Nombre");
+            agenciaCbo.SelectedIndex = -1;
+
+            LoadComboBox(Turista.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), turistaCbo, "Nombre");
+            agenciaCbo.SelectedIndex = -1;
+
+            LoadComboBox(Destino.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), destinosCbo, "Nombre");
+            agenciaCbo.SelectedIndex = -1;
+
+        }
+
+        private void SoloDigitos_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                (e.KeyChar != '.'))
             {
                 e.Handled = true;
-            }            
+            }
         }
 
-        private void DniLbl_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+      
 
     }
 }
