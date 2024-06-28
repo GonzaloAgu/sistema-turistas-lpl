@@ -38,9 +38,16 @@ namespace TurApp.Views
             //
             string criterio = null;
             if (this.CodPostalCheckBox.Checked)
-                criterio += " cod_postal = " + int.Parse(this.CodigoPostalTxt.Text);
-            if (this.NombreLocalidadChek.Checked)
-                criterio += " nombre = " + this.NombreLocalidadTxt.Text;
+                criterio = "cod_postal=" + int.Parse(this.CodigoPostalTxt.Text);
+
+
+            if (this.NombreLocalidadChek.Checked){
+                if(criterio != null)
+                    criterio += String.Format("AND nombre ILIKE '%{0}%'", NombreLocalidadTxt.Text);
+                else
+                    criterio = String.Format("nombre ILIKE '%{0}%'", NombreLocalidadTxt.Text);
+            }
+             
             try
             {
                 this.LocalidadesGrd.DataSource = Localidad.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));

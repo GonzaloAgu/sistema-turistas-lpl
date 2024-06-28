@@ -40,6 +40,13 @@ namespace TurApp.Views
                     criterio += String.Format(" and cod_pais = {0}", (PaisCbo.SelectedValue as Pais).Codigo);
             }
 
+            if (NombreChk.Checked) {
+                if(criterio == null)
+                    criterio = String.Format("nombre ILIKE '%{0}%' ", NombreTxt.Text);
+                else
+                    criterio += String.Format(" AND nombre ILIKE '%{0}%' ", NombreTxt.Text);
+            }
+
             try
             {
                 var lista = Turista.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));
@@ -88,7 +95,8 @@ namespace TurApp.Views
 
         private void FrmTuristaBusq_Load(object sender, EventArgs e)
         {            
-            PaisCbo.DataSource = Pais.FindAllStatic(null,(loc1,loc2)=>loc1.Nombre.CompareTo(loc2.Nombre) );
+            //PaisCbo.DataSource = ;
+            LoadComboBox(Pais.FindAllStatic(null, (loc1, loc2) => loc1.Nombre.CompareTo(loc2.Nombre)), PaisCbo, "Nombre");
             PaisCbo.SelectedIndex = -1;
         }
 

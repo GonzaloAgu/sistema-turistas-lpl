@@ -66,7 +66,7 @@
             this.DniTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DniTxt.Name = "DniTxt";
             this.DniTxt.Size = new System.Drawing.Size(123, 20);
-            this.DniTxt.TabIndex = 5;
+            this.DniTxt.TabIndex = 1;
             this.DniTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DniTxt_KeyPress);
             // 
             // DniChk
@@ -76,7 +76,7 @@
             this.DniChk.Margin = new System.Windows.Forms.Padding(2);
             this.DniChk.Name = "DniChk";
             this.DniChk.Size = new System.Drawing.Size(42, 17);
-            this.DniChk.TabIndex = 4;
+            this.DniChk.TabIndex = 0;
             this.DniChk.Text = "Dni";
             this.DniChk.UseVisualStyleBackColor = true;
             this.DniChk.CheckedChanged += new System.EventHandler(this.DniChk_CheckedChanged);
@@ -98,7 +98,7 @@
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
-            this.BuscarBtn.TabIndex = 8;
+            this.BuscarBtn.TabIndex = 6;
             this.BuscarBtn.Text = "Buscar";
             this.BuscarBtn.UseVisualStyleBackColor = true;
             this.BuscarBtn.Click += new System.EventHandler(this.BuscarBtn_Click);
@@ -110,14 +110,13 @@
             this.PaisChk.Margin = new System.Windows.Forms.Padding(2);
             this.PaisChk.Name = "PaisChk";
             this.PaisChk.Size = new System.Drawing.Size(46, 17);
-            this.PaisChk.TabIndex = 10;
+            this.PaisChk.TabIndex = 4;
             this.PaisChk.Text = "Pais";
             this.PaisChk.UseVisualStyleBackColor = true;
             this.PaisChk.CheckedChanged += new System.EventHandler(this.PaisChk_CheckedChanged);
             // 
             // PaisCbo
             // 
-            this.PaisCbo.DisplayMember = "Nombre";
             this.PaisCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaisCbo.Enabled = false;
             this.PaisCbo.FormattingEnabled = true;
@@ -125,8 +124,7 @@
             this.PaisCbo.Margin = new System.Windows.Forms.Padding(2);
             this.PaisCbo.Name = "PaisCbo";
             this.PaisCbo.Size = new System.Drawing.Size(206, 21);
-            this.PaisCbo.TabIndex = 11;
-            this.PaisCbo.ValueMember = "Codigo";
+            this.PaisCbo.TabIndex = 5;
             // 
             // FrmTuristaBusq
             // 
@@ -148,6 +146,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de Turista...";
             this.Activated += new System.EventHandler(this.FrmTuristaBusq_Activated);
+            this.Load += new System.EventHandler(this.FrmTuristaBusq_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

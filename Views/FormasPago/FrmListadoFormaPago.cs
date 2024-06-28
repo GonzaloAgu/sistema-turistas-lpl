@@ -32,7 +32,7 @@ namespace TurApp.Views {
             string criterio = null;
 
             if (FormaTxt.Text != "")
-                criterio = String.Format("forma='{0}'", FormaTxt.Text);
+                criterio = String.Format("forma ILIKE '%{0}%'", FormaTxt.Text);
             _lista = FormaPago.FindAllStatic(criterio, (a1, a2) => a1.Forma.CompareTo(a2.Forma));
             FormaPagoGrd.DataSource = _lista;
         }
