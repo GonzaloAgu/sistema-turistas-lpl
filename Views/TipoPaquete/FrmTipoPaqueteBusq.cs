@@ -27,12 +27,12 @@ namespace TurApp.Views
             MainView.Instance.Cursor = Cursors.WaitCursor;
             // verificar si hay multiples opciones a usar como filtro que elija alguna, si son dos campos, no hace falta.            
             string criterio = null;
-            if (this.CodigoChk.Checked)
+            if (this.CodigoChk.Checked && this.CodigoTxt.Text != "")
             {
                 criterio = String.Format("codigo = {0}", CodigoTxt.Text);
             }
 
-            if (this.NivelChk.Checked)
+            if (this.NivelChk.Checked && this.NivelTxt.Text != "")
             {
                 if(criterio==null)
                     criterio = String.Format("nivel = {0} ", NivelTxt.Text);
@@ -40,19 +40,10 @@ namespace TurApp.Views
                     criterio += String.Format(" and nivel = {0}", NivelTxt.Text);
             }
 
-            if (this.NombreChk.Checked)
-            {
-                if (criterio==null)
-                    criterio = String.Format("nombre = {0} ", NombreTxt.Text);
-                else
-                    criterio += String.Format(" and nombre = {0}", NombreTxt.Text);
-            }
-
             try
             {
                 var lista = TipoPaquete.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));
                 MainView.Instance.Cursor = Cursors.Default;
-
                 if (lista.Count == 0)
                 {
                     MessageBox.Show("No se encontraron resultados con criterio ingresado", "Sin resultados...", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,11 +62,6 @@ namespace TurApp.Views
         private void CodigoChk_CheckedChanged(object sender, EventArgs e)
         {
             this.CodigoTxt.Enabled = this.CodigoChk.Checked;
-        }
-
-        private void NombreChk_CheckedChanged(object sender, EventArgs e)
-        {
-            this.NombreTxt.Enabled = this.NombreChk.Checked;
         }
 
         private void NivelChk_CheckedChanged(object sender, EventArgs e)

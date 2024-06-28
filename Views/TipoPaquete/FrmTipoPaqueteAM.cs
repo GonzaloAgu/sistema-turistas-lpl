@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using TurApp.db;
 using Newtonsoft;
+using System.Globalization;
 
 namespace TurApp.Views
 {
@@ -86,48 +87,41 @@ namespace TurApp.Views
             string detalleLog="";
             MainView.Instance.Cursor = Cursors.WaitCursor;                       
             
-            if (CodigoTxt.Text == "")
-            {
-                MessageBox.Show("Ingrese codigo", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
-                return;
-            }
             if (NombreTxt.Text == "")
             {
                 MessageBox.Show("Ingrese nombre", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
+                NombreTxt.Focus();
                 return;
             }
             if (DescripcionTxt.Text == "")
             {
                 MessageBox.Show("Ingrese descripción", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
+                DescripcionTxt.Focus();
                 return;
             }
             if (DuracionTxt.Text == "")
             {
                 MessageBox.Show("Ingrese duración", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
+                DuracionTxt.Focus();
                 return;
             }
             if (NivelTxt.Text == "")
             {
                 MessageBox.Show("Ingrese nivel", "faltan datos..", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CodigoTxt.Focus();
+                NivelTxt.Focus();
                 return;
             }
             // validar...
             //.....
             //....
-            OperacionForm = FrmOperacion.frmAlta;
             if (OperacionForm == FrmOperacion.frmAlta)
             {
                 TipoPaq = new TipoPaquete();
                 operacionLog = "ALTA";
-                TipoPaq.Codigo = Convert.ToInt32(CodigoTxt.Text);
                 TipoPaq.Nombre = NombreTxt.Text;
                 TipoPaq.Descripcion = DescripcionTxt.Text;
-                TipoPaq.Duracion = DuracionTxt.Text;
+                DateTime parsedDate = DateTime.ParseExact(DuracionTxt.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                TipoPaq.Duracion = parsedDate.ToString("yyyy-MM-dd") + " 00:00:00";
                 TipoPaq.Nivel = Convert.ToInt32(NivelTxt.Text);
             }
             
@@ -135,10 +129,10 @@ namespace TurApp.Views
             {
                 operacionLog = "MODIFICACION";
                 TipoPaq = _TipoPaquete_modif;
-                TipoPaq.Codigo = Convert.ToInt32(CodigoTxt.Text);
                 TipoPaq.Nombre = NombreTxt.Text;
                 TipoPaq.Descripcion = DescripcionTxt.Text;
-                TipoPaq.Duracion = DuracionTxt.Text;
+                DateTime parsedDate = DateTime.ParseExact(DuracionTxt.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                TipoPaq.Duracion = parsedDate.ToString("yyyy-MM-dd") + " 00:00:00";
                 TipoPaq.Nivel = Convert.ToInt32(NivelTxt.Text);
                 detalleLog = "OBJ-Antes:" + TipoPaqueteLog + " - OBJ-MOD"; 
             }

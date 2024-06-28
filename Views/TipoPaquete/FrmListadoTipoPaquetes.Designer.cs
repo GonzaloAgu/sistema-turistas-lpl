@@ -69,6 +69,8 @@
             this.TipoPaquetesGrd.Size = new System.Drawing.Size(826, 384);
             this.TipoPaquetesGrd.TabIndex = 0;
             this.TipoPaquetesGrd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TipoPaquetesGrd_CellContentClick);
+            this.TipoPaquetesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TipoPaquetesGrd_DataBindingComplete);
+            this.TipoPaquetesGrd.DoubleClick += new System.EventHandler(this.TipoPaquetesGrd_DoubleClick);
             // 
             // CodigoCol
             // 
@@ -177,6 +179,7 @@
             this.CodigoChk.TabIndex = 0;
             this.CodigoChk.Text = "Código";
             this.CodigoChk.UseVisualStyleBackColor = true;
+            this.CodigoChk.CheckedChanged += new System.EventHandler(this.CodigoChk_CheckedChanged);
             // 
             // ExportarBtn
             // 
@@ -203,7 +206,8 @@
             this.MaximizeBox = false;
             this.Name = "FrmListadoTipoPaquetes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado de Turistas";
+            this.Text = "Listado de Tipo Paquetes";
+            this.Load += new System.EventHandler(this.FrmListadoTipoPaquetes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoPaquetesGrd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
