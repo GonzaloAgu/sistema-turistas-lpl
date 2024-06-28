@@ -42,7 +42,7 @@
             this.GuardarBtn.Location = new System.Drawing.Point(178, 212);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(75, 23);
-            this.GuardarBtn.TabIndex = 1;
+            this.GuardarBtn.TabIndex = 6;
             this.GuardarBtn.Text = "Guardar";
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
@@ -60,7 +60,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(260, 194);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // nivelTxt
@@ -68,7 +68,7 @@
             this.nivelTxt.Location = new System.Drawing.Point(120, 129);
             this.nivelTxt.Name = "nivelTxt";
             this.nivelTxt.Size = new System.Drawing.Size(121, 20);
-            this.nivelTxt.TabIndex = 7;
+            this.nivelTxt.TabIndex = 5;
             this.nivelTxt.Tag = "Nivel";
             this.nivelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nivelTxt_KeyPress);
             // 
@@ -77,7 +77,7 @@
             this.importeTxt.Location = new System.Drawing.Point(120, 104);
             this.importeTxt.Name = "importeTxt";
             this.importeTxt.Size = new System.Drawing.Size(121, 20);
-            this.importeTxt.TabIndex = 6;
+            this.importeTxt.TabIndex = 4;
             this.importeTxt.Tag = "Importe";
             this.importeTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.importeTxt_KeyPress);
             // 
@@ -135,7 +135,7 @@
             this.tipoActCB.Location = new System.Drawing.Point(120, 34);
             this.tipoActCB.Name = "tipoActCB";
             this.tipoActCB.Size = new System.Drawing.Size(121, 21);
-            this.tipoActCB.TabIndex = 0;
+            this.tipoActCB.TabIndex = 2;
             this.tipoActCB.Tag = "CodTipoActividad";
             this.tipoActCB.ValueMember = "Codigo";
             // 
@@ -144,7 +144,7 @@
             this.CancelarBtn.Location = new System.Drawing.Point(45, 211);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(75, 23);
-            this.CancelarBtn.TabIndex = 3;
+            this.CancelarBtn.TabIndex = 7;
             this.CancelarBtn.Text = "Cancelar";
             this.CancelarBtn.UseVisualStyleBackColor = true;
             this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);

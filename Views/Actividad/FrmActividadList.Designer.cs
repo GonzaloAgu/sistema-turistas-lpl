@@ -37,11 +37,11 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(669, 295);
+            this.CerrarBtn.Location = new System.Drawing.Point(546, 295);
             this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(54, 27);
-            this.CerrarBtn.TabIndex = 9;
+            this.CerrarBtn.TabIndex = 0;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
@@ -53,7 +53,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(752, 266);
+            this.groupBox1.Size = new System.Drawing.Size(589, 266);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado...";
@@ -79,8 +79,8 @@
             this.ActividadesGrd.ReadOnly = true;
             this.ActividadesGrd.RowTemplate.Height = 24;
             this.ActividadesGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ActividadesGrd.Size = new System.Drawing.Size(743, 237);
-            this.ActividadesGrd.TabIndex = 0;
+            this.ActividadesGrd.Size = new System.Drawing.Size(577, 237);
+            this.ActividadesGrd.TabIndex = 1;
             this.ActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.Actividades_DataBinding);
             this.ActividadesGrd.DoubleClick += new System.EventHandler(this.ActividadesGrd_DoubleClick);
             // 
@@ -122,11 +122,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 333);
+            this.ClientSize = new System.Drawing.Size(610, 333);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmActividadList";
-            this.Text = "FrmActividadList";
+            this.Text = "Resultado de búsqueda de actividades...";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActividadesGrd)).EndInit();
             this.ResumeLayout(false);
