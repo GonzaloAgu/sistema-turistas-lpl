@@ -33,7 +33,7 @@ namespace TurApp.Views
             //LoadComboBox( Pais.FindAllStatic(null , (l1,l2)=> l1.Nombre.CompareTo(l2.Nombre)) , this.PaisCbo, addSeleccion: true);
                                     
             this.TipoPaquetesGrd.AutoGenerateColumns = false;
-            this.TipoPaquetesGrd.DataSource = TipoPaquete.FindAllStatic (null, (p1,p2)=> (p1.Nombre).CompareTo(p2.Nombre));
+            this.TipoPaquetesGrd.DataSource = TipoPaquete.FindAllStatic (null, (p1,p2)=> (p1.Codigo).CompareTo(p2.Codigo));
         }
 
         private void CodigoChk_CheckedChanged(object sender, EventArgs e)
@@ -60,18 +60,18 @@ namespace TurApp.Views
                 else
                     criterio = "codigo = " + CodigoTxt.Text;
             }
-            this.TipoPaquetesGrd.DataSource = TipoPaquete.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));            
+            this.TipoPaquetesGrd.DataSource = TipoPaquete.FindAllStatic(criterio, (p1, p2) => (p1.Codigo).CompareTo(p2.Codigo));            
         }
 
         private void TipoPaquetesGrd_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow rw in this.TipoPaquetesGrd.Rows)
             {
-                rw.Cells[1].Value = (rw.DataBoundItem as TipoPaquete).Codigo;
-                rw.Cells[2].Value = (rw.DataBoundItem as TipoPaquete).Nombre;
-                rw.Cells[3].Value = (rw.DataBoundItem as TipoPaquete).Descripcion;
-                rw.Cells[4].Value = (rw.DataBoundItem as TipoPaquete).Duracion;
-                rw.Cells[5].Value = (rw.DataBoundItem as TipoPaquete).Nivel;
+                //rw.Cells[1].Value = (rw.DataBoundItem as TipoPaquete).Codigo;
+                rw.Cells[1].Value = (rw.DataBoundItem as TipoPaquete).Nombre;
+                rw.Cells[2].Value = (rw.DataBoundItem as TipoPaquete).Descripcion;
+                rw.Cells[3].Value = (rw.DataBoundItem as TipoPaquete).Duracion;
+                rw.Cells[4].Value = (rw.DataBoundItem as TipoPaquete).Nivel;
             }
         }
 

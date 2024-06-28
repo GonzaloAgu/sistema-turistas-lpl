@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NombreTxt = new System.Windows.Forms.TextBox();
-            this.NombreChk = new System.Windows.Forms.CheckBox();
             this.CodigoTxt = new System.Windows.Forms.TextBox();
             this.CodigoChk = new System.Windows.Forms.CheckBox();
             this.CancelarBtn = new System.Windows.Forms.Button();
@@ -37,27 +35,6 @@
             this.NivelChk = new System.Windows.Forms.CheckBox();
             this.NivelTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // NombreTxt
-            // 
-            this.NombreTxt.Enabled = false;
-            this.NombreTxt.Location = new System.Drawing.Point(296, 19);
-            this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.NombreTxt.Name = "NombreTxt";
-            this.NombreTxt.Size = new System.Drawing.Size(182, 20);
-            this.NombreTxt.TabIndex = 3;
-            // 
-            // NombreChk
-            // 
-            this.NombreChk.AutoSize = true;
-            this.NombreChk.Location = new System.Drawing.Point(220, 19);
-            this.NombreChk.Margin = new System.Windows.Forms.Padding(2);
-            this.NombreChk.Name = "NombreChk";
-            this.NombreChk.Size = new System.Drawing.Size(63, 17);
-            this.NombreChk.TabIndex = 2;
-            this.NombreChk.Text = "Nombre";
-            this.NombreChk.UseVisualStyleBackColor = true;
-            this.NombreChk.CheckedChanged += new System.EventHandler(this.NombreChk_CheckedChanged);
             // 
             // CodigoTxt
             // 
@@ -82,7 +59,7 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(373, 80);
+            this.CancelarBtn.Location = new System.Drawing.Point(139, 98);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(58, 27);
@@ -93,7 +70,7 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(267, 80);
+            this.BuscarBtn.Location = new System.Drawing.Point(43, 98);
             this.BuscarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(58, 27);
@@ -127,15 +104,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 136);
+            this.ClientSize = new System.Drawing.Size(216, 136);
             this.Controls.Add(this.NivelTxt);
             this.Controls.Add(this.NivelChk);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.CodigoTxt);
             this.Controls.Add(this.CodigoChk);
-            this.Controls.Add(this.NombreTxt);
-            this.Controls.Add(this.NombreChk);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -149,8 +124,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox NombreTxt;
-        private System.Windows.Forms.CheckBox NombreChk;
         private System.Windows.Forms.TextBox CodigoTxt;
         private System.Windows.Forms.CheckBox CodigoChk;
         private System.Windows.Forms.Button CancelarBtn;

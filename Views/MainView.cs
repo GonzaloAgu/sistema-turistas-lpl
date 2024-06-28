@@ -308,7 +308,7 @@ namespace TurApp.Views
         private void TipoPaqueteAM_mnu_Click(object sender, EventArgs e)
         {
             FrmTipoPaqueteAM form = new FrmTipoPaqueteAM();
-            form.Show();
+            form.ShowIngresoTipoPaquete();
         }
 
         private void BuscarTipoPaquete_mnu_Click(object sender, EventArgs e)
@@ -326,6 +326,12 @@ namespace TurApp.Views
         private void AcercaDe_mnu_Click(object sender, EventArgs e)
         {
             FrmAcercaDe form = new FrmAcercaDe();
+            form.Show();
+        }
+
+        private void TipoPaqueteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoTipoPaquetes form = new FrmListadoTipoPaquetes();
             form.Show();
         }
     }
