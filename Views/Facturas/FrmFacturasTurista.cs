@@ -22,6 +22,7 @@ namespace TurApp.Views
 
         private void FrmFacturasTurista_Load(object sender, EventArgs e)
         {
+            this.facturasGrd.AutoGenerateColumns = false;
             facturasGrd.DataSource = FacturaTurista.FindAllStatic("dni_turista=" + _turista.NroDocumento, null);
             this.Text = "Listado de facturas de " + _turista.Nombre;
         }
