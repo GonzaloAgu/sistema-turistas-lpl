@@ -66,7 +66,6 @@ namespace TurApp.Views
                 {
                     this.Text = "Actualizacion de datos de Turista...";
                     MisFactBtn.Enabled = true;
-                    
                 }
                 if (value == FrmOperacion.frmConsulta)
                 {
@@ -163,7 +162,9 @@ namespace TurApp.Views
             this.OperacionForm = FrmOperacion.frmModificacion;
             _Turista_modif = Tur_modif;
             TuristaLog = Newtonsoft.Json.JsonConvert.SerializeObject(_Turista_modif);
-            // cargar cada control con informacion del Turista....            
+            // cargar cada control con informacion del Turista....
+            this.PaisCbo.SelectedValue = Tur_modif.CodPais;
+            //this.PaisCbo.SelectedIndex = Convert.ToString(Tur_modif.CodPais);
             FormBase.ShowDataFromModel(this, Tur_modif);
             this.InvokerForm = Invoker;
             this.CancelarBtn.Click+=new EventHandler(CancelarBtn_Click);
