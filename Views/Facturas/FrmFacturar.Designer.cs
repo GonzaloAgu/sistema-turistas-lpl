@@ -31,7 +31,6 @@
             this.factGB = new System.Windows.Forms.GroupBox();
             this.detallePagoTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.letraTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.nroSerieTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.AnadirBtn = new System.Windows.Forms.Button();
             this.cancelarBtn = new System.Windows.Forms.Button();
             this.finalizarBtn = new System.Windows.Forms.Button();
+            this.LetraCbo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.factGB.SuspendLayout();
             this.SuspendLayout();
@@ -98,9 +98,9 @@
             // 
             // factGB
             // 
+            this.factGB.Controls.Add(this.LetraCbo);
             this.factGB.Controls.Add(this.detallePagoTxt);
             this.factGB.Controls.Add(this.label6);
-            this.factGB.Controls.Add(this.letraTxt);
             this.factGB.Controls.Add(this.label5);
             this.factGB.Controls.Add(this.nroSerieTxt);
             this.factGB.Controls.Add(this.label4);
@@ -130,14 +130,6 @@
             this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Detalle de pago";
-            // 
-            // letraTxt
-            // 
-            this.letraTxt.Location = new System.Drawing.Point(102, 80);
-            this.letraTxt.MaxLength = 1;
-            this.letraTxt.Name = "letraTxt";
-            this.letraTxt.Size = new System.Drawing.Size(32, 20);
-            this.letraTxt.TabIndex = 5;
             // 
             // label5
             // 
@@ -222,6 +214,20 @@
             this.finalizarBtn.UseVisualStyleBackColor = true;
             this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
             // 
+            // LetraCbo
+            // 
+            this.LetraCbo.DisplayMember = "Forma";
+            this.LetraCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LetraCbo.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C"});
+            this.LetraCbo.Location = new System.Drawing.Point(102, 80);
+            this.LetraCbo.Name = "LetraCbo";
+            this.LetraCbo.Size = new System.Drawing.Size(65, 21);
+            this.LetraCbo.TabIndex = 8;
+            this.LetraCbo.ValueMember = "Letra";
+            // 
             // FrmFacturar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,7 +258,6 @@
         private System.Windows.Forms.ComboBox FormaPagoCbo;
         private System.Windows.Forms.ComboBox TuristaCbo;
         private System.Windows.Forms.GroupBox factGB;
-        private System.Windows.Forms.TextBox letraTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox nroSerieTxt;
         private System.Windows.Forms.Label label4;
@@ -264,5 +269,6 @@
         private System.Windows.Forms.Button finalizarBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox detallePagoTxt;
+        private System.Windows.Forms.ComboBox LetraCbo;
     }
 }

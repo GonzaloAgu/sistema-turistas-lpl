@@ -36,7 +36,7 @@ namespace TurApp.Views {
 
         private void GenerarBtn_Click(object sender, EventArgs e)
         {
-            if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1 || detallePagoTxt.Text == "")
+            if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || LetraCbo.SelectedIndex == -1 || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1 || detallePagoTxt.Text == "")
             {
                 MessageBox.Show("Faltan datos por ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -49,13 +49,13 @@ namespace TurApp.Views {
                 _factura.CodFormaPago = (FormaPagoCbo.SelectedValue as FormaPago).Codigo;
                 _factura.Nro = Int32.Parse(nroFacturaTxt.Text);
                 _factura.Serie = Int32.Parse(nroSerieTxt.Text);
-                _factura.Letra = letraTxt.Text;
+                _factura.Letra = LetraCbo.GetItemText(LetraCbo.SelectedItem);
                 _factura.Fecha = DateTime.Now;
                 _factura.DetallePago = detallePagoTxt.Text;
 
                 try
                 {
-                    if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || letraTxt.Text == "" || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1)
+                    if (nroFacturaTxt.Text == "" || nroSerieTxt.Text == "" || LetraCbo.SelectedIndex == -1 || TuristaCbo.SelectedIndex == -1 || FormaPagoCbo.SelectedIndex == -1)
                     {
                         MessageBox.Show("Faltan datos por ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
