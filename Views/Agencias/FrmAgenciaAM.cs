@@ -36,7 +36,6 @@ namespace TurApp.Views
         private void LoadCombos()
         {
             this.LocalidadCbo.DataSource = Localidad.FindAllStatic(null, (pa1, pa2) => pa1.Nombre.CompareTo(pa2.Nombre));
-            //this.PaisCbo.DataSource = ORMDB<Localidad>.FindAll(null);
         }
         public override FrmOperacion OperacionForm
         {
