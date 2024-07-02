@@ -94,7 +94,6 @@
             this.gridLbl.Size = new System.Drawing.Size(33, 13);
             this.gridLbl.TabIndex = 1;
             this.gridLbl.Text = "Tipos";
-            this.gridLbl.Visible = false;
             // 
             // tipoPaqueteGrd
             // 
@@ -107,7 +106,6 @@
             this.tipoPaqueteGrd.RowHeadersVisible = false;
             this.tipoPaqueteGrd.Size = new System.Drawing.Size(260, 127);
             this.tipoPaqueteGrd.TabIndex = 0;
-            this.tipoPaqueteGrd.Visible = false;
             this.tipoPaqueteGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.tipoPaqueteGrd_DataBindingComplete);
             // 
             // Codigo

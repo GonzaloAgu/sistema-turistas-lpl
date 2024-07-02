@@ -48,8 +48,6 @@ namespace TurApp.Views
                 List<AgenciaTipoPaquete> lista = AgenciaTipoPaquete.FindAllStatic("cod_agencia=" + agencia.Codigo, null);
                 tipoPaqueteGrd.DataSource = lista;
             }
-                
-            tipoPaqueteGrd.Visible = agenciaCbo.SelectedIndex != -1;
         }
 
         private void CerrarBtn_Click(object sender, EventArgs e)
