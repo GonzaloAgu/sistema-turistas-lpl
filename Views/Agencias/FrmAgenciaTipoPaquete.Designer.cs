@@ -50,7 +50,7 @@
             this.mainGroup.Controls.Add(this.tipoPaqueteCbo);
             this.mainGroup.Controls.Add(this.gridLbl);
             this.mainGroup.Controls.Add(this.tipoPaqueteGrd);
-            this.mainGroup.Location = new System.Drawing.Point(3, 42);
+            this.mainGroup.Location = new System.Drawing.Point(11, 54);
             this.mainGroup.Name = "mainGroup";
             this.mainGroup.Size = new System.Drawing.Size(278, 237);
             this.mainGroup.TabIndex = 0;
@@ -127,7 +127,7 @@
             this.agenciaCbo.DisplayMember = "Codigo";
             this.agenciaCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.agenciaCbo.FormattingEnabled = true;
-            this.agenciaCbo.Location = new System.Drawing.Point(81, 12);
+            this.agenciaCbo.Location = new System.Drawing.Point(89, 24);
             this.agenciaCbo.Name = "agenciaCbo";
             this.agenciaCbo.Size = new System.Drawing.Size(184, 21);
             this.agenciaCbo.TabIndex = 9;
@@ -137,7 +137,7 @@
             // CodAge
             // 
             this.CodAge.AutoSize = true;
-            this.CodAge.Location = new System.Drawing.Point(11, 15);
+            this.CodAge.Location = new System.Drawing.Point(19, 27);
             this.CodAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CodAge.Name = "CodAge";
             this.CodAge.Size = new System.Drawing.Size(46, 13);
@@ -146,7 +146,7 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(194, 299);
+            this.CerrarBtn.Location = new System.Drawing.Point(215, 297);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(75, 23);
             this.CerrarBtn.TabIndex = 2;
@@ -158,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 334);
+            this.ClientSize = new System.Drawing.Size(302, 331);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.agenciaCbo);
             this.Controls.Add(this.CodAge);
