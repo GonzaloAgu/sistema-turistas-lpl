@@ -53,7 +53,7 @@
             this.mainGroup.Location = new System.Drawing.Point(11, 54);
             this.mainGroup.Name = "mainGroup";
             this.mainGroup.Size = new System.Drawing.Size(278, 237);
-            this.mainGroup.TabIndex = 0;
+            this.mainGroup.TabIndex = 1;
             this.mainGroup.TabStop = false;
             // 
             // label1
@@ -70,7 +70,7 @@
             this.anadirBtn.Location = new System.Drawing.Point(196, 196);
             this.anadirBtn.Name = "anadirBtn";
             this.anadirBtn.Size = new System.Drawing.Size(75, 23);
-            this.anadirBtn.TabIndex = 12;
+            this.anadirBtn.TabIndex = 3;
             this.anadirBtn.Text = "Añadir";
             this.anadirBtn.UseVisualStyleBackColor = true;
             this.anadirBtn.Click += new System.EventHandler(this.anadirBtn_Click);
@@ -83,7 +83,7 @@
             this.tipoPaqueteCbo.Location = new System.Drawing.Point(89, 198);
             this.tipoPaqueteCbo.Name = "tipoPaqueteCbo";
             this.tipoPaqueteCbo.Size = new System.Drawing.Size(102, 21);
-            this.tipoPaqueteCbo.TabIndex = 11;
+            this.tipoPaqueteCbo.TabIndex = 2;
             this.tipoPaqueteCbo.ValueMember = "Codigo";
             // 
             // gridLbl
@@ -130,7 +130,7 @@
             this.agenciaCbo.Location = new System.Drawing.Point(89, 24);
             this.agenciaCbo.Name = "agenciaCbo";
             this.agenciaCbo.Size = new System.Drawing.Size(184, 21);
-            this.agenciaCbo.TabIndex = 9;
+            this.agenciaCbo.TabIndex = 0;
             this.agenciaCbo.ValueMember = "Codigo";
             this.agenciaCbo.SelectedValueChanged += new System.EventHandler(this.agenciaCbo_SelectedValueChanged);
             // 
@@ -149,7 +149,7 @@
             this.CerrarBtn.Location = new System.Drawing.Point(215, 297);
             this.CerrarBtn.Name = "CerrarBtn";
             this.CerrarBtn.Size = new System.Drawing.Size(75, 23);
-            this.CerrarBtn.TabIndex = 2;
+            this.CerrarBtn.TabIndex = 4;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
             this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);

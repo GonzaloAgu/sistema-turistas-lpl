@@ -19,7 +19,7 @@ namespace TurApp.Views {
         }
 
         private void FrmDetalleFactura_Load(object sender, EventArgs e) {
-            LoadComboBox(Paquete.FindAllStatic(null, null), PaqueteCbo, "Codigo");
+            LoadComboBox(Paquete.FindAllStatic(null, null), PaqueteCbo);
         }
 
         private void anadirBtn_Click(object sender, EventArgs e) {
