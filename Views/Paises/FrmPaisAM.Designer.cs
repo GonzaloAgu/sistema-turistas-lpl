@@ -94,7 +94,7 @@
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Name = "FrmPaisAM";
-            this.Text = "Form1";
+            this.Text = "Ingreso de país...";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
