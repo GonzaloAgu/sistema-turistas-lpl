@@ -24,8 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ImporteTxt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.importeLabel = new System.Windows.Forms.Label();
             this.PaqueteCbo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.anadirBtn = new System.Windows.Forms.Button();
@@ -35,8 +34,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.ImporteTxt);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.importeLabel);
             this.groupBox1.Controls.Add(this.PaqueteCbo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 24);
@@ -45,21 +43,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // ImporteTxt
+            // importeLabel
             // 
-            this.ImporteTxt.Location = new System.Drawing.Point(84, 48);
-            this.ImporteTxt.Name = "ImporteTxt";
-            this.ImporteTxt.Size = new System.Drawing.Size(255, 20);
-            this.ImporteTxt.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Importe";
+            this.importeLabel.AutoSize = true;
+            this.importeLabel.Location = new System.Drawing.Point(19, 57);
+            this.importeLabel.Name = "importeLabel";
+            this.importeLabel.Size = new System.Drawing.Size(0, 13);
+            this.importeLabel.TabIndex = 2;
+            this.importeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // PaqueteCbo
             // 
@@ -69,6 +60,7 @@
             this.PaqueteCbo.Name = "PaqueteCbo";
             this.PaqueteCbo.Size = new System.Drawing.Size(255, 21);
             this.PaqueteCbo.TabIndex = 1;
+            this.PaqueteCbo.SelectedValueChanged += new System.EventHandler(this.PaqueteCbo_SelectedValueChanged);
             // 
             // label1
             // 
@@ -119,8 +111,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox ImporteTxt;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label importeLabel;
         private System.Windows.Forms.ComboBox PaqueteCbo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button anadirBtn;
