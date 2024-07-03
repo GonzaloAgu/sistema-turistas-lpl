@@ -340,5 +340,11 @@ namespace TurApp.Views
             FrmAgenciaTipoPaquete form = new FrmAgenciaTipoPaquete();
             form.ShowDialog();
         }
+
+        private void tipoActividadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoPaqueteTipoActividad form = new FrmTipoPaqueteTipoActividad();
+            form.ShowDialog();
+        }
     }
 }

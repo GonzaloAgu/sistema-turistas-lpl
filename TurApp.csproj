@@ -341,6 +341,12 @@
     <Compile Include="Views\TipoPaquete\FrmTipoPaqueteList.Designer.cs">
       <DependentUpon>FrmTipoPaqueteList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TipoPaquete\FrmTipoPaqueteTipoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoPaquete\FrmTipoPaqueteTipoActividad.designer.cs">
+      <DependentUpon>FrmTipoPaqueteTipoActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TiposActividad\FrmListadoTipoActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -500,6 +506,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoPaquete\FrmTipoPaqueteList.resx">
       <DependentUpon>FrmTipoPaqueteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoPaquete\FrmTipoPaqueteTipoActividad.resx">
+      <DependentUpon>FrmTipoPaqueteTipoActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TiposActividad\FrmListadoTipoActividad.resx">
       <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>
