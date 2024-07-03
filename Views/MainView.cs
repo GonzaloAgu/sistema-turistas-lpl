@@ -344,6 +344,10 @@ namespace TurApp.Views
         private void actividadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmPaqueteActividad form = new FrmPaqueteActividad();
+        }
+        private void tipoActividadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipoPaqueteTipoActividad form = new FrmTipoPaqueteTipoActividad();
             form.ShowDialog();
         }
     }

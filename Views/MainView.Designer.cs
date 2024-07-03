@@ -73,6 +73,8 @@
             this.StatusInfoUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.vínculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vincularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.status.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +160,8 @@
             this.tipoPaqueteToolStripMenuItem1});
             this.vincularUnTipoPaqueteToolStripMenuItem.Name = "vincularUnTipoPaqueteToolStripMenuItem";
             this.vincularUnTipoPaqueteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.vincularUnTipoPaqueteToolStripMenuItem.Text = "Vinculos...";
+
+            this.vincularUnTipoPaqueteToolStripMenuItem.Text = "Vincular...";
             // 
             // tipoPaqueteToolStripMenuItem1
             // 
@@ -293,7 +296,8 @@
             // 
             this.TipoPaquete_mnu_top.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TipoPaqueteAM_mnu,
-            this.BuscarTipoPaquete_mnu});
+            this.BuscarTipoPaquete_mnu,
+            this.vincularToolStripMenuItem});
             this.TipoPaquete_mnu_top.Name = "TipoPaquete_mnu_top";
             this.TipoPaquete_mnu_top.Size = new System.Drawing.Size(93, 20);
             this.TipoPaquete_mnu_top.Tag = "AltaTipoPaquete,ModificaTipoPaquete,ConsultaTipoPaquete";
@@ -302,7 +306,7 @@
             // TipoPaqueteAM_mnu
             // 
             this.TipoPaqueteAM_mnu.Name = "TipoPaqueteAM_mnu";
-            this.TipoPaqueteAM_mnu.Size = new System.Drawing.Size(113, 22);
+            this.TipoPaqueteAM_mnu.Size = new System.Drawing.Size(152, 22);
             this.TipoPaqueteAM_mnu.Tag = "AltaTipoPaquete";
             this.TipoPaqueteAM_mnu.Text = "Ingreso";
             this.TipoPaqueteAM_mnu.Click += new System.EventHandler(this.TipoPaqueteAM_mnu_Click);
@@ -310,7 +314,7 @@
             // BuscarTipoPaquete_mnu
             // 
             this.BuscarTipoPaquete_mnu.Name = "BuscarTipoPaquete_mnu";
-            this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(113, 22);
+            this.BuscarTipoPaquete_mnu.Size = new System.Drawing.Size(152, 22);
             this.BuscarTipoPaquete_mnu.Tag = "ModificaTipoPaquete,ConsultaTipoPaquete";
             this.BuscarTipoPaquete_mnu.Text = "Buscar";
             this.BuscarTipoPaquete_mnu.Click += new System.EventHandler(this.BuscarTipoPaquete_mnu_Click);
@@ -474,6 +478,20 @@
             this.actividadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.actividadToolStripMenuItem.Text = "Actividad";
             this.actividadToolStripMenuItem.Click += new System.EventHandler(this.actividadToolStripMenuItem_Click);
+            // vincularToolStripMenuItem
+            // 
+            this.vincularToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoActividadToolStripMenuItem});
+            this.vincularToolStripMenuItem.Name = "vincularToolStripMenuItem";
+            this.vincularToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vincularToolStripMenuItem.Text = "Vincular";
+            // 
+            // tipoActividadToolStripMenuItem
+            // 
+            this.tipoActividadToolStripMenuItem.Name = "tipoActividadToolStripMenuItem";
+            this.tipoActividadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoActividadToolStripMenuItem.Text = "Tipo Actividad";
+            this.tipoActividadToolStripMenuItem.Click += new System.EventHandler(this.tipoActividadToolStripMenuItem_Click);
             // 
             // MainView
             // 
@@ -549,6 +567,8 @@
         private System.Windows.Forms.ToolStripMenuItem tipoPaqueteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vínculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actividadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vincularToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoActividadToolStripMenuItem;
 
     }
 }
