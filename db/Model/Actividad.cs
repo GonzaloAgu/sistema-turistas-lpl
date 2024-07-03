@@ -78,6 +78,12 @@ namespace TurApp.db
             }
         }
         #endregion
+
+        public override string ToString()
+        {
+            return String.Format("{0}: {1} - {2}", Codigo, TipoActividadObj.Nombre, TipoActividadObj.Descripcion);
+        }
     }
 
+    
 }

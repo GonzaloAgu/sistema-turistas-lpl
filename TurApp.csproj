@@ -176,6 +176,12 @@
     <Compile Include="Views\Agencias\FrmAgenciaList.Designer.cs">
       <DependentUpon>FrmAgenciaList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaTipoPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Agencias\FrmAgenciaTipoPaquete.Designer.cs">
+      <DependentUpon>FrmAgenciaTipoPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Agencias\FrmListadoAgencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,12 @@
     <Compile Include="Views\Paquete\FrmListadoPaquetes.Designer.cs">
       <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Paquete\FrmPaqueteActividad.Designer.cs">
+      <DependentUpon>FrmPaqueteActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Paquete\FrmPaqueteAM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +346,12 @@
     </Compile>
     <Compile Include="Views\TipoPaquete\FrmTipoPaqueteList.Designer.cs">
       <DependentUpon>FrmTipoPaqueteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipoPaquete\FrmTipoPaqueteTipoActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoPaquete\FrmTipoPaqueteTipoActividad.designer.cs">
+      <DependentUpon>FrmTipoPaqueteTipoActividad.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TiposActividad\FrmListadoTipoActividad.cs">
       <SubType>Form</SubType>
@@ -414,6 +432,9 @@
     <EmbeddedResource Include="Views\Agencias\FrmAgenciaList.resx">
       <DependentUpon>FrmAgenciaList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Agencias\FrmAgenciaTipoPaquete.resx">
+      <DependentUpon>FrmAgenciaTipoPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Agencias\FrmListadoAgencia.resx">
       <DependentUpon>FrmListadoAgencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +492,9 @@
     <EmbeddedResource Include="Views\Paquete\FrmListadoPaquetes.resx">
       <DependentUpon>FrmListadoPaquetes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Paquete\FrmPaqueteActividad.resx">
+      <DependentUpon>FrmPaqueteActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Paquete\FrmPaqueteAM.resx">
       <DependentUpon>FrmPaqueteAM.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +515,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TipoPaquete\FrmTipoPaqueteList.resx">
       <DependentUpon>FrmTipoPaqueteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoPaquete\FrmTipoPaqueteTipoActividad.resx">
+      <DependentUpon>FrmTipoPaqueteTipoActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TiposActividad\FrmListadoTipoActividad.resx">
       <DependentUpon>FrmListadoTipoActividad.cs</DependentUpon>

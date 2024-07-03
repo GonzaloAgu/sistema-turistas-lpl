@@ -46,12 +46,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.CancelarBtn = new System.Windows.Forms.Button();
             this.GuardarBtn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Location = new System.Drawing.Point(11, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
@@ -60,7 +62,7 @@
             // 
             // NombreTxt
             // 
-            this.NombreTxt.Location = new System.Drawing.Point(75, 10);
+            this.NombreTxt.Location = new System.Drawing.Point(68, 20);
             this.NombreTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NombreTxt.Name = "NombreTxt";
             this.NombreTxt.Size = new System.Drawing.Size(192, 20);
@@ -69,7 +71,7 @@
             // 
             // CalleTxt
             // 
-            this.CalleTxt.Location = new System.Drawing.Point(75, 43);
+            this.CalleTxt.Location = new System.Drawing.Point(68, 53);
             this.CalleTxt.Margin = new System.Windows.Forms.Padding(2);
             this.CalleTxt.Name = "CalleTxt";
             this.CalleTxt.Size = new System.Drawing.Size(192, 20);
@@ -79,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 47);
+            this.label2.Location = new System.Drawing.Point(11, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
@@ -88,7 +90,7 @@
             // 
             // NroTxt
             // 
-            this.NroTxt.Location = new System.Drawing.Point(75, 76);
+            this.NroTxt.Location = new System.Drawing.Point(68, 86);
             this.NroTxt.Margin = new System.Windows.Forms.Padding(2);
             this.NroTxt.Name = "NroTxt";
             this.NroTxt.Size = new System.Drawing.Size(94, 20);
@@ -98,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 80);
+            this.label3.Location = new System.Drawing.Point(11, 90);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
@@ -107,7 +109,7 @@
             // 
             // PisoTxt
             // 
-            this.PisoTxt.Location = new System.Drawing.Point(75, 107);
+            this.PisoTxt.Location = new System.Drawing.Point(68, 117);
             this.PisoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.PisoTxt.Name = "PisoTxt";
             this.PisoTxt.Size = new System.Drawing.Size(94, 20);
@@ -117,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 111);
+            this.label4.Location = new System.Drawing.Point(11, 121);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
@@ -127,7 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 175);
+            this.label5.Location = new System.Drawing.Point(10, 185);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 13);
@@ -139,7 +141,7 @@
             this.LocalidadCbo.DisplayMember = "Nombre";
             this.LocalidadCbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocalidadCbo.FormattingEnabled = true;
-            this.LocalidadCbo.Location = new System.Drawing.Point(75, 172);
+            this.LocalidadCbo.Location = new System.Drawing.Point(68, 182);
             this.LocalidadCbo.Margin = new System.Windows.Forms.Padding(2);
             this.LocalidadCbo.Name = "LocalidadCbo";
             this.LocalidadCbo.Size = new System.Drawing.Size(174, 21);
@@ -149,7 +151,7 @@
             // 
             // Telefono1Txt
             // 
-            this.Telefono1Txt.Location = new System.Drawing.Point(75, 209);
+            this.Telefono1Txt.Location = new System.Drawing.Point(68, 219);
             this.Telefono1Txt.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono1Txt.Name = "Telefono1Txt";
             this.Telefono1Txt.Size = new System.Drawing.Size(94, 20);
@@ -159,7 +161,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 213);
+            this.label6.Location = new System.Drawing.Point(11, 223);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
@@ -168,7 +170,7 @@
             // 
             // DptoTxt
             // 
-            this.DptoTxt.Location = new System.Drawing.Point(75, 139);
+            this.DptoTxt.Location = new System.Drawing.Point(68, 149);
             this.DptoTxt.Margin = new System.Windows.Forms.Padding(2);
             this.DptoTxt.Name = "DptoTxt";
             this.DptoTxt.Size = new System.Drawing.Size(94, 20);
@@ -179,7 +181,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 143);
+            this.label7.Location = new System.Drawing.Point(11, 153);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
@@ -188,7 +190,7 @@
             // 
             // Telefono2Txt
             // 
-            this.Telefono2Txt.Location = new System.Drawing.Point(75, 243);
+            this.Telefono2Txt.Location = new System.Drawing.Point(68, 253);
             this.Telefono2Txt.Margin = new System.Windows.Forms.Padding(2);
             this.Telefono2Txt.Name = "Telefono2Txt";
             this.Telefono2Txt.Size = new System.Drawing.Size(94, 20);
@@ -198,7 +200,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 247);
+            this.label8.Location = new System.Drawing.Point(11, 257);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
@@ -207,7 +209,7 @@
             // 
             // CancelarBtn
             // 
-            this.CancelarBtn.Location = new System.Drawing.Point(253, 281);
+            this.CancelarBtn.Location = new System.Drawing.Point(285, 305);
             this.CancelarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelarBtn.Name = "CancelarBtn";
             this.CancelarBtn.Size = new System.Drawing.Size(59, 27);
@@ -217,7 +219,7 @@
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(166, 281);
+            this.GuardarBtn.Location = new System.Drawing.Point(208, 305);
             this.GuardarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.GuardarBtn.Name = "GuardarBtn";
             this.GuardarBtn.Size = new System.Drawing.Size(59, 27);
@@ -226,36 +228,46 @@
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Telefono2Txt);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.DptoTxt);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.Telefono1Txt);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.LocalidadCbo);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.PisoTxt);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.NroTxt);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.CalleTxt);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.NombreTxt);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 9);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(331, 291);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmAgenciaAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 323);
+            this.ClientSize = new System.Drawing.Size(355, 343);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
-            this.Controls.Add(this.Telefono2Txt);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.DptoTxt);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.Telefono1Txt);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.LocalidadCbo);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.PisoTxt);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.NroTxt);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.CalleTxt);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.NombreTxt);
-            this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAgenciaAM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -279,5 +291,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Button GuardarBtn;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -34,6 +34,14 @@ namespace TurApp.Views
                 criterio = String.Format("cod_postal = {0}", CodPostalTxt.Text);
             }
 
+            if (this.NombreLocalidadChk.Checked)
+            {
+                if(criterio==null)
+                    criterio = String.Format("nombre ILIKE '%{0}%'", NombreLocalidadTxt.Text);
+                else
+                    criterio += String.Format(" AND nombre ILIKE '%{0}%'", NombreLocalidadTxt.Text);
+            }
+
             try
             {
                 var lista = Localidad.FindAllStatic(criterio, (p1, p2) => (p1.Nombre).CompareTo(p2.Nombre));

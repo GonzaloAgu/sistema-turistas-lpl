@@ -31,9 +31,7 @@ namespace TurApp.Views
             _listado = listado;
             _criterio = criterio;
             this.TipoActividadesGrd.AutoGenerateColumns = false;
-            var bindingList = new BindingList<TipoActividad>(listado);
-            var source = new BindingSource(bindingList, null);
-            this.TipoActividadesGrd.DataSource = source;
+            this.TipoActividadesGrd.DataSource = _listado;
             InvokerForm.Close();
             this.MdiParent = MainView.Instance;
             this.Show();
@@ -54,7 +52,11 @@ namespace TurApp.Views
             for (int i = 0; i < this.TipoActividadesGrd.Rows.Count; ++i)
             {
                 DataGridViewRow item = this.TipoActividadesGrd.Rows[i];
-                item.Cells[3].Value = (item.DataBoundItem as TipoActividad).Nombre;
+                item.Cells[0].Value = (item.DataBoundItem as TipoActividad).Nombre;
+                item.Cells[1].Value = (item.DataBoundItem as TipoActividad).Codigo;
+                item.Cells[2].Value = (item.DataBoundItem as TipoActividad).Descripcion;
+                item.Cells[3].Value = (item.DataBoundItem as TipoActividad).Duracion;
+                item.Cells[4].Value = (item.DataBoundItem as TipoActividad).Nivel;
             }
         }
 

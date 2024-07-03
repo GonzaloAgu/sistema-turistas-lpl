@@ -86,7 +86,7 @@
             // 
             // TipoActividad
             // 
-            this.TipoActividad.DataPropertyName = "TipoActividad";
+            this.TipoActividad.DataPropertyName = "Nombre";
             this.TipoActividad.HeaderText = "Tipo de actividad";
             this.TipoActividad.Name = "TipoActividad";
             this.TipoActividad.ReadOnly = true;

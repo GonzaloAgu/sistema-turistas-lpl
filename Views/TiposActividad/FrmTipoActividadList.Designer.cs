@@ -47,10 +47,12 @@
             this.descripcion,
             this.duracion,
             this.nivel});
-            this.TipoActividadesGrd.Location = new System.Drawing.Point(4, 12);
+            this.TipoActividadesGrd.Location = new System.Drawing.Point(3, 10);
+            this.TipoActividadesGrd.Margin = new System.Windows.Forms.Padding(2);
             this.TipoActividadesGrd.Name = "TipoActividadesGrd";
-            this.TipoActividadesGrd.Size = new System.Drawing.Size(773, 246);
-            this.TipoActividadesGrd.TabIndex = 0;
+            this.TipoActividadesGrd.Size = new System.Drawing.Size(544, 200);
+            this.TipoActividadesGrd.TabIndex = 1;
+            this.TipoActividadesGrd.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.TipoActividadesGrd_DataBindingComplete);
             // 
             // Nombre
             // 
@@ -79,22 +81,25 @@
             // 
             // CerrarBtn
             // 
-            this.CerrarBtn.Location = new System.Drawing.Point(203, 297);
+            this.CerrarBtn.Location = new System.Drawing.Point(395, 234);
+            this.CerrarBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarBtn.Name = "CerrarBtn";
-            this.CerrarBtn.Size = new System.Drawing.Size(202, 47);
-            this.CerrarBtn.TabIndex = 1;
+            this.CerrarBtn.Size = new System.Drawing.Size(152, 38);
+            this.CerrarBtn.TabIndex = 0;
             this.CerrarBtn.Text = "Cerrar";
             this.CerrarBtn.UseVisualStyleBackColor = true;
+            this.CerrarBtn.Click += new System.EventHandler(this.CerrarBtn_Click);
             // 
             // FrmTipoActividadList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 369);
+            this.ClientSize = new System.Drawing.Size(559, 300);
             this.Controls.Add(this.CerrarBtn);
             this.Controls.Add(this.TipoActividadesGrd);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTipoActividadList";
-            this.Text = "Form1";
+            this.Text = "Resultado de búsqueda de tipos de actividad...";
             this.Load += new System.EventHandler(this.FrmTipoActividadList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TipoActividadesGrd)).EndInit();
             this.ResumeLayout(false);
