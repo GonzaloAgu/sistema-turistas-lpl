@@ -19,7 +19,7 @@ namespace TurApp.Views
 
         private void FrmAgenciaTipoPaquete_Load(object sender, EventArgs e)
         {
-            LoadComboBox(TipoPaquete.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), tipoPaqueteCbo, "Nombre");
+            LoadComboBox(TipoPaquete.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), tipoPaqueteCbo);
             LoadComboBox(TipoActividad.FindAllStatic(null, (tp1, tp2) => tp1.Nombre.CompareTo(tp2.Nombre)), tipoActividadCbo);
             tipoPaqueteCbo.SelectedIndex = -1;
             tipoActividadCbo.SelectedIndex = -1;
@@ -40,12 +40,12 @@ namespace TurApp.Views
         private void tipoPaqueteCbo_SelectedValueChanged(object sender, EventArgs e)
         {
             mainGroup.Visible = tipoPaqueteCbo.SelectedIndex != -1;
-            TipoPaquete tipopPaquete = tipoPaqueteCbo.SelectedItem as TipoPaquete;
+            TipoPaquete tipoPaquete = tipoPaqueteCbo.SelectedItem as TipoPaquete;
             tipoActividadGrd.AutoGenerateColumns = false;
 
-            if (tipopPaquete != null) {
-                gridLbl.Text = "Tipos de paquete ofrecidos por " + tipopPaquete.Nombre;
-                List<TipoPaqueteTipoActividad> lista = TipoPaqueteTipoActividad.FindAllStatic("cod_tipoPaquete=" + tipopPaquete.Codigo, null);
+            if (tipoPaquete != null) {
+                gridLbl.Text = "Tipos de actividad ofrecidos por " + tipoPaquete.Nombre;
+                List<TipoPaqueteTipoActividad> lista = TipoPaqueteTipoActividad.FindAllStatic("cod_tipo_paquete=" + tipoPaquete.Codigo, null);
                 tipoActividadGrd.DataSource = lista;
             }
         }
@@ -70,22 +70,13 @@ namespace TurApp.Views
                 tpta.CodTipoActividad = (tipoActividadCbo.SelectedItem as TipoActividad).Codigo;
                 tpta.SaveObj();
                 MessageBox.Show("Tipo de actividad añadido con éxito", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tipoActividadGrd.DataSource = TipoPaqueteTipoActividad.FindAllStatic("cod_tipoPaquete=" + tpta.CodTipoPaquete, null);
+                tipoActividadGrd.DataSource = TipoPaqueteTipoActividad.FindAllStatic("cod_tipo_paquete=" + tpta.CodTipoPaquete, null);
             }
-            catch (Exception exex)
+            catch (Exception ex)
             {
-                MessageBox.Show("El tipo de paquete ingresado ya está vinculado o se produjo otro error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El tipo de actividad ingresado ya está vinculado o se produjo otro error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
-
-
-
-
-        public ComboBox tipoActividadCbo { get; set; }
-
-
-
-        public ComboBox tipoPaqueteCbo { get; set; }
     }
 }
